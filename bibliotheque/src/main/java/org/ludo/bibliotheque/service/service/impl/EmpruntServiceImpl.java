@@ -7,6 +7,7 @@ import org.ludo.bibliotheque.dao.EmpruntRepository;
 import org.ludo.bibliotheque.dao.LivreRepository;
 import org.ludo.bibliotheque.entities.Emprunt;
 import org.ludo.bibliotheque.entities.Livre;
+import org.ludo.bibliotheque.exceptions.EmpruntExceptions;
 import org.ludo.bibliotheque.service.EmpruntService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -120,7 +121,7 @@ public class EmpruntServiceImpl implements EmpruntService {
      */
     @Transactional
     @Override
-    public Emprunt ouvrirEmprunt(Long idLivre, String pseudoEmprunteur) {
+    public Emprunt ouvrirEmprunt(Long idLivre, String pseudoEmprunteur) throws EmpruntExceptions {
 
         logger.debug("Appel empruntService méthode ouvrirEmprunt");
 
@@ -128,15 +129,20 @@ public class EmpruntServiceImpl implements EmpruntService {
         Livre livre = livreRepository.findById(idLivre).get();
         Date date = new Date();
 
-        nouvelEmprunt.setDateDebut(date);
-        nouvelEmprunt.setDateFin(ajouter4Semaines(date));
-        nouvelEmprunt.setPseudoEmprunteur(pseudoEmprunteur);
-        nouvelEmprunt.setLivre(livre);
-        nouvelEmprunt.setEnCours(true);
-        nouvelEmprunt.setProlongeable(true);
-        livre.setQuantiteDispo(livre.getQuantiteDispo() - 1);
+        if (livre.getQuantiteDispo() < 1 ) {
+            throw new EmpruntExceptions("Il n'y a aucun livre disponible pour ouvrir un nouvel emprunt");
+        } else {
 
-        return empruntRepository.save(nouvelEmprunt);
+            nouvelEmprunt.setDateDebut(date);
+            nouvelEmprunt.setDateFin(ajouter4Semaines(date));
+            nouvelEmprunt.setPseudoEmprunteur(pseudoEmprunteur);
+            nouvelEmprunt.setLivre(livre);
+            nouvelEmprunt.setEnCours(true);
+            nouvelEmprunt.setProlongeable(true);
+            livre.setQuantiteDispo(livre.getQuantiteDispo() - 1);
+
+            return empruntRepository.save(nouvelEmprunt);
+        }
     }
 
     /**

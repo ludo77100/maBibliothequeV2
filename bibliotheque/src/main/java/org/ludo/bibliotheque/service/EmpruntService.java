@@ -3,6 +3,7 @@ package org.ludo.bibliotheque.service;
 
 import org.ludo.bibliotheque.entities.Emprunt;
 import org.ludo.bibliotheque.entities.Livre;
+import org.ludo.bibliotheque.exceptions.EmpruntExceptions;
 
 import java.util.Date;
 import java.util.List;
@@ -16,7 +17,7 @@ public interface EmpruntService {
 
     List<Emprunt> findAllByPseudoEmprunteur(String pseudoEmprunteur);
 
-    Emprunt ouvrirEmprunt(Long idLivre, String pseudoEmprunteur);
+    Emprunt ouvrirEmprunt(Long idLivre, String pseudoEmprunteur) throws EmpruntExceptions;
 
     Emprunt cloturerEmprunt(Long idEmprunt);
 
