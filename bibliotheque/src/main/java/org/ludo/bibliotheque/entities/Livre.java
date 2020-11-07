@@ -1,6 +1,7 @@
 package org.ludo.bibliotheque.entities;
 
 import com.fasterxml.jackson.annotation.*;
+import org.hibernate.validator.constraints.Range;
 import org.springframework.lang.NonNull;
 
 import javax.persistence.*;
@@ -44,17 +45,20 @@ public class Livre implements Serializable {
     /**
      * Nombre de pages du livre
      */
+    @Range(min = 1, message = "Le nombre de pages ne peut être inférieur à 1")
     private int nombrePages ;
 
     /**
      * Quantité disponible du livre pour emprunt
      */
+    @Range(min = 0, message = "La quantité disponible ne peut être inférieur à zéro")
     private int quantiteDispo ;
 
 
     /**
      * Quantité d'exemplaire possédé par la bibliothèque
      */
+    @Range(min = 0, message = "Le nombre d'exemplaire possédés ne peut être inférieur à zéro")
     private int nombreExemplaires ;
 
     /**
