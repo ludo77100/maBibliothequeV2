@@ -6,6 +6,7 @@ import org.apache.logging.log4j.Logger;
 import org.ludo.bibliotheque.BibliothequeApplication;
 
 import org.ludo.bibliotheque.entities.Emprunt;
+import org.ludo.bibliotheque.exceptions.EmpruntExceptions;
 import org.ludo.bibliotheque.service.EmpruntService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -90,7 +91,7 @@ public class EmpruntController {
      */
     @ApiOperation(value = "Pour ouvrir un emprunt")
     @PostMapping(value = "/emprunt/{idLivre}")
-    public Emprunt ouvrirEmprunt(@PathVariable Long idLivre, @RequestParam String pseudoEmprunteur){
+    public Emprunt ouvrirEmprunt(@PathVariable Long idLivre, @RequestParam String pseudoEmprunteur) throws EmpruntExceptions {
 
         logger.debug("Appel controlleur ouvrirEmprunt");
 
