@@ -346,3 +346,51 @@
 [DEBUG] 2020-05-19 14:46:40.035 [http-nio-8080-exec-8] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
 [DEBUG] 2020-05-19 14:46:40.986 [http-nio-8080-exec-9] BibliothequeApplication - Appel controlleur listeLivre
 [DEBUG] 2020-05-19 14:46:40.986 [http-nio-8080-exec-9] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2020-11-07 10:15:51.207 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2020-11-07 10:17:13.843 [http-nio-8080-exec-1] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2020-11-07 10:17:13.844 [http-nio-8080-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2020-11-07 10:17:13.911 [http-nio-8080-exec-2] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2020-11-07 10:17:13.911 [http-nio-8080-exec-2] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2020-11-07 10:19:42.114 [http-nio-8080-exec-3] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2020-11-07 10:19:42.115 [http-nio-8080-exec-3] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2020-11-07 10:23:22.826 [http-nio-8080-exec-4] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2020-11-07 10:23:22.826 [http-nio-8080-exec-4] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2020-11-07 10:23:23.831 [http-nio-8080-exec-5] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2020-11-07 10:23:23.831 [http-nio-8080-exec-5] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2020-11-07 10:24:03.921 [http-nio-8080-exec-6] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2020-11-07 10:24:03.922 [http-nio-8080-exec-6] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2020-11-07 10:24:27.445 [http-nio-8080-exec-7] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2020-11-07 10:24:27.445 [http-nio-8080-exec-7] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2020-11-07 10:27:35.650 [http-nio-8080-exec-8] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2020-11-07 10:27:35.650 [http-nio-8080-exec-8] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2020-11-07 12:29:18.063 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2020-11-07 12:29:54.654 [http-nio-8080-exec-1] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2020-11-07 12:29:54.654 [http-nio-8080-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2020-11-07 13:09:07.612 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2020-11-07 13:13:54.718 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2020-11-07 13:14:11.675 [http-nio-8082-exec-8] BibliothequeApplication - Appel controlleur listeLivreNonRendueApresDateFin
+[DEBUG] 2020-11-07 13:14:11.681 [http-nio-8082-exec-8] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2020-11-07 13:20:16.249 [http-nio-8082-exec-5] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2020-11-07 13:20:16.251 [http-nio-8082-exec-5] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2020-11-07 13:20:23.171 [http-nio-8082-exec-6] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2020-11-07 13:20:23.171 [http-nio-8082-exec-6] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2020-11-07 13:20:34.824 [http-nio-8082-exec-3] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2020-11-07 13:20:34.824 [http-nio-8082-exec-3] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2020-11-07 13:20:36.177 [http-nio-8082-exec-7] BibliothequeApplication - Appel controlleur listeEmpruntUtilisateur
+[DEBUG] 2020-11-07 13:20:36.177 [http-nio-8082-exec-7] BibliothequeApplication - Appel empruntService méthode findAllByPseudoEmprunteur avec paramètre pseudoEmprunteur : admin
+[DEBUG] 2020-11-07 13:20:38.107 [http-nio-8082-exec-8] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2020-11-07 13:20:38.108 [http-nio-8082-exec-8] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2020-11-07 13:20:40.415 [http-nio-8082-exec-10] BibliothequeApplication - Appel controlleur findById livre
+[DEBUG] 2020-11-07 13:20:40.416 [http-nio-8082-exec-10] BibliothequeApplication - Appel LivreServiceImpl méthode findLivreById avec paramètre idLidvre : 4
+[DEBUG] 2020-11-07 13:20:42.865 [http-nio-8082-exec-9] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2020-11-07 13:20:42.865 [http-nio-8082-exec-9] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2020-11-07 13:21:18.280 [http-nio-8082-exec-4] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2020-11-07 13:21:18.280 [http-nio-8082-exec-4] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2020-11-07 13:22:15.421 [http-nio-8082-exec-2] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2020-11-07 13:22:15.421 [http-nio-8082-exec-2] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2020-11-07 13:22:16.675 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2020-11-07 13:22:16.675 [http-nio-8082-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2020-11-07 13:22:20.316 [http-nio-8082-exec-5] BibliothequeApplication - appel controlleur listeLivreRecherche
+[DEBUG] 2020-11-07 13:22:20.316 [http-nio-8082-exec-5] BibliothequeApplication - Appel LivreServiceImpl méthode findByTitreContainingIgnoreCase avec paramètre mc : bla
+[DEBUG] 2020-11-07 13:22:21.527 [http-nio-8082-exec-6] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2020-11-07 13:22:21.527 [http-nio-8082-exec-6] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
