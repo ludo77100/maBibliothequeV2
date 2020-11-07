@@ -394,3 +394,9 @@
 [DEBUG] 2020-11-07 13:22:20.316 [http-nio-8082-exec-5] BibliothequeApplication - Appel LivreServiceImpl méthode findByTitreContainingIgnoreCase avec paramètre mc : bla
 [DEBUG] 2020-11-07 13:22:21.527 [http-nio-8082-exec-6] BibliothequeApplication - Appel controlleur listeLivre
 [DEBUG] 2020-11-07 13:22:21.527 [http-nio-8082-exec-6] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2020-11-07 13:27:08.820 [http-nio-8082-exec-7] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2020-11-07 13:27:08.820 [http-nio-8082-exec-7] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2020-11-07 14:39:32.422 [scheduling-1] BibliothequeApplication - Execution du batch
+[DEBUG] 2020-11-07 14:39:32.461 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2020-11-07 14:39:32.490 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Black out pour l'emprunt id : 1
+[DEBUG] 2020-11-07 14:39:32.490 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
