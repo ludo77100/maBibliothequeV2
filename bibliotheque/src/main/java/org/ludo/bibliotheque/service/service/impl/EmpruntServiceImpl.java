@@ -129,6 +129,7 @@ public class EmpruntServiceImpl implements EmpruntService {
         Livre livre = livreRepository.findById(idLivre).get();
         Date date = new Date();
 
+        //TODO ajout d'une vérification si un livre est disponible >> FAIT
         if (livre.getQuantiteDispo() < 1 ) {
             throw new EmpruntExceptions("Il n'y a aucun livre disponible pour ouvrir un nouvel emprunt");
         } else {

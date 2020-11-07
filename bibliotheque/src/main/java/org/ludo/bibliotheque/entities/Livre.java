@@ -51,6 +51,12 @@ public class Livre implements Serializable {
      */
     private int quantiteDispo ;
 
+
+    /**
+     * Quantité d'exemplaire possédé par la bibliothèque
+     */
+    private int nombreExemplaires ;
+
     /**
      * Url de l'image du livre
      */
@@ -82,7 +88,7 @@ public class Livre implements Serializable {
      * @param emprunt Relation avec la table emprunt
      * @param urlImage Url de l'image du livre
      */
-    public Livre(Long idLivre, String titre, String auteur, String editeur, String decription, int nombrePages, int quantiteDispo, Set<Emprunt> emprunt, String urlImage) {
+    public Livre(Long idLivre, String titre, String auteur, String editeur, String decription, int nombrePages, int quantiteDispo, int nombreExemplaires, Set<Emprunt> emprunt, String urlImage) {
         this.idLivre = idLivre;
         this.titre = titre;
         this.auteur = auteur;
@@ -92,6 +98,7 @@ public class Livre implements Serializable {
         this.quantiteDispo = quantiteDispo;
         this.emprunt = emprunt;
         this.urlImage = urlImage;
+        this.nombreExemplaires = nombreExemplaires;
     }
 
     public Long getIdLivre() {
@@ -134,7 +141,6 @@ public class Livre implements Serializable {
         this.decription = decription;
     }
 
-
     public int getNombrePages() {
         return nombrePages;
     }
@@ -149,6 +155,14 @@ public class Livre implements Serializable {
 
     public void setQuantiteDispo(int quantiteDispo) {
         this.quantiteDispo = quantiteDispo;
+    }
+
+    public int getNombreExemplaires() {
+        return nombreExemplaires;
+    }
+
+    public void setNombreExemplaires(int nombreExemplaires) {
+        this.nombreExemplaires = nombreExemplaires;
     }
 
     public Set<Emprunt> getEmprunt() {
@@ -177,6 +191,7 @@ public class Livre implements Serializable {
                 ", decription='" + decription + '\'' +
                 ", nombrePages=" + nombrePages +
                 ", quantiteDispo=" + quantiteDispo +
+                ", nombreExemplaires=" + nombreExemplaires +
                 ", urlImage='" + urlImage + '\'' +
                 ", emprunt=" + emprunt +
                 '}';
