@@ -1,0 +1,26 @@
+@charset "UTF-8";
+.red{
+	color: red;
+}
+
+.spacer{
+	margin-top: 20px;
+}
+
+.spacer-line{
+	margin-left: 20px ;
+	margin-right: 20px;
+}
+
+.nopadding{
+	margin: 0 ;
+}
+
+.bord{
+	border: 1px solid black ;
+}
+
+.banner-height{
+	height: 250px;
+}
+

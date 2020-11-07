@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css"
+          href="../static/css/bootstrap.min.css"
+          th:href="@{/css/bootstrap.min.css}">
+
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css"
+          th:href="@{/css/style.css}">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+
+    <title>Les amis de l'escalade</title>
+</head>
+<body>
+<div class="container-fluid">
+    <header class="row">
+        <div class="col-lg-12 spacer">
+            <a th:href=@{/}><img class="rounded mx-auto d-block"
+                                 src="../img/banniere.jpg" alt="banniere"></a>
+        </div>
+    </header>
+</div>
+
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" th:href="@{/}">Accueil</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" th:href=@{/}>Catalogue</a></li>
+            </ul>
+
+            <ul class="navbar-nav navbar-expand-lg ml-auto">
+                <li sec:authorize="isAuthenticated()" class="nav-item"><a class="nav-link" th:href="@{/infosPerso}">Mes infos personnelles</a></li>
+                <li sec:authorize="isAuthenticated()" class="nav-item"><a class="nav-link" th:href="@{/emprunt/utilisateur}">Mes emprûnts</a></li>
+                <li sec:authorize="!isAuthenticated()" class="nav-item"><a class="btn btn-info" th:href="@{/connexion}">Inscription/Connexion</a></li>
+                <li sec:authorize="isAuthenticated()" class="nav-item"><form th:action="@{/logout}" method="post"><input type="submit" class="btn btn-info" value="Se déconnecter" /></form></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<section class="spacer" layout:fragment="content"></section>
+
+
+<footer class="navbar-fixed-bottom">
+    <hr />
+    <div class="container-fluid">
+        <small>Copyright @2019</small>
+        <small>- Contact</small>
+    </div>
+</footer>
+
+</body>
+</html>

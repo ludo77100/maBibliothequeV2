@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Détails livre</title>
+
+    <link rel="stylesheet" type="text/css"
+          href="../static/css/bootstrap.min.css"
+          th:href="@{/css/bootstrap.min.css}">
+</head>
+<body>
+<div layout:fragment="content">
+   <div class="container">
+       <div class="row">
+       <div class="col-lg-4">
+            <img th:src="${livreDetails.getUrlImage()}" />
+       </div>
+       <div class="col-lg-8">
+           <div class="card-header"><h2 th:text="${livreDetails.titre}"></h2><p>de <span class="text-left" th:text="${livreDetails.auteur}"></span></p></div>
+           <div class="card-body">
+               <ul class="list-group">
+                   <li class="list-group-item border-0" th:text="${livreDetails.decription}"></li>
+               </ul>
+                       <ul class="list-group list-group-horizontal">
+                           <li class="list-group-item border-0 text-right">Editeur : <strong><span class="" th:text="${livreDetails.editeur}"></span></strong></li>
+                           <li class="list-group-item border-0 text-right">Nombre de pages : <strong><span th:text="${livreDetails.nombrePages}"></span></strong></li>
+                           <li class="list-group-item border-0 text-right">Quantité en stock : <strong><span th:text="${livreDetails.quantiteDispo}"></span></strong></li>
+                       </ul>
+               <a class="btn btn-primary text-center spacer" th:href="@{/}">Retour au catalogue</a>
+           </div>
+       </div>
+       </div>
+   </div>
+</div>
+</body>
+</html>
