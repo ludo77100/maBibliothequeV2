@@ -85,17 +85,17 @@ public class EmpruntController {
 
     /**
      * Permet l'ouverture d'un nouvel emprunt pour un livre
-     * @param idLivre id du livre pour l'emprunt
+     * @param identifiantExemplaire id de l'exemplaire emprunté
      * @param pseudoEmprunteur pseudo de l'emprunteur
      * @return un nouvel emprunt
      */
     @ApiOperation(value = "Pour ouvrir un emprunt")
     @PostMapping(value = "/emprunt/{idLivre}")
-    public Emprunt ouvrirEmprunt(@PathVariable Long idLivre, @RequestParam String pseudoEmprunteur) throws EmpruntExceptions {
+    public Emprunt ouvrirEmprunt(@PathVariable String identifiantExemplaire, @RequestParam String pseudoEmprunteur) throws EmpruntExceptions {
 
         logger.debug("Appel controlleur ouvrirEmprunt");
 
-        return empruntService.ouvrirEmprunt(idLivre, pseudoEmprunteur);
+        return empruntService.ouvrirEmprunt(identifiantExemplaire, pseudoEmprunteur);
     }
 
     /**

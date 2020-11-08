@@ -18,8 +18,6 @@ import java.util.Date;
 @NoArgsConstructor
 public class Emprunt implements Serializable {
 
-    //todo ajouter lombok
-
     /**
      * id de emprunt
      */
