@@ -4,8 +4,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.ludo.bibliotheque.BibliothequeApplication;
 import org.ludo.bibliotheque.dao.EmpruntRepository;
+import org.ludo.bibliotheque.dao.ExemplaireRepository;
 import org.ludo.bibliotheque.dao.LivreRepository;
 import org.ludo.bibliotheque.entities.Emprunt;
+import org.ludo.bibliotheque.entities.Exemplaire;
 import org.ludo.bibliotheque.entities.Livre;
 import org.ludo.bibliotheque.exceptions.EmpruntExceptions;
 import org.ludo.bibliotheque.service.EmpruntService;
@@ -28,6 +30,9 @@ public class EmpruntServiceImpl implements EmpruntService {
 
     @Autowired
     LivreRepository livreRepository ;
+
+    @Autowired
+    ExemplaireRepository exemplaireRepository ;
 
     /**
      * Trouve tous les emprunts
@@ -122,12 +127,12 @@ public class EmpruntServiceImpl implements EmpruntService {
      */
     @Transactional
     @Override
-    public Emprunt ouvrirEmprunt(Long idLivre, String pseudoEmprunteur) throws EmpruntExceptions {
+    public Emprunt ouvrirEmprunt(String identifiantExemplaire, String pseudoEmprunteur) throws EmpruntExceptions {
 
         logger.debug("Appel empruntService méthode ouvrirEmprunt");
 
         Emprunt nouvelEmprunt = new Emprunt();
-        Livre livre = livreRepository.findById(idLivre).get();
+        Exemplaire exemplaire = exemplaireRepository.findByidentifiant(identifiantExemplaire);
         Date date = new Date();
 
         //TODO ajout d'une vérification si un livre est disponible >> FAIT
@@ -138,7 +143,7 @@ public class EmpruntServiceImpl implements EmpruntService {
             nouvelEmprunt.setDateDebut(date);
             nouvelEmprunt.setDateFin(ajouter4Semaines(date));
             nouvelEmprunt.setPseudoEmprunteur(pseudoEmprunteur);
-            nouvelEmprunt.setLivre(livre);
+            nouvelEmprunt.setExemplaire(exemplaire);
             nouvelEmprunt.setEnCours(true);
             nouvelEmprunt.setProlongeable(true);
             livre.setQuantiteDispo(livre.getQuantiteDispo() - 1);

@@ -17,7 +17,7 @@ public interface EmpruntService {
 
     List<Emprunt> findAllByPseudoEmprunteur(String pseudoEmprunteur);
 
-    Emprunt ouvrirEmprunt(Long idLivre, String pseudoEmprunteur) throws EmpruntExceptions;
+    Emprunt ouvrirEmprunt(String identifiantExemplaire, String pseudoEmprunteur) throws EmpruntExceptions;
 
     Emprunt cloturerEmprunt(Long idEmprunt);
 
