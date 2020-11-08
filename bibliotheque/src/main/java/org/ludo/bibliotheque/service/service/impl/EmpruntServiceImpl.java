@@ -25,6 +25,7 @@ public class EmpruntServiceImpl implements EmpruntService {
 
     @Autowired
     EmpruntRepository empruntRepository ;
+
     @Autowired
     LivreRepository livreRepository ;
 
