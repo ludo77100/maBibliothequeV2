@@ -71,7 +71,7 @@ public class Livre implements Serializable {
      */
     @JsonIgnore
     @OneToMany(mappedBy = "livre", fetch = FetchType.LAZY)
-    private Set<Emprunt> emprunt;
+    private Set<Exemplaire> exemplaires;
 
     /**
      * Instanciation de livre
@@ -89,10 +89,10 @@ public class Livre implements Serializable {
      * @param decription description du livre
      * @param nombrePages nombre de pages du livre
      * @param quantiteDispo Quantité disponible du livre pour emprunt
-     * @param emprunt Relation avec la table emprunt
+     * @param exemplaires avec la table emprunt
      * @param urlImage Url de l'image du livre
      */
-    public Livre(Long idLivre, String titre, String auteur, String editeur, String decription, int nombrePages, int quantiteDispo, int nombreExemplaires, Set<Emprunt> emprunt, String urlImage) {
+    public Livre(Long idLivre, String titre, String auteur, String editeur, String decription, int nombrePages, int quantiteDispo, int nombreExemplaires, Set<Exemplaire> exemplaires, String urlImage) {
         this.idLivre = idLivre;
         this.titre = titre;
         this.auteur = auteur;
@@ -100,7 +100,7 @@ public class Livre implements Serializable {
         this.decription = decription;
         this.nombrePages = nombrePages;
         this.quantiteDispo = quantiteDispo;
-        this.emprunt = emprunt;
+        this.exemplaires = exemplaires;
         this.urlImage = urlImage;
         this.nombreExemplaires = nombreExemplaires;
     }
@@ -169,12 +169,12 @@ public class Livre implements Serializable {
         this.nombreExemplaires = nombreExemplaires;
     }
 
-    public Set<Emprunt> getEmprunt() {
-        return emprunt;
+    public Set<Exemplaire> getExemplaires() {
+        return exemplaires;
     }
 
-    public void setEmprunt(Set<Emprunt> emprunt) {
-        this.emprunt = emprunt;
+    public void setExemplaires(Set<Exemplaire> exemplaires) {
+        this.exemplaires = exemplaires;
     }
 
     public String getUrlImage() {
@@ -197,7 +197,7 @@ public class Livre implements Serializable {
                 ", quantiteDispo=" + quantiteDispo +
                 ", nombreExemplaires=" + nombreExemplaires +
                 ", urlImage='" + urlImage + '\'' +
-                ", emprunt=" + emprunt +
+                ", emprunt=" + exemplaires +
                 '}';
     }
 }

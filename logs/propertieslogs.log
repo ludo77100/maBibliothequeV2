@@ -400,3 +400,4 @@
 [DEBUG] 2020-11-07 14:39:32.461 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
 [DEBUG] 2020-11-07 14:39:32.490 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Black out pour l'emprunt id : 1
 [DEBUG] 2020-11-07 14:39:32.490 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2020-11-07 18:01:45.394 [main] BibliothequeApplication - Microservice Bibliothèque démarré

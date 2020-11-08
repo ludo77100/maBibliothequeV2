@@ -2,10 +2,7 @@ package org.ludo.bibliotheque.entities;
 
 import org.ludo.bibliotheque.Enums.EtatEnums;
 
-import javax.persistence.ElementCollection;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.FetchType;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
@@ -18,6 +15,18 @@ public class Exemplaire implements Serializable {
     private String etat ;
 
     private String identifiant ;
+
+    /**
+     * Relation avec la table Livre
+     */
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "id_livre")
+    private Livre livre ;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_emprunt")
+    private Emprunt emprunt;
+
 
     /**
      * Enumération pour les rôles/privilèges
