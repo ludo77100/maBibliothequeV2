@@ -14,6 +14,8 @@ import java.util.Date;
 @Entity
 public class Emprunt implements Serializable {
 
+    //todo ajouter lombok
+
     /**
      * id de emprunt
      */
@@ -46,12 +48,8 @@ public class Emprunt implements Serializable {
      */
     private boolean enCours ;
 
-    /**
-     * Relation avec la table Livre
-     */
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "id_livre")
-    private Livre livre ;
+    @OneToOne(mappedBy = "emprunt")
+    private Exemplaire exemplaire ;
 
     /**
      * Instanciation de emprunt
@@ -60,24 +58,14 @@ public class Emprunt implements Serializable {
         super();
     }
 
-    /**
-     * instanciation de emprunt
-     * @param idEmprunt id emprunt
-     * @param pseudoEmprunteur pseudo de l'emprunteur
-     * @param dateDebut date de début de l'emprunt
-     * @param dateFin date de fin de l'emprunt
-     * @param prolongeable prolongeable ou non
-     * @param enCours en cours ou non
-     * @param livre relation avec la table livre
-     */
-    public Emprunt(Long idEmprunt, String pseudoEmprunteur, Date dateDebut, Date dateFin, boolean prolongeable, boolean enCours, Livre livre) {
+    public Emprunt(Long idEmprunt, String pseudoEmprunteur, Date dateDebut, Date dateFin, boolean prolongeable, boolean enCours, Exemplaire exemplaire) {
         this.idEmprunt = idEmprunt;
         this.pseudoEmprunteur = pseudoEmprunteur;
         this.dateDebut = dateDebut;
         this.dateFin = dateFin;
         this.prolongeable = prolongeable;
         this.enCours = enCours;
-        this.livre = livre;
+        this.exemplaire = exemplaire;
     }
 
     public Long getIdEmprunt() {
@@ -128,12 +116,12 @@ public class Emprunt implements Serializable {
         this.enCours = enCours;
     }
 
-    public Livre getLivre() {
-        return livre;
+    public Exemplaire getExemplaire() {
+        return exemplaire;
     }
 
-    public void setLivre(Livre livre) {
-        this.livre = livre;
+    public void setExemplaire(Exemplaire exemplaire) {
+        this.exemplaire = exemplaire;
     }
 
     @Override
@@ -145,7 +133,7 @@ public class Emprunt implements Serializable {
                 ", dateFin=" + dateFin +
                 ", prolongeable=" + prolongeable +
                 ", enCours=" + enCours +
-                ", livre=" + livre +
+                ", exemplaire=" + exemplaire +
                 '}';
     }
 }
