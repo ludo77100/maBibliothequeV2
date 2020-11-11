@@ -35,7 +35,6 @@ public class ExemplaireServiceTestUnit {
         livre.setAuteur("Abc");
         livre.setDecription("Bcd");
         livre.setEditeur("Cde");
-        livre.setNombreExemplaires(5);
         livre.setNombrePages(200);
         livre.setTitre("Def");
         livre.setQuantiteDispo(5);

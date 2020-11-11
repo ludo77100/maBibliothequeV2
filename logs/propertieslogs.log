@@ -407,3 +407,12 @@
 [DEBUG] 2020-11-11 12:37:08.012 [http-nio-8082-exec-8] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
 [DEBUG] 2020-11-11 12:38:40.457 [http-nio-8082-exec-1] BibliothequeApplication - appel controlleur listeLivreRecherche
 [DEBUG] 2020-11-11 12:38:40.458 [http-nio-8082-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode findByTitreContainingIgnoreCase avec paramètre mc : a
+[DEBUG] 2020-11-11 12:40:53.126 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2020-11-11 12:41:05.476 [http-nio-8082-exec-10] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2020-11-11 12:41:05.476 [http-nio-8082-exec-10] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2020-11-11 12:43:42.879 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2020-11-11 12:44:20.423 [http-nio-8082-exec-10] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2020-11-11 12:44:20.423 [http-nio-8082-exec-10] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2020-11-11 12:45:53.536 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2020-11-11 13:39:56.035 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2020-11-11 13:48:14.961 [main] BibliothequeApplication - Microservice Bibliothèque démarré
