@@ -43,16 +43,11 @@ public class ExemplaireServiceImpl implements ExemplaireService {
     public String compositionIdentifiant(Livre livre){
 
         String newRef ;
-        Exemplaire exemplaire = new Exemplaire();
         Set<Exemplaire> exemplaires = livre.getExemplaires();
+        int sizeSet = exemplaires.size() + 1 ;
 
-        if (exemplaires == null){
-            newRef = livre.getTitre().substring(0,1) + livre.getAuteur().substring(0,1) + livre.getEditeur().substring(0,1) + "/1";
-        } else {
-            int newEndRef = exemplaires.size() + 1 ;
-            String str = exemplaire.getIdentifiant().split("/")[0];
-            newRef = str + newEndRef ;
-        }
+        newRef = livre.getTitre().substring(0,1) + livre.getAuteur().substring(0,1) + livre.getEditeur().substring(0,1) + "/" + sizeSet;
+
 
         return newRef ;
     }
