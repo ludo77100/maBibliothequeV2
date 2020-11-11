@@ -15,9 +15,11 @@ public class Exemplaire implements Serializable {
 
     //TODO création de l'entité Exemplaire >> FAIT
 
-    private long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long idExemplaire;
 
-    private String etat;
+    private EtatEnums etat; //TODO voir enums avec deyine
 
     private String identifiant;
 

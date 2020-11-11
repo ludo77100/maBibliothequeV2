@@ -1,5 +1,7 @@
 package org.ludo.bibliotheque.controller;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.ludo.bibliotheque.entities.Exemplaire;
 import org.ludo.bibliotheque.service.ExemplaireService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,9 +19,10 @@ public class ExemplaireController {
 
     //TODO controlleur pour compter le nombre d'exemplaire
 
-    @GetMapping(value = "/exemplaire/{idLivre}")
-    public Exemplaire ajouterExemplaire(@PathVariable Long idLivre){
-        return exemplaireService.ajouterExemplaire(idLivre) ;
+    @ApiOperation(value = "Cette API permet l'ajout d'un exemplaire avec le titre d'un livre")
+    @GetMapping(value = "/exemplaire/{titreLivre}")
+    public Exemplaire ajouterExemplaire(@PathVariable String titreLivre){
+        return exemplaireService.ajouterExemplaire(titreLivre) ;
     }
 
 }

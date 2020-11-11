@@ -135,21 +135,15 @@ public class EmpruntServiceImpl implements EmpruntService {
         Exemplaire exemplaire = exemplaireRepository.findByidentifiant(identifiantExemplaire);
         Date date = new Date();
 
-        //TODO ajout d'une vérification si un livre est disponible >> FAIT
-        if (livre.getQuantiteDispo() < 1 ) {
-            throw new EmpruntExceptions("Il n'y a aucun livre disponible pour ouvrir un nouvel emprunt");
-        } else {
-
             nouvelEmprunt.setDateDebut(date);
             nouvelEmprunt.setDateFin(ajouter4Semaines(date));
             nouvelEmprunt.setPseudoEmprunteur(pseudoEmprunteur);
             nouvelEmprunt.setExemplaire(exemplaire);
             nouvelEmprunt.setEnCours(true);
             nouvelEmprunt.setProlongeable(true);
-            livre.setQuantiteDispo(livre.getQuantiteDispo() - 1);
 
             return empruntRepository.save(nouvelEmprunt);
-        }
+
     }
 
     /**
@@ -164,7 +158,7 @@ public class EmpruntServiceImpl implements EmpruntService {
         logger.debug("Appel empruntService méthode cloturerEmprunt");
 
         Emprunt emprunt = empruntRepository.findById(idEmprunt).get();
-        Livre livre = emprunt.getLivre();
+        Livre livre = emprunt.getExemplaire().getLivre();
         Date date = new Date();
 
         emprunt.setEnCours(false);

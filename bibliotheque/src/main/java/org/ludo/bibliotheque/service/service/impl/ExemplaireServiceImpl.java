@@ -1,5 +1,6 @@
 package org.ludo.bibliotheque.service.service.impl;
 
+import org.ludo.bibliotheque.Enums.EtatEnums;
 import org.ludo.bibliotheque.dao.ExemplaireRepository;
 import org.ludo.bibliotheque.dao.LivreRepository;
 import org.ludo.bibliotheque.entities.Exemplaire;
@@ -9,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
-import java.util.SortedSet;
 
 @Service
 public class ExemplaireServiceImpl implements ExemplaireService {
@@ -21,33 +21,39 @@ public class ExemplaireServiceImpl implements ExemplaireService {
     LivreRepository livreRepository ;
 
     @Override
-    public Exemplaire ajouterExemplaire(Long idLivre) {
+    public Exemplaire ajouterExemplaire(String titreLivre) {
 
+        Livre livreEnCours = livreRepository.findByTitre(titreLivre);
+        Exemplaire enregistrementExemplaire = new Exemplaire();
+
+        enregistrementExemplaire.setEtat(EtatEnums.DISPONIBLE);
+        enregistrementExemplaire.setIdentifiant(this.compositionIdentifiant(livreEnCours));
+        enregistrementExemplaire.setLivre(livreEnCours);
+
+        return exemplaireRepository.save(enregistrementExemplaire);
+    }
+
+    //TODO gerer le cas ou un identifiat existe deja
+    /**
+     * Méthode pour composer un identifiant pour un exemplaire
+     * Un identifiant se compose de la première lettre du titre, puis auteur, puis editeur, puis un slash et pour finir un nombre qui est le nombre d'element dans le set pour le livre
+     * @param livre le livre pour lequel il faut composer la référence
+     * @return l'identifiant en String
+     */
+    public String compositionIdentifiant(Livre livre){
+
+        String newRef ;
         Exemplaire exemplaire = new Exemplaire();
-        Livre livre = livreRepository.findById(idLivre).get();
+        Set<Exemplaire> exemplaires = livre.getExemplaires();
 
-        /*
-        Remonte la dérnière référence pour ce livre,
-        si null commence à 1
-        sinon on prend la dernière ref et on fait + 1
-         */
-
-        SortedSet<Exemplaire> setExemplaires = (SortedSet<Exemplaire>) livre.getExemplaires();
-        String identifiant = setExemplaires.last().getIdentifiant();
-
-        if (identifiant == null){
-            exemplaire.setIdentifiant(livre.getTitre().substring(0,1) + "1");
+        if (exemplaires == null){
+            newRef = livre.getTitre().substring(0,1) + livre.getAuteur().substring(0,1) + livre.getEditeur().substring(0,1) + "/1";
         } else {
-            exe
+            int newEndRef = exemplaires.size() + 1 ;
+            String str = exemplaire.getIdentifiant().split("/")[0];
+            newRef = str + newEndRef ;
         }
 
-    /*
-    Règle de gestion pour la création de l'identifiant d'un livre
-    - Commence par la première lettre du titre
-    -
-    - Suivi d'un numéro qui s'incrémente en fonction du numéro de la dernière référence
-     */
-
-        return null;
+        return newRef ;
     }
 }
