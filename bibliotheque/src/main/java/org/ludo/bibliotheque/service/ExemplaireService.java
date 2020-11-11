@@ -4,6 +4,6 @@ import org.ludo.bibliotheque.entities.Exemplaire;
 
 public interface ExemplaireService {
 
-    Exemplaire ajouterExemplaire(Long idLivre);
+    Exemplaire ajouterExemplaire(String titreLivre);
 
 }

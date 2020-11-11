@@ -78,11 +78,11 @@ public class EmailServiceImpl implements EmailService {
 
             UtilisateurBean utilisateur = microserviceUtilisateurProxy.login(e.getPseudoEmprunteur());
 
-            logger.debug("Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : " + utilisateur.getEmail() + " pour le livre : " +e.getLivre().getTitre() + " pour l'emprunt id : " + e.getIdEmprunt());
+            logger.debug("Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : " + utilisateur.getEmail() + " pour le livre : " +e.getExemplaire().getLivre().getTitre() + " pour l'emprunt id : " + e.getIdEmprunt());
 
             String text = email.getContenu()
                     .replace("[NOMUTILISATEUR]", e.getPseudoEmprunteur())
-                    .replace("[TITRELIVRE]", e.getLivre().getTitre())
+                    .replace("[TITRELIVRE]", e.getExemplaire().getLivre().getTitre())
                     .replace("[DATEFIN]", strDate);
 
             sendSimpleMessage(utilisateur.getEmail(), email.getObjet(), text);
