@@ -121,7 +121,7 @@ public class EmpruntServiceImpl implements EmpruntService {
 
     /**
      * Enregistre un nouvel emprunt
-     * @param idLivre id du livre emprunté
+     * @param identifiantExemplaire identifiant de l'exemplaire emprunté
      * @param pseudoEmprunteur pseudo de l'emprunteur
      * @return le nouvel emprunt
      */
@@ -132,7 +132,7 @@ public class EmpruntServiceImpl implements EmpruntService {
         logger.debug("Appel empruntService méthode ouvrirEmprunt");
 
         Emprunt nouvelEmprunt = new Emprunt();
-        Exemplaire exemplaire = exemplaireRepository.findByidentifiant(identifiantExemplaire);
+        Exemplaire exemplaire = exemplaireRepository.findByIdentifiant(identifiantExemplaire);
         Date date = new Date();
 
             nouvelEmprunt.setDateDebut(date);
@@ -141,6 +141,7 @@ public class EmpruntServiceImpl implements EmpruntService {
             nouvelEmprunt.setExemplaire(exemplaire);
             nouvelEmprunt.setEnCours(true);
             nouvelEmprunt.setProlongeable(true);
+            nouvelEmprunt.setExemplaire(exemplaire);
 
             return empruntRepository.save(nouvelEmprunt);
 

@@ -11,13 +11,11 @@ import java.util.List;
 @Entity
 public class Exemplaire implements Serializable {
 
-    //TODO création de l'entité Exemplaire >> FAIT
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long idExemplaire;
 
-    private EtatEnums etat; //TODO voir enums avec deyine
+    private EtatEnums etat;
 
     private String identifiant;
 
@@ -28,29 +26,20 @@ public class Exemplaire implements Serializable {
     @JoinColumn(name = "id_livre")
     private Livre livre;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_emprunt")
+    @OneToOne(mappedBy = "exemplaire", fetch = FetchType.LAZY)
     private Emprunt emprunt;
 
-
-    /**
-     * Enumération pour les rôles/privilèges
-     */
-    @Enumerated(EnumType.STRING)
-    @ElementCollection(fetch = FetchType.EAGER)
-    private List<EtatEnums> etatEnumsList;
 
     public Exemplaire(){
         super();
     }
 
-    public Exemplaire(long idExemplaire, EtatEnums etat, String identifiant, Livre livre, Emprunt emprunt, List<EtatEnums> etatEnumsList) {
+    public Exemplaire(long idExemplaire, EtatEnums etat, String identifiant, Livre livre, Emprunt emprunt) {
         this.idExemplaire = idExemplaire;
         this.etat = etat;
         this.identifiant = identifiant;
         this.livre = livre;
         this.emprunt = emprunt;
-        this.etatEnumsList = etatEnumsList;
     }
 
     public long getIdExemplaire() {
@@ -93,14 +82,6 @@ public class Exemplaire implements Serializable {
         this.emprunt = emprunt;
     }
 
-    public List<EtatEnums> getEtatEnumsList() {
-        return etatEnumsList;
-    }
-
-    public void setEtatEnumsList(List<EtatEnums> etatEnumsList) {
-        this.etatEnumsList = etatEnumsList;
-    }
-
     @Override
     public String toString() {
         return "Exemplaire{" +
@@ -109,7 +90,6 @@ public class Exemplaire implements Serializable {
                 ", identifiant='" + identifiant + '\'' +
                 ", livre=" + livre +
                 ", emprunt=" + emprunt +
-                ", etatEnumsList=" + etatEnumsList +
                 '}';
     }
 }

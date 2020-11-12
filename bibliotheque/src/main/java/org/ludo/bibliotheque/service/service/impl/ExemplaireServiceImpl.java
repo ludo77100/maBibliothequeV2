@@ -33,6 +33,13 @@ public class ExemplaireServiceImpl implements ExemplaireService {
         return exemplaireRepository.save(enregistrementExemplaire);
     }
 
+    public Exemplaire changerEtatExemplaire(String nouvelEtat){
+
+
+
+        return exemplaireRepository.save();
+    }
+
     //TODO gerer le cas ou un identifiat existe deja
     /**
      * Méthode pour composer un identifiant pour un exemplaire
@@ -46,7 +53,7 @@ public class ExemplaireServiceImpl implements ExemplaireService {
         Set<Exemplaire> exemplaires = livre.getExemplaires();
         int sizeSet = exemplaires.size() + 1 ;
 
-        newRef = livre.getTitre().substring(0,1) + livre.getAuteur().substring(0,1) + livre.getEditeur().substring(0,1) + "/" + sizeSet;
+        newRef = livre.getTitre().substring(0,1) + livre.getAuteur().substring(0,1) + livre.getEditeur().substring(0,1) + sizeSet;
 
 
         return newRef ;
