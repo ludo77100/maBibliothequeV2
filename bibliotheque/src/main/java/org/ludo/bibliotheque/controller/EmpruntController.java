@@ -90,7 +90,7 @@ public class EmpruntController {
      * @return un nouvel emprunt
      */
     @ApiOperation(value = "Pour ouvrir un emprunt")
-    @PostMapping(value = "/emprunt/{idLivre}")
+    @PostMapping(value = "/emprunt/{identifiantExemplaire}")
     public Emprunt ouvrirEmprunt(@PathVariable String identifiantExemplaire, @RequestParam String pseudoEmprunteur) throws EmpruntExceptions {
 
         logger.debug("Appel controlleur ouvrirEmprunt");

@@ -39,5 +39,5 @@ public class ExemplaireServiceTestUnit {
         livre.setTitre("Def");
         livre.setQuantiteDispo(5);
         livre.setUrlImage("Efg");
-        Assert.assertEquals("DAC/1", exemplaireServiceImpl.compositionIdentifiant(livre)); }
+        Assert.assertEquals("DAC1", exemplaireServiceImpl.compositionIdentifiant(livre)); }
 }

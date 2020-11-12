@@ -5,6 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ExemplaireRepository extends JpaRepository<Exemplaire, Long> {
 
-    Exemplaire findByidentifiant(String identifiantExemplaire);
-
+    Exemplaire findByIdentifiant(String identifiantExemplaire);
 }
