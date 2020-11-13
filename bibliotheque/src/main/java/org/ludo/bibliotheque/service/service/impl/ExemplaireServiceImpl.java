@@ -33,11 +33,24 @@ public class ExemplaireServiceImpl implements ExemplaireService {
         return exemplaireRepository.save(enregistrementExemplaire);
     }
 
-    public Exemplaire changerEtatExemplaire(String nouvelEtat){
+    public Exemplaire changerEtatExemplaire(String identifiantExemplaire, String nouvelEtat){
 
+        Exemplaire exemplaire = exemplaireRepository.findByIdentifiant(identifiantExemplaire) ;
 
+        switch (nouvelEtat){
+            case "DISPONIBLE":
+                exemplaire.setEtat(EtatEnums.DISPONIBLE);
+            case "INDISPONIBLE":
+                exemplaire.setEtat(EtatEnums.INDISPONIBLE);
+            case "RESERVE":
+                exemplaire.setEtat(EtatEnums.RESERVE);
+            case "EMPRUNTE":
+                exemplaire.setEtat(EtatEnums.EMPRUNTE);
+            case "ATTENTE":
+                exemplaire.setEtat(EtatEnums.ATTENTE);
+        }
 
-        return exemplaireRepository.save();
+        return exemplaireRepository.save(exemplaire);
     }
 
     //TODO gerer le cas ou un identifiat existe deja
@@ -54,7 +67,6 @@ public class ExemplaireServiceImpl implements ExemplaireService {
         int sizeSet = exemplaires.size() + 1 ;
 
         newRef = livre.getTitre().substring(0,1) + livre.getAuteur().substring(0,1) + livre.getEditeur().substring(0,1) + sizeSet;
-
 
         return newRef ;
     }
