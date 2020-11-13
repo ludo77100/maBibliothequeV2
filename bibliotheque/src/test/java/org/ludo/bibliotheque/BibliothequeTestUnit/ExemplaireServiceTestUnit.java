@@ -5,7 +5,9 @@ import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.runner.RunWith;
+import org.ludo.bibliotheque.Enums.EtatEnums;
 import org.ludo.bibliotheque.dao.ExemplaireRepository;
+import org.ludo.bibliotheque.entities.Exemplaire;
 import org.ludo.bibliotheque.entities.Livre;
 import org.ludo.bibliotheque.service.ExemplaireService;
 import org.ludo.bibliotheque.service.service.impl.ExemplaireServiceImpl;
@@ -39,5 +41,17 @@ public class ExemplaireServiceTestUnit {
         livre.setTitre("Def");
         livre.setQuantiteDispo(5);
         livre.setUrlImage("Efg");
-        Assert.assertEquals("DAC1", exemplaireServiceImpl.compositionIdentifiant(livre)); }
+        Assert.assertEquals("DAC1", exemplaireServiceImpl.compositionIdentifiant(livre));
+    }
+
+    @Test
+    public void changerEtatExemplaireToIndisponible(){
+
+        Exemplaire exemplaire = new Exemplaire() ;
+
+        exemplaire.setEtat(EtatEnums.DISPONIBLE);
+        exemplaire.setIdentifiant("LRB1");
+
+        Assert.assertEquals(EtatEnums.INDISPONIBLE, exemplaireServiceImpl.changerEtatExemplaire("LRB1", "INDISPONIBLE"));
+    }
 }
