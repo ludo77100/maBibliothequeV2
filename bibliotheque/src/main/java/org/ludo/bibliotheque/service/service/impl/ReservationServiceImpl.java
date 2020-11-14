@@ -1,9 +1,11 @@
 package org.ludo.bibliotheque.service.service.impl;
 
+import org.ludo.bibliotheque.Enums.EtatReservationEnums;
 import org.ludo.bibliotheque.dao.EmpruntRepository;
 import org.ludo.bibliotheque.dao.LivreRepository;
 import org.ludo.bibliotheque.dao.ReservationRepository;
 import org.ludo.bibliotheque.entities.Emprunt;
+import org.ludo.bibliotheque.entities.Exemplaire;
 import org.ludo.bibliotheque.entities.Livre;
 import org.ludo.bibliotheque.entities.Reservation;
 import org.ludo.bibliotheque.exceptions.ReservationExceptions;
@@ -40,8 +42,19 @@ public class ReservationServiceImpl implements ReservationService {
         ouvrirReservation.setDateDemandeReservation(date);
         ouvrirReservation.setLivre(livreDemande);
         ouvrirReservation.setPseudoDemandeur(pseudoDemandeur);
+        ouvrirReservation.setEtatReservationEnums(EtatReservationEnums.ENCOURS);
 
         return reservationRepository.save(ouvrirReservation);
+    }
+
+    @Override
+    public Reservation mettreReservationAttente(Exemplaire exemplaire, Reservation reservation) {
+
+        reservation.setEtatReservationEnums(EtatReservationEnums.ATTENTE);
+        reservation.setExemplaire(exemplaire);
+        //TODO envoyer mail pour informer utilisateur que son livre est disponible
+
+        return reservationRepository.save(reservation);
     }
 
     //TODO à tester
