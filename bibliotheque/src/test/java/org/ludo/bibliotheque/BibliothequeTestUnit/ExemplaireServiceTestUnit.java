@@ -52,6 +52,6 @@ public class ExemplaireServiceTestUnit {
         exemplaire.setEtat(EtatEnums.DISPONIBLE);
         exemplaire.setIdentifiant("LRB1");
 
-        Assert.assertEquals(EtatEnums.INDISPONIBLE, exemplaireServiceImpl.changerEtatExemplaire("LRB1", "INDISPONIBLE"));
+        Assert.assertEquals(EtatEnums.INDISPONIBLE, exemplaireServiceImpl.changerEtatExemplaire("LRB1", "INDISPONIBLE").getEtat());
     }
 }

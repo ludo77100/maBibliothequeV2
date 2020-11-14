@@ -69,6 +69,10 @@ public class Livre implements Serializable {
     @OneToMany(mappedBy = "livre", fetch = FetchType.LAZY)
     private Set<Exemplaire> exemplaires;
 
+    @JsonBackReference
+    @OneToMany(mappedBy = "livre")
+    private Set<Reservation> reservations;
+
     public Livre() {
         super();
     }
