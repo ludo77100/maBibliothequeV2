@@ -1,6 +1,7 @@
 package org.ludo.bibliotheque.entities;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import org.ludo.bibliotheque.Enums.EtatReservationEnums;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -17,6 +18,10 @@ public class Reservation implements Serializable {
 
     private String pseudoDemandeur ;
 
+    private EtatReservationEnums etatReservationEnums ;
+
+    private Exemplaire exemplaire ;
+
     @JsonManagedReference
     @ManyToOne
     private Livre livre;
@@ -25,10 +30,12 @@ public class Reservation implements Serializable {
         super();
     }
 
-    public Reservation(long idReservation, Date dateDemandeReservation, String pseudoDemandeur, Livre livre) {
+    public Reservation(long idReservation, Date dateDemandeReservation, String pseudoDemandeur, EtatReservationEnums etatReservationEnums, Exemplaire exemplaire, Livre livre) {
         this.idReservation = idReservation;
         this.dateDemandeReservation = dateDemandeReservation;
         this.pseudoDemandeur = pseudoDemandeur;
+        this.etatReservationEnums = etatReservationEnums;
+        this.exemplaire = exemplaire;
         this.livre = livre;
     }
 
@@ -56,6 +63,22 @@ public class Reservation implements Serializable {
         this.pseudoDemandeur = pseudoDemandeur;
     }
 
+    public EtatReservationEnums getEtatReservationEnums() {
+        return etatReservationEnums;
+    }
+
+    public void setEtatReservationEnums(EtatReservationEnums etatReservationEnums) {
+        this.etatReservationEnums = etatReservationEnums;
+    }
+
+    public Exemplaire getExemplaire() {
+        return exemplaire;
+    }
+
+    public void setExemplaire(Exemplaire exemplaire) {
+        this.exemplaire = exemplaire;
+    }
+
     public Livre getLivre() {
         return livre;
     }
@@ -70,6 +93,8 @@ public class Reservation implements Serializable {
                 "idReservation=" + idReservation +
                 ", dateDemandeReservation=" + dateDemandeReservation +
                 ", pseudoDemandeur='" + pseudoDemandeur + '\'' +
+                ", etatReservationEnums=" + etatReservationEnums +
+                ", exemplaire=" + exemplaire +
                 ", livre=" + livre +
                 '}';
     }

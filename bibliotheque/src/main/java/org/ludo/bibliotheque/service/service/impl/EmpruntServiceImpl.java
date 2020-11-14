@@ -3,22 +3,24 @@ package org.ludo.bibliotheque.service.service.impl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.ludo.bibliotheque.BibliothequeApplication;
+import org.ludo.bibliotheque.Enums.EtatEnums;
+import org.ludo.bibliotheque.Enums.EtatReservationEnums;
 import org.ludo.bibliotheque.dao.EmpruntRepository;
 import org.ludo.bibliotheque.dao.ExemplaireRepository;
 import org.ludo.bibliotheque.dao.LivreRepository;
+import org.ludo.bibliotheque.dao.ReservationRepository;
 import org.ludo.bibliotheque.entities.Emprunt;
 import org.ludo.bibliotheque.entities.Exemplaire;
 import org.ludo.bibliotheque.entities.Livre;
+import org.ludo.bibliotheque.entities.Reservation;
 import org.ludo.bibliotheque.exceptions.EmpruntExceptions;
 import org.ludo.bibliotheque.service.EmpruntService;
+import org.ludo.bibliotheque.service.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 public class EmpruntServiceImpl implements EmpruntService {
@@ -33,6 +35,13 @@ public class EmpruntServiceImpl implements EmpruntService {
 
     @Autowired
     ExemplaireRepository exemplaireRepository ;
+
+    @Autowired
+    ReservationRepository reservationRepository ;
+
+    @Autowired
+    ReservationService reservationService ;
+
 
     /**
      * Trouve tous les emprunts
@@ -142,6 +151,7 @@ public class EmpruntServiceImpl implements EmpruntService {
             nouvelEmprunt.setEnCours(true);
             nouvelEmprunt.setProlongeable(true);
             nouvelEmprunt.setExemplaire(exemplaire);
+            exemplaire.setEtat(EtatEnums.EMPRUNTE);
 
             return empruntRepository.save(nouvelEmprunt);
 
@@ -154,7 +164,7 @@ public class EmpruntServiceImpl implements EmpruntService {
      */
     @Transactional
     @Override
-    public Emprunt cloturerEmprunt(Long idEmprunt) {
+    public Emprunt cloturerEmprunt(Long idEmprunt) throws EmpruntExceptions {
 
         logger.debug("Appel empruntService méthode cloturerEmprunt");
 
@@ -162,10 +172,31 @@ public class EmpruntServiceImpl implements EmpruntService {
         Livre livre = emprunt.getExemplaire().getLivre();
         Date date = new Date();
 
-        emprunt.setEnCours(false);
-        emprunt.setDateFin(date);
-        livre.setQuantiteDispo(livre.getQuantiteDispo() + 1);
+        if (!livre.getReservations().isEmpty()) {
+            Reservation reservationPlusAncienne = new Reservation();
+            Set<Reservation> reservationSet = livre.getReservations();
+            for (Reservation e : reservationSet) {
+                Date dateReservation = date;
+                if (e.getDateDemandeReservation().before(dateReservation)) {
+                    reservationPlusAncienne = e;
+                }
+            }
+            reservationPlusAncienne.setEtatReservationEnums(EtatReservationEnums.ATTENTE);
+            //TODO appel methode pour envoyer mail
+            //TODO DOIT PASSER EN ATTENTE 48h
+            reservationService.mettreReservationAttente(emprunt.getExemplaire(), reservationPlusAncienne);
+            emprunt.getExemplaire().setEtat(EtatEnums.ATTENTE);
+            emprunt.setEnCours(false);
+            emprunt.setDateFin(date);
+            return empruntRepository.save(emprunt);
 
-        return empruntRepository.save(emprunt);
+        } else {
+
+            emprunt.getExemplaire().setEtat(EtatEnums.DISPONIBLE);
+            emprunt.setEnCours(false);
+            emprunt.setDateFin(date);
+
+            return empruntRepository.save(emprunt);
+        }
     }
 }

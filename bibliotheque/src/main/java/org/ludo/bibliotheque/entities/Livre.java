@@ -77,7 +77,7 @@ public class Livre implements Serializable {
         super();
     }
 
-    public Livre(Long idLivre, String titre, String auteur, String editeur, String decription, @Range(min = 1, message = "Le nombre de pages ne peut être inférieur à 1") int nombrePages, @Range(min = 0, message = "La quantité disponible ne peut être inférieur à zéro") int quantiteDispo, String urlImage, Set<Exemplaire> exemplaires) {
+    public Livre(Long idLivre, String titre, String auteur, String editeur, String decription, @Range(min = 1, message = "Le nombre de pages ne peut être inférieur à 1") int nombrePages, @Range(min = 0, message = "La quantité disponible ne peut être inférieur à zéro") int quantiteDispo, String urlImage, Set<Exemplaire> exemplaires, Set<Reservation> reservations) {
         this.idLivre = idLivre;
         this.titre = titre;
         this.auteur = auteur;
@@ -87,6 +87,7 @@ public class Livre implements Serializable {
         this.quantiteDispo = quantiteDispo;
         this.urlImage = urlImage;
         this.exemplaires = exemplaires;
+        this.reservations = reservations;
     }
 
     public Long getIdLivre() {
@@ -161,6 +162,14 @@ public class Livre implements Serializable {
         this.exemplaires = exemplaires;
     }
 
+    public Set<Reservation> getReservations() {
+        return reservations;
+    }
+
+    public void setReservations(Set<Reservation> reservations) {
+        this.reservations = reservations;
+    }
+
     @Override
     public String toString() {
         return "Livre{" +
@@ -173,6 +182,7 @@ public class Livre implements Serializable {
                 ", quantiteDispo=" + quantiteDispo +
                 ", urlImage='" + urlImage + '\'' +
                 ", exemplaires=" + exemplaires +
+                ", reservations=" + reservations +
                 '}';
     }
 }

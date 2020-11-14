@@ -19,7 +19,7 @@ public interface EmpruntService {
 
     Emprunt ouvrirEmprunt(String identifiantExemplaire, String pseudoEmprunteur) throws EmpruntExceptions;
 
-    Emprunt cloturerEmprunt(Long idEmprunt);
+    Emprunt cloturerEmprunt(Long idEmprunt) throws EmpruntExceptions;
 
     Date ajouter4Semaines(Date date);
 
