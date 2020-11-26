@@ -1,6 +1,7 @@
 package org.ludo.bibliotheque.controller;
 
 import org.ludo.bibliotheque.entities.Reservation;
+import org.ludo.bibliotheque.exceptions.ReservationExceptions;
 import org.ludo.bibliotheque.service.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,7 +15,7 @@ public class ReservationController {
     ReservationService reservationService ;
 
     @PostMapping(value = "/reservation/ouvrir")
-    public Reservation ouvrirReservation(@RequestParam String pseudoDemandeur, @RequestParam String titreLivre){
+    public Reservation ouvrirReservation(@RequestParam String pseudoDemandeur, @RequestParam String titreLivre) throws ReservationExceptions {
         return reservationService.ouvrirReservation(pseudoDemandeur, titreLivre) ;
     }
 

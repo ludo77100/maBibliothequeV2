@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.ludo.bibliotheque.BibliothequeApplication;
 import org.ludo.bibliotheque.service.EmailService;
+import org.ludo.bibliotheque.service.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
@@ -16,11 +17,15 @@ public class BatchJob {
     @Autowired
     EmailService emailService ;
 
+    @Autowired
+    ReservationService reservationService ;
+
     @Scheduled(cron = "0 0 14 * * *")
     public void lendingRevival() throws Exception {
         logger.debug("Execution du batch");
 
         emailService.envoyerEmailRelance();
+
 
     }
 

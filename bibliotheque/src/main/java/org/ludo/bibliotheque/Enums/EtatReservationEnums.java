@@ -5,6 +5,7 @@ public enum EtatReservationEnums {
     ENCOURS,
     ATTENTE,
     CLOTURE,
+    ANNULE,
     INITIALISE
 
 }

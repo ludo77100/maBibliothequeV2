@@ -1,6 +1,8 @@
 package org.ludo.bibliotheque;
 
+import org.ludo.bibliotheque.dao.LivreRepository;
 import org.ludo.bibliotheque.exceptions.CustomErrorDecoder;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -13,6 +15,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import javax.annotation.PostConstruct;
+
 @SpringBootApplication
 @EnableSwagger2
 @EnableFeignClients("org.ludo.bibliotheque")
@@ -20,6 +24,9 @@ import org.apache.logging.log4j.Logger;
 @EnableDiscoveryClient
 @EnableEurekaClient
 public class BibliothequeApplication {
+
+	@Autowired
+	LivreRepository livreRepository ;
 
 	private static final Logger logger = LogManager.getLogger(BibliothequeApplication.class);
 
