@@ -1,5 +1,8 @@
 package org.ludo.bibliotheque.service;
 
+import org.ludo.bibliotheque.entities.Exemplaire;
+import org.ludo.bibliotheque.entities.Reservation;
+
 import javax.mail.MessagingException;
 
 public interface EmailService {
@@ -8,4 +11,7 @@ public interface EmailService {
 
     void envoyerEmailRelance() throws MessagingException;
 
-}
+    void envoyerEmailExemplaireDispo(Exemplaire exemplaire, Reservation reservation) throws MessagingException;
+
+
+    }

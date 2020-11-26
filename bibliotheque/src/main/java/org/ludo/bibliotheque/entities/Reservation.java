@@ -12,15 +12,17 @@ public class Reservation implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long idReservation ;
+    private long idReservation;
 
-    private Date dateDemandeReservation ;
+    private Date dateDemandeReservation;
 
-    private String pseudoDemandeur ;
+    private String pseudoDemandeur;
 
-    private EtatReservationEnums etatReservationEnums ;
+    private EtatReservationEnums etatReservationEnums;
 
-    private Exemplaire exemplaire ;
+    private Date dateCloture;
+
+    private Exemplaire exemplaire;
 
     @JsonManagedReference
     @ManyToOne
@@ -30,11 +32,12 @@ public class Reservation implements Serializable {
         super();
     }
 
-    public Reservation(long idReservation, Date dateDemandeReservation, String pseudoDemandeur, EtatReservationEnums etatReservationEnums, Exemplaire exemplaire, Livre livre) {
+    public Reservation(long idReservation, Date dateDemandeReservation, String pseudoDemandeur, EtatReservationEnums etatReservationEnums, Date dateCloture, Exemplaire exemplaire, Livre livre) {
         this.idReservation = idReservation;
         this.dateDemandeReservation = dateDemandeReservation;
         this.pseudoDemandeur = pseudoDemandeur;
         this.etatReservationEnums = etatReservationEnums;
+        this.dateCloture = dateCloture;
         this.exemplaire = exemplaire;
         this.livre = livre;
     }
@@ -71,6 +74,14 @@ public class Reservation implements Serializable {
         this.etatReservationEnums = etatReservationEnums;
     }
 
+    public Date getDateCloture() {
+        return dateCloture;
+    }
+
+    public void setDateCloture(Date dateCloture) {
+        this.dateCloture = dateCloture;
+    }
+
     public Exemplaire getExemplaire() {
         return exemplaire;
     }
@@ -94,6 +105,7 @@ public class Reservation implements Serializable {
                 ", dateDemandeReservation=" + dateDemandeReservation +
                 ", pseudoDemandeur='" + pseudoDemandeur + '\'' +
                 ", etatReservationEnums=" + etatReservationEnums +
+                ", dateCloture=" + dateCloture +
                 ", exemplaire=" + exemplaire +
                 ", livre=" + livre +
                 '}';

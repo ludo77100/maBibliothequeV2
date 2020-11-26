@@ -13,6 +13,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.mail.MessagingException;
 import java.util.List;
 import java.util.Optional;
 
@@ -105,7 +106,7 @@ public class EmpruntController {
      */
     @ApiOperation(value = "Permet de de cloturer un emprunt")
     @PutMapping(value = "emprunt/{idEmprunt}")
-    public Emprunt cloturerEmprunt(@RequestParam Long idEmprunt){
+    public Emprunt cloturerEmprunt(@RequestParam Long idEmprunt) throws EmpruntExceptions, MessagingException {
         logger.debug("Appel controlleur cloturerEmprunt");
         return empruntService.cloturerEmprunt(idEmprunt);
     }

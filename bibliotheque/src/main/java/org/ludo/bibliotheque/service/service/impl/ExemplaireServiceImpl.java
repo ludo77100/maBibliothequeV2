@@ -66,7 +66,7 @@ public class ExemplaireServiceImpl implements ExemplaireService {
         Set<Exemplaire> exemplaires = livre.getExemplaires();
         int sizeSet = exemplaires.size() + 1 ;
 
-        newRef = livre.getTitre().substring(0,1) + livre.getAuteur().substring(0,1) + livre.getEditeur().substring(0,1) + sizeSet;
+        newRef = livre.getIdLivre() + livre.getTitre().substring(0,1) + livre.getAuteur().substring(0,1) + livre.getEditeur().substring(0,1) + sizeSet;
 
         return newRef ;
     }

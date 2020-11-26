@@ -9,12 +9,17 @@ import org.ludo.bibliotheque.entities.Exemplaire;
 import org.ludo.bibliotheque.entities.Livre;
 import org.ludo.bibliotheque.entities.Reservation;
 import org.ludo.bibliotheque.exceptions.ReservationExceptions;
+import org.ludo.bibliotheque.service.EmailService;
 import org.ludo.bibliotheque.service.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.mail.MessagingException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 @Service
 public class ReservationServiceImpl implements ReservationService {
@@ -27,6 +32,9 @@ public class ReservationServiceImpl implements ReservationService {
 
     @Autowired
     EmpruntRepository empruntRepository ;
+
+    @Autowired
+    EmailService emailService ;
 
     @Override
     public Reservation ouvrirReservation(String pseudoDemandeur, String titreLivre) throws ReservationExceptions {
@@ -48,11 +56,18 @@ public class ReservationServiceImpl implements ReservationService {
     }
 
     @Override
-    public Reservation mettreReservationAttente(Exemplaire exemplaire, Reservation reservation) {
+    public Reservation mettreReservationAttente(Exemplaire exemplaire, Reservation reservation) throws MessagingException {
+
+        Date dateCloture = new Date();
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(dateCloture);
+        calendar.add(Calendar.DATE, 2);
+        dateCloture = calendar.getTime();
 
         reservation.setEtatReservationEnums(EtatReservationEnums.ATTENTE);
         reservation.setExemplaire(exemplaire);
-        //TODO envoyer mail pour informer utilisateur que son livre est disponible
+        reservation.setDateCloture(dateCloture);
+        emailService.envoyerEmailExemplaireDispo(exemplaire, reservation);
 
         return reservationRepository.save(reservation);
     }
@@ -73,4 +88,17 @@ public class ReservationServiceImpl implements ReservationService {
                 throw new ReservationExceptions("Un emprunt pour ce livre existe déjà pour cette utilisateur");
         }
     }
+
+/*    public void verificationReservationAttente(){
+        Set<Reservation> reservations = reservationRepository.findAllByEtatReservationEnumsIsAttente();
+        Date dateDuJour = new Date();
+
+
+        for (Reservation e: reservations) {
+            if (e.getDateCloture().before(dateDuJour)){
+                e.setEtatReservationEnums(EtatReservationEnums.CLOTURE);
+                reservationRepository.save(e);
+            }
+        }
+    }*/
 }

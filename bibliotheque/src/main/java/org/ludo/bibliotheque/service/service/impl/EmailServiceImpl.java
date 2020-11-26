@@ -7,6 +7,8 @@ import org.ludo.bibliotheque.beans.UtilisateurBean;
 import org.ludo.bibliotheque.dao.EmailRepository;
 import org.ludo.bibliotheque.entities.Email;
 import org.ludo.bibliotheque.entities.Emprunt;
+import org.ludo.bibliotheque.entities.Exemplaire;
+import org.ludo.bibliotheque.entities.Reservation;
 import org.ludo.bibliotheque.proxies.MicroserviceUtilisateurProxy;
 import org.ludo.bibliotheque.service.EmailService;
 import org.ludo.bibliotheque.service.EmpruntService;
@@ -18,6 +20,7 @@ import org.springframework.stereotype.Service;
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -70,8 +73,6 @@ public class EmailServiceImpl implements EmailService {
 
         for (Emprunt e: listeEmpruntNonRendue) {
 
-
-
             Date datefin = e.getDateFin();
             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
             String strDate = sdf.format(datefin);
@@ -87,5 +88,27 @@ public class EmailServiceImpl implements EmailService {
 
             sendSimpleMessage(utilisateur.getEmail(), email.getObjet(), text);
         }
+    }
+
+    public void envoyerEmailExemplaireDispo(Exemplaire exemplaire, Reservation reservation) throws MessagingException {
+        Email email = emailRepository.findByNom("exemplaireDispo");
+        UtilisateurBean utilisateur = microserviceUtilisateurProxy.login(reservation.getPseudoDemandeur());
+
+        Date dateCloture = new Date();
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(dateCloture);
+        calendar.add(Calendar.DATE, 2);
+        dateCloture = calendar.getTime();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        String strDate = sdf.format(dateCloture);
+
+
+        String text = email.getContenu()
+                .replace("[NOMUTILISATEUR]", utilisateur.getPseudo())
+                .replace("[TITRELIVRE]", exemplaire.getLivre().getTitre())
+                .replace("[DATECLOTURE]", strDate);
+
+        sendSimpleMessage(utilisateur.getEmail(), email.getObjet(), text);
+
     }
 }

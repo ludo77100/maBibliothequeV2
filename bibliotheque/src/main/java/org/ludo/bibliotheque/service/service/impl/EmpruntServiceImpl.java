@@ -19,6 +19,7 @@ import org.ludo.bibliotheque.service.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.mail.MessagingException;
 import javax.transaction.Transactional;
 import java.util.*;
 
@@ -164,7 +165,7 @@ public class EmpruntServiceImpl implements EmpruntService {
      */
     @Transactional
     @Override
-    public Emprunt cloturerEmprunt(Long idEmprunt) throws EmpruntExceptions {
+    public Emprunt cloturerEmprunt(Long idEmprunt) throws EmpruntExceptions, MessagingException {
 
         logger.debug("Appel empruntService méthode cloturerEmprunt");
 
@@ -182,8 +183,6 @@ public class EmpruntServiceImpl implements EmpruntService {
                 }
             }
             reservationPlusAncienne.setEtatReservationEnums(EtatReservationEnums.ATTENTE);
-            //TODO appel methode pour envoyer mail
-            //TODO DOIT PASSER EN ATTENTE 48h
             reservationService.mettreReservationAttente(emprunt.getExemplaire(), reservationPlusAncienne);
             emprunt.getExemplaire().setEtat(EtatEnums.ATTENTE);
             emprunt.setEnCours(false);
