@@ -1,0 +1,6 @@
+projectKey=my_bibli_v2
+serverUrl=http://localhost:9000
+serverVersion=8.5.1.38104
+dashboardUrl=http://localhost:9000/dashboard?id=my_bibli_v2
+ceTaskId=AXWm9C7tKZKh-gemwWBf
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AXWm9C7tKZKh-gemwWBf
