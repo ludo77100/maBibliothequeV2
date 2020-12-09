@@ -73,6 +73,7 @@ public class EmailServiceImpl implements EmailService {
 
         for (Emprunt e: listeEmpruntNonRendue) {
 
+
             e.setProlongeable(false) ; //correction d'un bug, ticket github #2
             Date datefin = e.getDateFin();
             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
