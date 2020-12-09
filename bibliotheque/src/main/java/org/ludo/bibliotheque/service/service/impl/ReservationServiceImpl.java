@@ -16,10 +16,7 @@ import org.springframework.stereotype.Service;
 
 import javax.mail.MessagingException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 @Service
 public class ReservationServiceImpl implements ReservationService {
@@ -70,6 +67,35 @@ public class ReservationServiceImpl implements ReservationService {
         emailService.envoyerEmailExemplaireDispo(exemplaire, reservation);
 
         return reservationRepository.save(reservation);
+    }
+
+    @Override
+    public List<Reservation> getAllReservation() {
+        return reservationRepository.findAll();
+    }
+
+    @Override
+    public List<Reservation> getAllReservationForLivre(String titreLivre) {
+        return reservationRepository.findAllByTitreLivre(titreLivre);
+    }
+
+    @Override
+    public Reservation getOlderReservationForLivre(String titreLivre) {
+
+        Reservation reservationPlusAncienne = new Reservation();
+        Livre livre = livreRepository.findByTitre(titreLivre);
+        Date date = new Date();
+        Set<Reservation> reservationSet = livre.getReservations();
+
+        if (!reservationSet.isEmpty()) {
+            for (Reservation e : reservationSet) {
+                if (e.getDateDemandeReservation().before(date)) {
+                    reservationPlusAncienne = e;
+                    date = e.getDateDemandeReservation();
+                }
+            }
+        }
+        return reservationPlusAncienne;
     }
 
     //TODO à tester

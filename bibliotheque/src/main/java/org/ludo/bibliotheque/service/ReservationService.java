@@ -6,9 +6,16 @@ import org.ludo.bibliotheque.entities.Reservation;
 import org.ludo.bibliotheque.exceptions.ReservationExceptions;
 
 import javax.mail.MessagingException;
+import java.util.List;
 
 public interface ReservationService {
     Reservation ouvrirReservation(String pseudoDemandeur, String titreLivre) throws ReservationExceptions;
 
     Reservation mettreReservationAttente(Exemplaire exemplaire, Reservation reservationPlusAncienne) throws MessagingException;
+
+    List<Reservation> getAllReservation();
+
+    List<Reservation> getAllReservationForLivre(String titreLivre);
+
+    Reservation getOlderReservationForLivre(String titreLivre);
 }
