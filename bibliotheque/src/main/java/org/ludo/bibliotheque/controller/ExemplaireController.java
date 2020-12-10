@@ -3,10 +3,12 @@ package org.ludo.bibliotheque.controller;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.ludo.bibliotheque.entities.Exemplaire;
+import org.ludo.bibliotheque.entities.Livre;
 import org.ludo.bibliotheque.service.ExemplaireService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -27,8 +29,17 @@ public class ExemplaireController {
         return exemplaireService.ajouterExemplaire(titreLivre) ;
     }
 
+    @ApiOperation(value = "Cette API permet de récupérer tous les exemplaires")
+    @GetMapping(value = "/exemplaire/")
     public List<Exemplaire> getAllExemplaire(){
         return exemplaireService.getAllExemplaire();
     }
+
+    @ApiOperation(value = "Cette API permet de récupérer tous les exemplaires d'un livre")
+    @GetMapping(value = "/exemplaire/livre")
+    public List<Exemplaire> getAllExemplaireForLivre(@RequestParam Livre livre){
+        return exemplaireService.getAllExemplaireForLivre(livre);
+    }
+
 
 }
