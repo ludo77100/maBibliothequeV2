@@ -42,6 +42,9 @@ public class EmpruntBean {
      */
     private LivreBean livre ;
 
+    private ExemplaireBean exemplaire ;
+
+
     /**
      * instanciation de emprunt
      * @param idEmprunt id emprunt
@@ -52,7 +55,7 @@ public class EmpruntBean {
      * @param enCours en cours ou non
      * @param livre relation avec la table livre
      */
-    public EmpruntBean(Long idEmprunt, String pseudoEmprunteur, Date dateDebut, Date dateFin, boolean prolongeable, boolean enCours, LivreBean livre) {
+    public EmpruntBean(Long idEmprunt, String pseudoEmprunteur, Date dateDebut, Date dateFin, boolean prolongeable, boolean enCours, LivreBean livre, ExemplaireBean exemplaire) {
         this.idEmprunt = idEmprunt;
         this.pseudoEmprunteur = pseudoEmprunteur;
         this.dateDebut = dateDebut;
@@ -60,6 +63,7 @@ public class EmpruntBean {
         this.prolongeable = prolongeable;
         this.enCours = enCours;
         this.livre = livre;
+        this.exemplaire = exemplaire;
     }
 
     public Long getIdEmprunt() {
@@ -118,6 +122,14 @@ public class EmpruntBean {
         this.livre = livre;
     }
 
+    public ExemplaireBean getExemplaire() {
+        return exemplaire;
+    }
+
+    public void setExemplaire(ExemplaireBean exemplaire) {
+        this.exemplaire = exemplaire;
+    }
+
     @Override
     public String toString() {
         return "EmpruntBean{" +
@@ -128,6 +140,7 @@ public class EmpruntBean {
                 ", prolongeable=" + prolongeable +
                 ", enCours=" + enCours +
                 ", livre=" + livre +
+                ", exemplaire=" + exemplaire +
                 '}';
     }
 }

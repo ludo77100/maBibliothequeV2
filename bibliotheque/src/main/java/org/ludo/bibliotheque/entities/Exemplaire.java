@@ -28,7 +28,7 @@ public class Exemplaire implements Serializable {
     private Livre livre;
 
     @JsonIgnore
-    @OneToOne(mappedBy = "exemplaire", fetch = FetchType.LAZY)
+    @OneToOne(mappedBy = "exemplaire", fetch = FetchType.EAGER)
     private Emprunt emprunt;
 
 
