@@ -9,6 +9,7 @@ import org.ludo.bibliotheque.service.ExemplaireService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -31,6 +32,11 @@ public class ExemplaireServiceImpl implements ExemplaireService {
         enregistrementExemplaire.setLivre(livreEnCours);
 
         return exemplaireRepository.save(enregistrementExemplaire);
+    }
+
+    @Override
+    public List<Exemplaire> getAllExemplaire() {
+        return exemplaireRepository.findAll();
     }
 
     public Exemplaire changerEtatExemplaire(String identifiantExemplaire, String nouvelEtat){
