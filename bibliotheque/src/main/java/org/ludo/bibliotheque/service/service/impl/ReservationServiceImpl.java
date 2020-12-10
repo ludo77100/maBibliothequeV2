@@ -53,17 +53,24 @@ public class ReservationServiceImpl implements ReservationService {
     }
 
     @Override
-    public Reservation mettreReservationAttente(Exemplaire exemplaire, Reservation reservation) throws MessagingException {
+    public Reservation mettreReservationAttente(Exemplaire exemplaire) throws MessagingException {
 
+        //Dans cette partie on créé la date de cloture a j+2
         Date dateCloture = new Date();
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(dateCloture);
         calendar.add(Calendar.DATE, 2);
         dateCloture = calendar.getTime();
 
+        //ici on appel la méthode pour trouver la reservation la plus ancienne
+        Reservation reservation = this.getOlderReservationForLivre(exemplaire.getLivre().getTitre());
+
+        //Ici on set les valeurs nécéssaires
         reservation.setEtatReservationEnums(EtatReservationEnums.ATTENTE);
         reservation.setExemplaire(exemplaire);
         reservation.setDateCloture(dateCloture);
+
+        //Ici on envoie le mail pour prévenir qu'un exemplaire est disponible
         emailService.envoyerEmailExemplaireDispo(exemplaire, reservation);
 
         return reservationRepository.save(reservation);

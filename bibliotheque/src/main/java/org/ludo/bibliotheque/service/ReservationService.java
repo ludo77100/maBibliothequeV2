@@ -11,7 +11,7 @@ import java.util.List;
 public interface ReservationService {
     Reservation ouvrirReservation(String pseudoDemandeur, String titreLivre) throws ReservationExceptions;
 
-    Reservation mettreReservationAttente(Exemplaire exemplaire, Reservation reservationPlusAncienne) throws MessagingException;
+    Reservation mettreReservationAttente(Exemplaire exemplaire) throws MessagingException;
 
     List<Reservation> getAllReservation();
 

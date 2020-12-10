@@ -174,28 +174,13 @@ public class EmpruntServiceImpl implements EmpruntService {
         Date date = new Date();
 
         if (!livre.getReservations().isEmpty()) {
-            Reservation reservationPlusAncienne = new Reservation();
-            Set<Reservation> reservationSet = livre.getReservations();
-            for (Reservation e : reservationSet) {
-                Date dateReservation = date;
-                if (e.getDateDemandeReservation().before(dateReservation)) {
-                    reservationPlusAncienne = e;
-                }
-            }
-            reservationPlusAncienne.setEtatReservationEnums(EtatReservationEnums.ATTENTE);
-            reservationService.mettreReservationAttente(emprunt.getExemplaire(), reservationPlusAncienne);
+            reservationService.mettreReservationAttente(emprunt.getExemplaire());
             emprunt.getExemplaire().setEtat(EtatEnums.ATTENTE);
-            emprunt.setEnCours(false);
-            emprunt.setDateFin(date);
-            return empruntRepository.save(emprunt);
-
         } else {
-
             emprunt.getExemplaire().setEtat(EtatEnums.DISPONIBLE);
             emprunt.setEnCours(false);
             emprunt.setDateFin(date);
-
-            return empruntRepository.save(emprunt);
         }
+        return emprunt;
     }
 }
