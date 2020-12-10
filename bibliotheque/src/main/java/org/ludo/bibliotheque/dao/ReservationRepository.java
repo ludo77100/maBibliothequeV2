@@ -11,4 +11,5 @@ public interface ReservationRepository extends JpaRepository<Reservation, Long> 
 
     Set<Reservation> findAllByEtatReservationEnums(EtatReservationEnums attente);
 
+    List<Reservation> findAllBypseudoDemandeur(String pseudoEmprunteur);
 }

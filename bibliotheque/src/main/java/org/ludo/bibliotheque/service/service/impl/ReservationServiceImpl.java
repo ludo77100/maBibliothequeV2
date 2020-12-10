@@ -158,4 +158,9 @@ public class ReservationServiceImpl implements ReservationService {
 
         return reservationRepository.save(reservation);
     }
+
+    @Override
+    public List<Reservation> getAllReservationForUser(String pseudoEmprunteur) {
+        return reservationRepository.findAllBypseudoDemandeur(pseudoEmprunteur);
+    }
 }

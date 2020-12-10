@@ -22,4 +22,5 @@ public interface ReservationService {
 
     Reservation accepterReservation(long idReservation) throws EmpruntExceptions;
 
+    List<Reservation> getAllReservationForUser(String pseudoEmprunteur);
 }

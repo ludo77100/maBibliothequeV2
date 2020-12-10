@@ -39,4 +39,9 @@ public class ReservationController {
         return reservationService.accepterReservation(idReservation);
     }
 
+    @GetMapping(value = "/reservation/user")
+    public List<Reservation> getAllReservationForUtlisateur(@RequestParam String pseudoEmprunteur){
+        return reservationService.getAllReservationForUser(pseudoEmprunteur);
+    }
+
 }
