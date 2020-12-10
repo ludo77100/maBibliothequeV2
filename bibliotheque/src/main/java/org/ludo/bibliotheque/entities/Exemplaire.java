@@ -1,5 +1,6 @@
 package org.ludo.bibliotheque.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.ludo.bibliotheque.Enums.EtatEnums;
@@ -26,6 +27,7 @@ public class Exemplaire implements Serializable {
     @JoinColumn(name = "id_livre")
     private Livre livre;
 
+    @JsonIgnore
     @OneToOne(mappedBy = "exemplaire", fetch = FetchType.LAZY)
     private Emprunt emprunt;
 

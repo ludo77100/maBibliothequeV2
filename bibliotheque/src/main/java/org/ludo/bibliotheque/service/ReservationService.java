@@ -3,6 +3,7 @@ package org.ludo.bibliotheque.service;
 import org.ludo.bibliotheque.entities.Emprunt;
 import org.ludo.bibliotheque.entities.Exemplaire;
 import org.ludo.bibliotheque.entities.Reservation;
+import org.ludo.bibliotheque.exceptions.EmpruntExceptions;
 import org.ludo.bibliotheque.exceptions.ReservationExceptions;
 
 import javax.mail.MessagingException;
@@ -18,5 +19,7 @@ public interface ReservationService {
     Reservation getOlderReservationForLivre(String titreLivre);
 
     void verificationReservationAttente() throws MessagingException;
+
+    Reservation accepterReservation(long idReservation) throws EmpruntExceptions;
 
 }

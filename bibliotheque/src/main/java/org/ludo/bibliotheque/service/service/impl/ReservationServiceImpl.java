@@ -9,8 +9,10 @@ import org.ludo.bibliotheque.entities.Emprunt;
 import org.ludo.bibliotheque.entities.Exemplaire;
 import org.ludo.bibliotheque.entities.Livre;
 import org.ludo.bibliotheque.entities.Reservation;
+import org.ludo.bibliotheque.exceptions.EmpruntExceptions;
 import org.ludo.bibliotheque.exceptions.ReservationExceptions;
 import org.ludo.bibliotheque.service.EmailService;
+import org.ludo.bibliotheque.service.EmpruntService;
 import org.ludo.bibliotheque.service.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -33,6 +35,9 @@ public class ReservationServiceImpl implements ReservationService {
 
     @Autowired
     EmailService emailService ;
+
+    @Autowired
+    EmpruntService empruntService ;
 
     @Override
     public Reservation ouvrirReservation(String pseudoDemandeur, String titreLivre) throws ReservationExceptions {
@@ -141,5 +146,16 @@ public class ReservationServiceImpl implements ReservationService {
                 reservationRepository.save(e);
             }
         }
+    }
+
+    @Override
+    public Reservation accepterReservation(long idReservation) throws EmpruntExceptions {
+        Reservation reservation = reservationRepository.findById(idReservation).get();
+        Exemplaire exemplaire = reservation.getExemplaire();
+
+        reservation.setEtatReservationEnums(EtatReservationEnums.CLOTURE);
+        empruntService.ouvrirEmprunt(exemplaire.getIdentifiant(), reservation.getPseudoDemandeur());
+
+        return reservationRepository.save(reservation);
     }
 }

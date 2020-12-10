@@ -22,11 +22,7 @@ public class BatchJob {
 
     @Scheduled(cron = "0 0 14 * * *")
     public void lendingRevival() throws Exception {
-        logger.debug("Execution du batch");
-
         emailService.envoyerEmailRelance();
-
-
     }
 
     @Scheduled(cron = "0 0 1 * * *")

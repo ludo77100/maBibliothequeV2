@@ -1,6 +1,7 @@
 package org.ludo.bibliotheque.controller;
 
 import org.ludo.bibliotheque.entities.Reservation;
+import org.ludo.bibliotheque.exceptions.EmpruntExceptions;
 import org.ludo.bibliotheque.exceptions.ReservationExceptions;
 import org.ludo.bibliotheque.service.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +32,11 @@ public class ReservationController {
     @GetMapping(value = "/reservation/olderForLivre")
     public Reservation getOlderReservationForLivre(@RequestParam String titreLivre){
         return reservationService.getOlderReservationForLivre(titreLivre);
+    }
+
+    @GetMapping(value = "/reservation/accepter")
+    public Reservation acceptReservation(@RequestParam long idReservation) throws EmpruntExceptions {
+        return reservationService.accepterReservation(idReservation);
     }
 
 }
