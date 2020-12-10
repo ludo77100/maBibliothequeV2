@@ -2,6 +2,7 @@ package org.ludo.clientui.proxies;
 
 import org.ludo.clientui.beans.EmpruntBean;
 import org.ludo.clientui.beans.LivreBean;
+import org.ludo.clientui.beans.ReservationBean;
 import org.ludo.clientui.configuration.FeignConfig;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
@@ -70,5 +71,14 @@ public interface MicroserviceBibliothequeProxy {
      */
     @PutMapping(value = "/bibliotheque/emprunt/prolonger/{idEmprunt}")
     EmpruntBean prolongerEmprunt(@PathVariable("idEmprunt")Long idEmprunt);
+
+    /*
+    **************
+    APIs Reservation
+    **************
+     */
+
+    @GetMapping(value = "/bibliotheque/reservation/user/{pseudoEmprunteur}")
+    List<ReservationBean> getAllReservationForUtlisateur(@RequestParam String pseudoEmprunteur);
 
 }
