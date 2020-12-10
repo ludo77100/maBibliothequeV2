@@ -1,5 +1,6 @@
 package org.ludo.bibliotheque.service.service.impl;
 
+import org.ludo.bibliotheque.Enums.EtatEnums;
 import org.ludo.bibliotheque.Enums.EtatReservationEnums;
 import org.ludo.bibliotheque.dao.EmpruntRepository;
 import org.ludo.bibliotheque.dao.LivreRepository;
@@ -119,14 +120,23 @@ public class ReservationServiceImpl implements ReservationService {
 
     public void verificationReservationAttente() throws MessagingException {
 
+        //On récupère toutes les reservations en attente
         Set<Reservation> reservations = reservationRepository.findAllByEtatReservationEnums(EtatReservationEnums.ATTENTE);
+        //On initialise la date du jour
         Date dateDuJour = new Date();
 
+        //Sur chaque reservations de la liste
         for (Reservation e: reservations) {
+            //On regarde si la date de cloture est avant la date du jour
             if (e.getDateCloture().before(dateDuJour)){
+                //Dans ce cas on cloture la reservation
                 e.setEtatReservationEnums(EtatReservationEnums.CLOTURE);
+                //Et on vérifie si il y a d'autre demandes de réservation et on execute ou pas la mise en attente d'une reservation
                 if (!e.getExemplaire().getLivre().getReservations().isEmpty()) {
                     this.mettreReservationAttente(e.getExemplaire());
+                } else {
+                    //Si aucune reservation, l'exemplaire passe à disponible
+                    e.getExemplaire().setEtat(EtatEnums.DISPONIBLE);
                 }
                 reservationRepository.save(e);
             }

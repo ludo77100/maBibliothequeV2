@@ -464,3 +464,5 @@
 [DEBUG] 2020-11-26 15:16:19.459 [http-nio-8082-exec-7] BibliothequeApplication - Appel controlleur ouvrirEmprunt
 [DEBUG] 2020-11-26 15:16:19.460 [http-nio-8082-exec-7] BibliothequeApplication - Appel empruntService méthode ouvrirEmprunt
 [DEBUG] 2020-11-26 15:16:19.463 [http-nio-8082-exec-7] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Thu Nov 26 15:16:19 CET 2020
+[DEBUG] 2020-12-10 10:59:27.236 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2020-12-10 14:39:03.229 [main] BibliothequeApplication - Microservice Bibliothèque démarré

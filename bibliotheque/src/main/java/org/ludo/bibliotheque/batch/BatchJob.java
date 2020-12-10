@@ -29,6 +29,11 @@ public class BatchJob {
 
     }
 
+    @Scheduled(cron = "0 0 1 * * *")
+    public void verifReservationsAttentes() throws Exception {
+        reservationService.verificationReservationAttente();
+    }
+
 
 
 }

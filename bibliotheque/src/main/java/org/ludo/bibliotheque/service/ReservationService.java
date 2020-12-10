@@ -16,4 +16,7 @@ public interface ReservationService {
     List<Reservation> getAllReservation();
 
     Reservation getOlderReservationForLivre(String titreLivre);
+
+    void verificationReservationAttente() throws MessagingException;
+
 }
