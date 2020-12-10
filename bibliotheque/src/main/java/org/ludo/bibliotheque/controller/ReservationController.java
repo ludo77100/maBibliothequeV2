@@ -27,10 +27,6 @@ public class ReservationController {
         return reservationService.getAllReservation();
     }
 
-    @GetMapping(value = "/reservation/allforlivre")
-    public List<Reservation> getAllReservationForLivre(@RequestParam String titreLivre){
-        return reservationService.getAllReservationForLivre(titreLivre);
-    }
 
     @GetMapping(value = "/reservation/olderForLivre")
     public Reservation getOlderReservationForLivre(@RequestParam String titreLivre){

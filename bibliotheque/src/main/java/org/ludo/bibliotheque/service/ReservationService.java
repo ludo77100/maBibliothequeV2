@@ -15,7 +15,5 @@ public interface ReservationService {
 
     List<Reservation> getAllReservation();
 
-    List<Reservation> getAllReservationForLivre(String titreLivre);
-
     Reservation getOlderReservationForLivre(String titreLivre);
 }

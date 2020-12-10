@@ -82,11 +82,6 @@ public class ReservationServiceImpl implements ReservationService {
     }
 
     @Override
-    public List<Reservation> getAllReservationForLivre(String titreLivre) {
-        return reservationRepository.findAllByTitreLivre(titreLivre);
-    }
-
-    @Override
     public Reservation getOlderReservationForLivre(String titreLivre) {
 
         Reservation reservationPlusAncienne = new Reservation();
@@ -122,16 +117,19 @@ public class ReservationServiceImpl implements ReservationService {
         }
     }
 
-/*    public void verificationReservationAttente(){
-        Set<Reservation> reservations = reservationRepository.findAllByEtatReservationEnumsIsAttente();
-        Date dateDuJour = new Date();
+    public void verificationReservationAttente() throws MessagingException {
 
+        Set<Reservation> reservations = reservationRepository.findAllByEtatReservationEnums(EtatReservationEnums.ATTENTE);
+        Date dateDuJour = new Date();
 
         for (Reservation e: reservations) {
             if (e.getDateCloture().before(dateDuJour)){
                 e.setEtatReservationEnums(EtatReservationEnums.CLOTURE);
+                if (!e.getExemplaire().getLivre().getReservations().isEmpty()) {
+                    this.mettreReservationAttente(e.getExemplaire());
+                }
                 reservationRepository.save(e);
             }
         }
-    }*/
+    }
 }
