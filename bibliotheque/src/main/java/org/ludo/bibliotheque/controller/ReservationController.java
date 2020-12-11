@@ -5,10 +5,7 @@ import org.ludo.bibliotheque.exceptions.EmpruntExceptions;
 import org.ludo.bibliotheque.exceptions.ReservationExceptions;
 import org.ludo.bibliotheque.service.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -39,8 +36,8 @@ public class ReservationController {
         return reservationService.accepterReservation(idReservation);
     }
 
-    @GetMapping(value = "/reservation/user")
-    public List<Reservation> getAllReservationForUtlisateur(@RequestParam String pseudoEmprunteur){
+    @GetMapping(value = "/reservation/user/{pseudoEmprunteur}")
+    public List<Reservation> getAllReservationForUtlisateur(@PathVariable("pseudoEmprunteur") String pseudoEmprunteur){
         return reservationService.getAllReservationForUser(pseudoEmprunteur);
     }
 

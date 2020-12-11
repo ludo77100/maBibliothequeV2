@@ -21,6 +21,7 @@ public class ReservationController {
 
     @GetMapping(value = "/reservation/user")
     public String listeReservationUtilisateur(Model model, HttpServletRequest request){
+
         if (request.getRemoteUser() == null) {
             return "connexion";
         } else {

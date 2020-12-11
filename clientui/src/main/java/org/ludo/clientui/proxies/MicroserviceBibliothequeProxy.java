@@ -79,6 +79,6 @@ public interface MicroserviceBibliothequeProxy {
      */
 
     @GetMapping(value = "/bibliotheque/reservation/user/{pseudoEmprunteur}")
-    List<ReservationBean> getAllReservationForUtlisateur(@RequestParam String pseudoEmprunteur);
+    List<ReservationBean> getAllReservationForUtlisateur(@PathVariable("pseudoEmprunteur") String pseudoEmprunteur);
 
 }
