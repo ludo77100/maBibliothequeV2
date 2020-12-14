@@ -53,6 +53,7 @@
             <ul class="navbar-nav navbar-expand-lg ml-auto">
                 <li sec:authorize="isAuthenticated()" class="nav-item"><a class="nav-link" th:href="@{/infosPerso}">Mes infos personnelles</a></li>
                 <li sec:authorize="isAuthenticated()" class="nav-item"><a class="nav-link" th:href="@{/emprunt/utilisateur}">Mes emprûnts</a></li>
+                <li sec:authorize="isAuthenticated()" class="nav-item"><a class="nav-link" th:href="@{/reservation/user}">Mes réservations</a></li>
                 <li sec:authorize="!isAuthenticated()" class="nav-item"><a class="btn btn-info" th:href="@{/connexion}">Inscription/Connexion</a></li>
                 <li sec:authorize="isAuthenticated()" class="nav-item"><form th:action="@{/logout}" method="post"><input type="submit" class="btn btn-info" value="Se déconnecter" /></form></li>
             </ul>

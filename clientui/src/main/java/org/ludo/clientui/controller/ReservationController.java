@@ -9,6 +9,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -33,6 +34,19 @@ public class ReservationController {
             model.addAttribute("listeReservationUtilisateur", listeReservationUtilisateur);
 
             return "/listeReservations";
+        }
+    }
+
+    @GetMapping(value = "/reservation/accepter/{idReservation}")
+    public String acceptReservation(@PathVariable long idReservation, HttpServletRequest request) {
+
+        if (request.getRemoteUser() == null) {
+            return "connexion";
+        } else {
+
+            reservationProxy.acceptReservation(idReservation);
+
+            return "redirect:/listeReservations";
         }
     }
 }

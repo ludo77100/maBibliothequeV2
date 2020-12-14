@@ -31,8 +31,8 @@ public class ReservationController {
         return reservationService.getOlderReservationForLivre(titreLivre);
     }
 
-    @GetMapping(value = "/reservation/accepter")
-    public Reservation acceptReservation(@RequestParam long idReservation) throws EmpruntExceptions {
+    @GetMapping(value = "/reservation/accepter/{idReservation}")
+    public Reservation acceptReservation(@PathVariable long idReservation) throws EmpruntExceptions {
         return reservationService.accepterReservation(idReservation);
     }
 
