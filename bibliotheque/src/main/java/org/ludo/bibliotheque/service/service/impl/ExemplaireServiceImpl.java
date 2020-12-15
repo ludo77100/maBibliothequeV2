@@ -31,6 +31,9 @@ public class ExemplaireServiceImpl implements ExemplaireService {
         enregistrementExemplaire.setIdentifiant(this.compositionIdentifiant(livreEnCours));
         enregistrementExemplaire.setLivre(livreEnCours);
 
+        livreEnCours.setQuantiteDispo(livreEnCours.getQuantiteDispo()+1);
+        livreRepository.save(livreEnCours);
+
         return exemplaireRepository.save(enregistrementExemplaire);
     }
 

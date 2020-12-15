@@ -28,7 +28,9 @@
                         <li class="list-group-item text-right" th:text="${lru.etatReservationEnums}"></li>
                     </ul>
                     <div class="text-center spacer">
-                        <button class="btn btn-primary" th:if="${lru.dateCloture != NULL}"><a class="btn btn-primary" th:href="@{/reservation/accepter/{idReservation}(idReservation=${lru.idReservation})}">Accepter</a></button>
+                        <button class="btn btn-primary" th:if="${lru.etatReservationEnums == ATTENTE}">
+                            <a class="btn btn-primary" th:href="@{/reservation/accepter/{idReservation}(idReservation=${lru.idReservation})}">Accepter</a>
+                        </button>
                     </div>
                 </div>
             </div>
