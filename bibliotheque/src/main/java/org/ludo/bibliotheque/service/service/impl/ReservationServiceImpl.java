@@ -45,17 +45,22 @@ public class ReservationServiceImpl implements ReservationService {
         Livre livreDemande = livreRepository.findByTitre(titreLivre);
         List<Emprunt> listeEmpruntUtilisateur = empruntRepository.findAllByPseudoEmprunteurAndEnCoursIsTrue(pseudoDemandeur);
 
-        this.verifLivreReserveNonEmprunte(listeEmpruntUtilisateur, titreLivre);
+        if (livreDemande.getReservations().size() > livreDemande.getExemplaires().size()*2) {
+            throw new ReservationExceptions("La liste de réservations est complète");
+        } else {
 
-        Date date = new Date() ;
-        Reservation ouvrirReservation = new Reservation() ;
+            this.verifLivreReserveNonEmprunte(listeEmpruntUtilisateur, titreLivre);
 
-        ouvrirReservation.setDateDemandeReservation(date);
-        ouvrirReservation.setLivre(livreDemande);
-        ouvrirReservation.setPseudoDemandeur(pseudoDemandeur);
-        ouvrirReservation.setEtatReservationEnums(EtatReservationEnums.ENCOURS);
+            Date date = new Date();
+            Reservation ouvrirReservation = new Reservation();
 
-        return reservationRepository.save(ouvrirReservation);
+            ouvrirReservation.setDateDemandeReservation(date);
+            ouvrirReservation.setLivre(livreDemande);
+            ouvrirReservation.setPseudoDemandeur(pseudoDemandeur);
+            ouvrirReservation.setEtatReservationEnums(EtatReservationEnums.ENCOURS);
+            return reservationRepository.save(ouvrirReservation);
+
+        }
     }
 
     @Override
