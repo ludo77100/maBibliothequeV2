@@ -168,4 +168,16 @@ public class ReservationServiceImpl implements ReservationService {
     public List<Reservation> getAllReservationForUser(String pseudoEmprunteur) {
         return reservationRepository.findAllBypseudoDemandeur(pseudoEmprunteur);
     }
+
+    @Override
+    public Reservation fermerReservation(long idReservation) {
+
+        Reservation reservation = reservationRepository.findById(idReservation).get();
+        Date date = new Date();
+
+        reservation.setEtatReservationEnums(EtatReservationEnums.ANNULE);
+        reservation.setDateCloture(date);
+
+        return reservationRepository.save(reservation);
+    }
 }

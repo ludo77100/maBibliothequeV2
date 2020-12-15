@@ -46,7 +46,20 @@ public class ReservationController {
 
             reservationProxy.acceptReservation(idReservation);
 
-            return "redirect:/listeReservations";
+            return "redirect:/reservation/user";
+        }
+    }
+
+    @GetMapping(value = "/reservation/fermer/{idReservation}")
+    public String fermerReservation(@PathVariable long idReservation, HttpServletRequest request) {
+
+        if (request.getRemoteUser() == null) {
+            return "connexion";
+        } else {
+
+            reservationProxy.fermerReservation(idReservation);
+
+            return "redirect:/reservation/user";
         }
     }
 }

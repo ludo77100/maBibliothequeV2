@@ -41,4 +41,9 @@ public class ReservationController {
         return reservationService.getAllReservationForUser(pseudoEmprunteur);
     }
 
+    @GetMapping(value = "/reservation/fermer/{idReservation}")
+    public Reservation fermerReservation(@PathVariable long idReservation){
+        return reservationService.fermerReservation(idReservation);
+    }
+
 }
