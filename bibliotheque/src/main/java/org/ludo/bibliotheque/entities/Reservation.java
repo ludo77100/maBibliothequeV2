@@ -20,6 +20,9 @@ public class Reservation implements Serializable {
 
     private EtatReservationEnums etatReservationEnums;
 
+    @Transient
+    private int positionFileAttente ;
+
     private Date dateCloture;
 
     private Exemplaire exemplaire;
@@ -96,6 +99,14 @@ public class Reservation implements Serializable {
 
     public void setLivre(Livre livre) {
         this.livre = livre;
+    }
+
+    public int getPositionFileAttente() {
+        return positionFileAttente;
+    }
+
+    public void setPositionFileAttente(int positionFileAttente) {
+        this.positionFileAttente = positionFileAttente;
     }
 
     @Override

@@ -26,13 +26,17 @@
                         <li class="list-group-item text-right" th:text="${#dates.format(lru.dateDemandeReservation, 'dd/MM/yyyy')}"></li>
                         <li class="list-group-item"><strong>Etat de la demande: </strong></li>
                         <li class="list-group-item text-right" th:text="${lru.etatReservationEnums}"></li>
+                        <li class="list-group-item"><strong>Date de retour la plus proche: </strong></li>
+                        <li class="list-group-item text-right" th:text="${lru.etatReservationEnums}"></li>
+                        <li class="list-group-item"><strong>Position dans la file d'attente: </strong></li>
+                        <li class="list-group-item text-right" th:text="${lru.etatReservationEnums}"></li>
                     </ul>
                     <div class="text-center spacer">
-                        <button class="btn btn-primary" th:if="${lru.etatReservationEnums == ATTENTE}">
+                        <button class="btn btn-primary" th:if="${lru.etatReservationEnums == 'ATTENTE'}">
                             <a class="btn btn-primary" th:href="@{/reservation/accepter/{idReservation}(idReservation=${lru.idReservation})}">Accepter</a>
                         </button>
-                        <button class="btn btn-primary" th:if="${lru.etatReservationEnums != ANNULE || CLOTURE">
-                            <a class="btn btn-primary" th:href="@{/reservation/fermer/{idReservation}(idReservation=${lru.idReservation})}">Accepter</a>
+                        <button class="btn btn-primary" th:if="${lru.etatReservationEnums == 'ENCOURS'} OR ${lru.etatReservationEnums == 'ATTENTE'}">
+                            <a class="btn btn-primary" th:href="@{/reservation/fermer/{idReservation}(idReservation=${lru.idReservation})}">Annuler</a>
                         </button>
                     </div>
                 </div>

@@ -7,7 +7,8 @@ public class EmailType {
     String dateFinPret;
     String nomUtilisateur;
 
-    public EmailType() { super();
+    public EmailType() {
+        super();
     }
 
     public EmailType(String email, String titre, String dateFinPret, String nomUtilisateur) {

@@ -12,17 +12,24 @@ public class ReservationBean {
 
     private String etatReservationEnums;
 
+    private int positionFileAttente ;
+
     private Date dateCloture;
 
     private ExemplaireBean exemplaire;
 
     private LivreBean livre;
 
-    public ReservationBean(long idReservation, Date dateDemandeReservation, String pseudoDemandeur, String etatReservationEnums, Date dateCloture, ExemplaireBean exemplaire, LivreBean livre) {
+    public ReservationBean() {
+        super();
+    }
+
+    public ReservationBean(long idReservation, Date dateDemandeReservation, String pseudoDemandeur, String etatReservationEnums, int positionFileAttente, Date dateCloture, ExemplaireBean exemplaire, LivreBean livre) {
         this.idReservation = idReservation;
         this.dateDemandeReservation = dateDemandeReservation;
         this.pseudoDemandeur = pseudoDemandeur;
         this.etatReservationEnums = etatReservationEnums;
+        this.positionFileAttente = positionFileAttente;
         this.dateCloture = dateCloture;
         this.exemplaire = exemplaire;
         this.livre = livre;
@@ -60,6 +67,14 @@ public class ReservationBean {
         this.etatReservationEnums = etatReservationEnums;
     }
 
+    public int getPositionFileAttente() {
+        return positionFileAttente;
+    }
+
+    public void setPositionFileAttente(int positionFileAttente) {
+        this.positionFileAttente = positionFileAttente;
+    }
+
     public Date getDateCloture() {
         return dateCloture;
     }
@@ -91,6 +106,7 @@ public class ReservationBean {
                 ", dateDemandeReservation=" + dateDemandeReservation +
                 ", pseudoDemandeur='" + pseudoDemandeur + '\'' +
                 ", etatReservationEnums='" + etatReservationEnums + '\'' +
+                ", positionFileAttente=" + positionFileAttente +
                 ", dateCloture=" + dateCloture +
                 ", exemplaire=" + exemplaire +
                 ", livre=" + livre +

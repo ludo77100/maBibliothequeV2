@@ -166,6 +166,7 @@ public class ReservationServiceImpl implements ReservationService {
 
     @Override
     public List<Reservation> getAllReservationForUser(String pseudoEmprunteur) {
+
         return reservationRepository.findAllBypseudoDemandeur(pseudoEmprunteur);
     }
 
@@ -179,5 +180,28 @@ public class ReservationServiceImpl implements ReservationService {
         reservation.setDateCloture(date);
 
         return reservationRepository.save(reservation);
+    }
+
+    public List<Reservation> trouverPositionReservation(String pseudoEmprunteur){
+
+        List<Reservation> listeReservationUtilisateur = this.getAllReservationForUser(pseudoEmprunteur);
+
+        for (int i = 0 ; i < listeReservationUtilisateur.size() ; i++){
+
+            Date dateReservationUtilisateur = listeReservationUtilisateur.get(i).getDateDemandeReservation();
+            int compteurReservations = 1 ;
+            Set<Reservation> reservations = listeReservationUtilisateur.get(i).getLivre().getReservations();
+            List<Reservation> listeR = (List<Reservation>) reservations;
+
+            for (int j = 0 ; j < reservations.size() ; j++){
+                Reservation reservation = listeR.get(j);
+                if (reservation.getDateDemandeReservation().before(dateReservationUtilisateur)){
+                    compteurReservations = compteurReservations +1 ;
+                }
+            }
+            listeReservationUtilisateur.get(i).setPositionFileAttente(compteurReservations);
+
+        }
+    return listeReservationUtilisateur ;
     }
 }
