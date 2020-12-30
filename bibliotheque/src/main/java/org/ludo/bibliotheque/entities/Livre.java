@@ -66,6 +66,9 @@ public class Livre implements Serializable {
     @Transient
     private Date dateRetourPlusProche ;
 
+    @Transient
+    private int tailleListeReservationEnCours ;
+
     /**
      * Relation avec la table emprunt
      */
@@ -182,6 +185,14 @@ public class Livre implements Serializable {
         this.dateRetourPlusProche = dateRetourPlusProche;
     }
 
+    public int getTailleListeReservationEnCours() {
+        return tailleListeReservationEnCours;
+    }
+
+    public void setTailleListeReservationEnCours(int tailleListeReservationEnCours) {
+        this.tailleListeReservationEnCours = tailleListeReservationEnCours;
+    }
+
     @Override
     public String toString() {
         return "Livre{" +
@@ -194,6 +205,7 @@ public class Livre implements Serializable {
                 ", quantiteDispo=" + quantiteDispo +
                 ", urlImage='" + urlImage + '\'' +
                 ", dateRetourPlusProche=" + dateRetourPlusProche +
+                ", tailleListeReservation=" + tailleListeReservationEnCours +
                 ", exemplaires=" + exemplaires +
                 ", reservations=" + reservations +
                 '}';

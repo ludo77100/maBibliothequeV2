@@ -4,10 +4,13 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.ludo.bibliotheque.BibliothequeApplication;
 import org.ludo.bibliotheque.Enums.EtatEnums;
+import org.ludo.bibliotheque.Enums.EtatReservationEnums;
 import org.ludo.bibliotheque.dao.LivreRepository;
+import org.ludo.bibliotheque.dao.ReservationRepository;
 import org.ludo.bibliotheque.entities.Emprunt;
 import org.ludo.bibliotheque.entities.Exemplaire;
 import org.ludo.bibliotheque.entities.Livre;
+import org.ludo.bibliotheque.entities.Reservation;
 import org.ludo.bibliotheque.service.LivreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,6 +27,9 @@ public class LivreServiceImpl implements LivreService {
     @Autowired
     LivreRepository livreRepository ;
 
+    @Autowired
+    ReservationRepository reservationRepository ;
+
     /**
      * Trouve tous les livres
      * @return liste des livres
@@ -33,11 +39,12 @@ public class LivreServiceImpl implements LivreService {
 
         logger.debug("Appel LivreServiceImpl méthode findAll");
 
-        //TODO rajouter ici date retour la plus proche
-
         List<Livre> listeLivre = livreRepository.findAll();
-
         for (Livre e : listeLivre){
+
+            List<Reservation> listeReservation = reservationRepository.findAllByLivreAndEtatReservationEnums(e, EtatReservationEnums.ENCOURS);
+            e.setTailleListeReservationEnCours(listeReservation.size());
+
             Set<Exemplaire> listeExemplaires =  e.getExemplaires();
             Date dateRetour = new Date();
             dateRetour.setDate(2999-12-12);

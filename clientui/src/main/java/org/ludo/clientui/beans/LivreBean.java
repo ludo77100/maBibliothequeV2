@@ -50,6 +50,8 @@ public class LivreBean {
 
     private Date dateRetourPlusProche ;
 
+    private int tailleListeReservationEnCours ;
+
     /**
      * Relation avec la table emprunt
      */
@@ -67,7 +69,7 @@ public class LivreBean {
      * @param emprunt Relation avec la table emprunt
      * @param urlImage Url de l'image du livre
      */
-    public LivreBean(int idLivre, String titre, String auteur, String editeur, String decription, int nombrePages, int quantiteDispo, Collection<EmpruntBean> emprunt, String urlImage, Date dateRetourPlusProche) {
+    public LivreBean(int idLivre, String titre, String auteur, String editeur, String decription, int nombrePages, int quantiteDispo, Collection<EmpruntBean> emprunt, String urlImage, Date dateRetourPlusProche, int tailleListeReservationEnCours) {
         this.idLivre = idLivre;
         this.titre = titre;
         this.auteur = auteur;
@@ -78,6 +80,7 @@ public class LivreBean {
         this.emprunt = emprunt;
         this.urlImage = urlImage;
         this.dateRetourPlusProche = dateRetourPlusProche ;
+        this.tailleListeReservationEnCours = tailleListeReservationEnCours ;
     }
 
     public int getIdLivre() {
@@ -160,6 +163,14 @@ public class LivreBean {
         this.dateRetourPlusProche = dateRetourPlusProche;
     }
 
+    public int getTailleListeReservationEnCours() {
+        return tailleListeReservationEnCours;
+    }
+
+    public void setTailleListeReservationEnCours(int tailleListeReservationEnCours) {
+        this.tailleListeReservationEnCours = tailleListeReservationEnCours;
+    }
+
     @Override
     public String toString() {
         return "LivreBean{" +
@@ -172,6 +183,7 @@ public class LivreBean {
                 ", quantiteDispo=" + quantiteDispo +
                 ", urlImage='" + urlImage + '\'' +
                 ", dateRetourPlusProche=" + dateRetourPlusProche +
+                ", tailleListeReservationEnCours=" + tailleListeReservationEnCours +
                 ", emprunt=" + emprunt +
                 '}';
     }
