@@ -153,6 +153,7 @@ public class EmpruntServiceImpl implements EmpruntService {
             nouvelEmprunt.setProlongeable(true);
             nouvelEmprunt.setExemplaire(exemplaire);
             exemplaire.setEtat(EtatEnums.EMPRUNTE);
+            exemplaire.getLivre().setQuantiteDispo(exemplaire.getLivre().getQuantiteDispo() - 1 );
 
             return empruntRepository.save(nouvelEmprunt);
 
