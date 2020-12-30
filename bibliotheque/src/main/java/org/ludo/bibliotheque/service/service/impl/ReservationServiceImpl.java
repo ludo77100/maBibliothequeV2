@@ -44,12 +44,13 @@ public class ReservationServiceImpl implements ReservationService {
 
         Livre livreDemande = livreRepository.findByTitre(titreLivre);
         List<Emprunt> listeEmpruntUtilisateur = empruntRepository.findAllByPseudoEmprunteurAndEnCoursIsTrue(pseudoDemandeur);
+        List<Reservation> listeReservationUtilisateur = reservationRepository.findAllBypseudoDemandeur(pseudoDemandeur);
 
         if (livreDemande.getReservations().size() > livreDemande.getExemplaires().size()*2) {
             throw new ReservationExceptions("La liste de réservations est complète");
         } else {
 
-            this.verifLivreReserveNonEmprunte(listeEmpruntUtilisateur, titreLivre);
+            this.verifLivreReserveNonEmprunte(listeEmpruntUtilisateur, titreLivre, listeReservationUtilisateur);
 
             Date date = new Date();
             Reservation ouvrirReservation = new Reservation();
@@ -114,17 +115,23 @@ public class ReservationServiceImpl implements ReservationService {
     //TODO à tester
     /**
      * Cette méthode permet de vérifier qu'un utilisateur demandant une réservation pour un livre
-     * ne le possède pas déjà sur un emprunt
+     * ne le possède pas déjà sur un emprunt ou une reservation
      * @param listeEmpruntUtilisateur
      * @param titreLivre
      */
-    public void verifLivreReserveNonEmprunte(List<Emprunt> listeEmpruntUtilisateur, String titreLivre) throws ReservationExceptions{
+    public void verifLivreReserveNonEmprunte(List<Emprunt> listeEmpruntUtilisateur, String titreLivre, List<Reservation> listeReservationUtilisateur) throws ReservationExceptions{
 
-        for (int i = 0 ; i < listeEmpruntUtilisateur.size() ; i++){
-            Emprunt emprunt = listeEmpruntUtilisateur.get(i);
+        for (Emprunt emprunt : listeEmpruntUtilisateur) {
             String livre = emprunt.getExemplaire().getLivre().getTitre();
-            if (livre == titreLivre)
+            if (livre.equals(titreLivre))
                 throw new ReservationExceptions("Un emprunt pour ce livre existe déjà pour cette utilisateur");
+        }
+
+        for (Reservation reservation : listeReservationUtilisateur){
+            String livre = reservation.getLivre().getTitre();
+            if (livre.equals(titreLivre)){
+                throw new ReservationExceptions("Une réservation pour ce livre existe déjà pour cette utilisateur");
+            }
         }
     }
 
