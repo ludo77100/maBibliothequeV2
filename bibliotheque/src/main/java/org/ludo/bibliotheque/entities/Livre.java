@@ -9,6 +9,7 @@ import org.springframework.lang.NonNull;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Collection;
+import java.util.Date;
 import java.util.Set;
 
 /**
@@ -61,6 +62,9 @@ public class Livre implements Serializable {
      * Url de l'image du livre
      */
     private String urlImage;
+
+    @Transient
+    private Date dateRetourPlusProche ;
 
     /**
      * Relation avec la table emprunt
@@ -170,6 +174,14 @@ public class Livre implements Serializable {
         this.reservations = reservations;
     }
 
+    public Date getDateRetourPlusProche() {
+        return dateRetourPlusProche;
+    }
+
+    public void setDateRetourPlusProche(Date dateRetourPlusProche) {
+        this.dateRetourPlusProche = dateRetourPlusProche;
+    }
+
     @Override
     public String toString() {
         return "Livre{" +
@@ -181,6 +193,7 @@ public class Livre implements Serializable {
                 ", nombrePages=" + nombrePages +
                 ", quantiteDispo=" + quantiteDispo +
                 ", urlImage='" + urlImage + '\'' +
+                ", dateRetourPlusProche=" + dateRetourPlusProche +
                 ", exemplaires=" + exemplaires +
                 ", reservations=" + reservations +
                 '}';

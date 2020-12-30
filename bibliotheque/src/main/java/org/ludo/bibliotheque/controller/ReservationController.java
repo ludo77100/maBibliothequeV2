@@ -15,8 +15,8 @@ public class ReservationController {
     @Autowired
     ReservationService reservationService ;
 
-    @PostMapping(value = "/reservation/ouvrir")
-    public Reservation ouvrirReservation(@RequestParam String pseudoDemandeur, @RequestParam String titreLivre) throws ReservationExceptions {
+    @PostMapping(value = "/reservation/ouvrir/{titreLivre}/{pseudoDemandeur}")
+    public Reservation ouvrirReservation(@PathVariable("titreLivre") String titreLivre, @PathVariable("pseudoDemandeur") String pseudoDemandeur) throws ReservationExceptions {
         return reservationService.ouvrirReservation(pseudoDemandeur, titreLivre) ;
     }
 

@@ -87,4 +87,7 @@ public interface MicroserviceBibliothequeProxy {
     @GetMapping(value = "/bibliotheque/reservation/fermer/{idReservation}")
     ReservationBean fermerReservation(@PathVariable long idReservation);
 
+    @PostMapping(value = "/bibliotheque/reservation/ouvrir/{titreLivre}/{pseudoDemandeur}")
+    ReservationBean ouvrirReservation(@PathVariable("titreLivre") String titreLivre, @PathVariable("pseudoDemandeur") String pseudoDemandeur);
+
 }

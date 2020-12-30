@@ -1,6 +1,7 @@
 package org.ludo.clientui.beans;
 
 import java.util.Collection;
+import java.util.Date;
 
 /**
  * Bean pour entity livre
@@ -47,6 +48,8 @@ public class LivreBean {
      */
     private String urlImage ;
 
+    private Date dateRetourPlusProche ;
+
     /**
      * Relation avec la table emprunt
      */
@@ -64,7 +67,7 @@ public class LivreBean {
      * @param emprunt Relation avec la table emprunt
      * @param urlImage Url de l'image du livre
      */
-    public LivreBean(int idLivre, String titre, String auteur, String editeur, String decription, int nombrePages, int quantiteDispo, Collection<EmpruntBean> emprunt, String urlImage) {
+    public LivreBean(int idLivre, String titre, String auteur, String editeur, String decription, int nombrePages, int quantiteDispo, Collection<EmpruntBean> emprunt, String urlImage, Date dateRetourPlusProche) {
         this.idLivre = idLivre;
         this.titre = titre;
         this.auteur = auteur;
@@ -74,6 +77,7 @@ public class LivreBean {
         this.quantiteDispo = quantiteDispo;
         this.emprunt = emprunt;
         this.urlImage = urlImage;
+        this.dateRetourPlusProche = dateRetourPlusProche ;
     }
 
     public int getIdLivre() {
@@ -148,6 +152,14 @@ public class LivreBean {
         this.urlImage = urlImage;
     }
 
+    public Date getDateRetourPlusProche() {
+        return dateRetourPlusProche;
+    }
+
+    public void setDateRetourPlusProche(Date dateRetourPlusProche) {
+        this.dateRetourPlusProche = dateRetourPlusProche;
+    }
+
     @Override
     public String toString() {
         return "LivreBean{" +
@@ -159,6 +171,7 @@ public class LivreBean {
                 ", nombrePages=" + nombrePages +
                 ", quantiteDispo=" + quantiteDispo +
                 ", urlImage='" + urlImage + '\'' +
+                ", dateRetourPlusProche=" + dateRetourPlusProche +
                 ", emprunt=" + emprunt +
                 '}';
     }

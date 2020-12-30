@@ -3,13 +3,18 @@ package org.ludo.bibliotheque.service.service.impl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.ludo.bibliotheque.BibliothequeApplication;
+import org.ludo.bibliotheque.Enums.EtatEnums;
 import org.ludo.bibliotheque.dao.LivreRepository;
+import org.ludo.bibliotheque.entities.Emprunt;
+import org.ludo.bibliotheque.entities.Exemplaire;
 import org.ludo.bibliotheque.entities.Livre;
 import org.ludo.bibliotheque.service.LivreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 @Service
 public class LivreServiceImpl implements LivreService {
@@ -28,7 +33,25 @@ public class LivreServiceImpl implements LivreService {
 
         logger.debug("Appel LivreServiceImpl méthode findAll");
 
-        return livreRepository.findAll();
+        //TODO rajouter ici date retour la plus proche
+
+        List<Livre> listeLivre = livreRepository.findAll();
+
+        for (Livre e : listeLivre){
+            Set<Exemplaire> listeExemplaires =  e.getExemplaires();
+            Date dateRetour = new Date();
+            dateRetour.setDate(2999-12-12);
+
+            for (Exemplaire f : listeExemplaires){
+                System.out.println(f.getEtat());
+                if (f.getEtat().equals(EtatEnums.EMPRUNTE) && f.getEmprunt().getDateFin().before(dateRetour)){
+                    dateRetour = f.getEmprunt().getDateFin();
+                    e.setDateRetourPlusProche(dateRetour);
+                }
+            }
+        }
+
+        return listeLivre ;
     }
 
     /**

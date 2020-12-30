@@ -32,8 +32,19 @@
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item"><strong>Auteur: </strong></li>
                                 <li class="list-group-item text-right" th:text="${ll.auteur}"></li>
+                                <div th:if="${ll.quantiteDispo > 0}">
                                 <li class="list-group-item"><strong>Quantité emprûntable: </strong></li>
                                 <li class="list-group-item text-right" th:text="${ll.quantiteDispo}"></li>
+                                </div>
+                                <div th:if="${ll.quantiteDispo == 0}">
+                                    <li class="list-group-item"><strong>Retour en stock estimé: </strong></li>
+                                    <li class="list-group-item text-right" th:text="${#dates.format(ll.dateRetourPlusProche, 'dd/MM/yyyy')}"></li>
+                                    <div class="text-center spacer">
+                                        <a class="btn btn-primary" th:href="@{/reservation/ouvrir/{titreLivre}(titreLivre=${ll.titre})}">
+                                            Reserver
+                                        </a>
+                                    </div>
+                                </div>
                             </ul>
                             <div class="text-center spacer">
                                 <a class="btn btn-primary" th:href="@{/livre/{idLivre}(idLivre=${ll.idLivre})}">
