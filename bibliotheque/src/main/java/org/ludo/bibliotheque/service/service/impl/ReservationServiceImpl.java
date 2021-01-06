@@ -46,11 +46,13 @@ public class ReservationServiceImpl implements ReservationService {
         List<Emprunt> listeEmpruntUtilisateur = empruntRepository.findAllByPseudoEmprunteurAndEnCoursIsTrue(pseudoDemandeur);
         List<Reservation> listeReservationUtilisateur = reservationRepository.findAllBypseudoDemandeur(pseudoDemandeur);
 
-        if (livreDemande.getReservations().size() > livreDemande.getExemplaires().size()*2) {
+        this.verifLivreReserveNonEmprunte(listeEmpruntUtilisateur, titreLivre, listeReservationUtilisateur);
+
+
+        if (livreDemande.getReservations().size() >= livreDemande.getExemplaires().size()*2) {
             throw new ReservationExceptions("La liste de réservations est complète");
         } else {
 
-            this.verifLivreReserveNonEmprunte(listeEmpruntUtilisateur, titreLivre, listeReservationUtilisateur);
 
             Date date = new Date();
             Reservation ouvrirReservation = new Reservation();
@@ -188,6 +190,18 @@ public class ReservationServiceImpl implements ReservationService {
             }
             listeReservationUtilisateur.get(i).setPositionFileAttente(compteurReservations);
         }
+
+        for (Reservation e : listeReservationUtilisateur){
+            Set<Exemplaire> exemplaireSet = e.getLivre().getExemplaires();
+            Date date = new Date() ;
+            for (Exemplaire f : exemplaireSet){
+                if (f.getEmprunt().getDateFin().after(date) && e.getEtatReservationEnums().equals(EtatReservationEnums.ENCOURS)){
+                    date = f.getEmprunt().getDateFin();
+                    e.setDateDisponibiliteEstimee(date);
+                }
+            }
+            e.setDateDisponibiliteEstimee(date);
+        }
         return listeReservationUtilisateur ;
     }
 
@@ -201,6 +215,11 @@ public class ReservationServiceImpl implements ReservationService {
         reservation.setDateCloture(date);
 
         return reservationRepository.save(reservation);
+    }
+
+    @Override
+    public void deleteById(Long idReservation) {
+        reservationRepository.deleteById(idReservation);
     }
 
 }

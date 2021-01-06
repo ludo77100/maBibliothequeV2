@@ -26,10 +26,12 @@
                         <li class="list-group-item text-right" th:text="${#dates.format(lru.dateDemandeReservation, 'dd/MM/yyyy')}"></li>
                         <li class="list-group-item"><strong>Etat de la demande: </strong></li>
                         <li class="list-group-item text-right" th:text="${lru.etatReservationEnums}"></li>
+                        <div th:if="${lru.etatReservationEnums == 'ENCOURS'}">
                         <li class="list-group-item"><strong>Date de retour la plus proche: </strong></li>
                         <li class="list-group-item text-right" th:text="${lru.etatReservationEnums}"></li>
                         <li class="list-group-item"><strong>Position dans la file d'attente: </strong></li>
                         <li class="list-group-item text-right" th:text="${lru.positionFileAttente}"></li>
+                        </div>
                     </ul>
                     <div class="text-center spacer">
                         <button class="btn btn-primary" th:if="${lru.etatReservationEnums == 'ATTENTE'}">

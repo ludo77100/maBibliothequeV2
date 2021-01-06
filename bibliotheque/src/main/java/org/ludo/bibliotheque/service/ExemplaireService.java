@@ -11,5 +11,7 @@ public interface ExemplaireService {
 
     List<Exemplaire> getAllExemplaire();
 
-    List<Exemplaire> getAllExemplaireForLivre(Livre livre);
+    List<Exemplaire> getAllExemplaireForLivre(String titreLivre);
+
+    void deleteById(Long idExemplaire);
 }

@@ -28,4 +28,5 @@ public interface EmpruntService {
 
     List<Emprunt> listeLivreNonRendueApresDateFin();
 
+    void deleteById(Long idEmprunt);
 }

@@ -80,10 +80,11 @@ public class LivreController {
      * @return la suppression du livre
      */
     @ApiOperation(value = "Pour supprimer un livre")
-    @GetMapping(value = "/livre/supprimer")
-    public void supprimerLivre(Long idLivre){
+    @DeleteMapping(value = "/livre/supprimer/{idLivre}")
+    public void supprimerLivre(@PathVariable("idLivre") Long idLivre){
         logger.debug("appel controlleur supprimerLivre");
 
         livreService.supprimerLivre(idLivre);
     }
+
 }

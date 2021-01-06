@@ -25,4 +25,6 @@ public interface ReservationService {
     List<Reservation> getAllReservationForUser(String pseudoEmprunteur);
 
     Reservation fermerReservation(long idReservation);
+
+    void deleteById(Long idReservation);
 }

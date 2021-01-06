@@ -46,4 +46,10 @@ public class ReservationController {
         return reservationService.fermerReservation(idReservation);
     }
 
+
+    @DeleteMapping(value = "/reservation/supprimer/{idReservation}")
+    public void supprimerReservation(@PathVariable("idReservation") Long idReservation){
+        reservationService.deleteById(idReservation);
+    }
+
 }

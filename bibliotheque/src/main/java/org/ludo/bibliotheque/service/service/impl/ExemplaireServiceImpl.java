@@ -43,8 +43,13 @@ public class ExemplaireServiceImpl implements ExemplaireService {
     }
 
     @Override
-    public List<Exemplaire> getAllExemplaireForLivre(Livre livre) {
-        return exemplaireRepository.findAllByLivre(livre);
+    public List<Exemplaire> getAllExemplaireForLivre(String titreLivre) {
+        return exemplaireRepository.findAllByLivre_titre(titreLivre);
+    }
+
+    @Override
+    public void deleteById(Long idExemplaire) {
+        exemplaireRepository.deleteById(idExemplaire);
     }
 
     public Exemplaire changerEtatExemplaire(String identifiantExemplaire, String nouvelEtat){

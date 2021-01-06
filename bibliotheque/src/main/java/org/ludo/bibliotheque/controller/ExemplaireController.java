@@ -6,10 +6,7 @@ import org.ludo.bibliotheque.entities.Exemplaire;
 import org.ludo.bibliotheque.entities.Livre;
 import org.ludo.bibliotheque.service.ExemplaireService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -24,7 +21,7 @@ public class ExemplaireController {
     //TODO controlleur pour compter le nombre d'exemplaire
 
     @ApiOperation(value = "Cette API permet l'ajout d'un exemplaire avec le titre d'un livre")
-    @GetMapping(value = "/exemplaire/{titreLivre}")
+    @GetMapping(value = "/exemplaire/ajouter/{titreLivre}")
     public Exemplaire ajouterExemplaire(@PathVariable String titreLivre){
         return exemplaireService.ajouterExemplaire(titreLivre) ;
     }
@@ -36,10 +33,14 @@ public class ExemplaireController {
     }
 
     @ApiOperation(value = "Cette API permet de récupérer tous les exemplaires d'un livre")
-    @GetMapping(value = "/exemplaire/livre")
-    public List<Exemplaire> getAllExemplaireForLivre(@RequestParam Livre livre){
-        return exemplaireService.getAllExemplaireForLivre(livre);
+    @GetMapping(value = "/exemplaire/{titreLivre}")
+    public List<Exemplaire> getAllExemplaireForLivre(@PathVariable("titreLivre") String titreLivre){
+        return exemplaireService.getAllExemplaireForLivre(titreLivre);
     }
 
+    @DeleteMapping(value = "/exemplaire/supprimer/{idExemplaire}")
+    public void supprimerExemplaire(@PathVariable("idExemplaire") Long idExemplaire){
+        exemplaireService.deleteById(idExemplaire);
+    }
 
 }

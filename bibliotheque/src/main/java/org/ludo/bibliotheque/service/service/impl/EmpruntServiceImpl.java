@@ -129,6 +129,11 @@ public class EmpruntServiceImpl implements EmpruntService {
         return listeEmprunt;
     }
 
+    @Override
+    public void deleteById(Long idEmprunt) {
+        empruntRepository.deleteById(idEmprunt);
+    }
+
     /**
      * Enregistre un nouvel emprunt
      * @param identifiantExemplaire identifiant de l'exemplaire emprunté
@@ -143,6 +148,7 @@ public class EmpruntServiceImpl implements EmpruntService {
 
         Emprunt nouvelEmprunt = new Emprunt();
         Exemplaire exemplaire = exemplaireRepository.findByIdentifiant(identifiantExemplaire);
+        Livre livre = livreRepository.findByTitre(exemplaire.getLivre().getTitre());
         Date date = new Date();
 
             nouvelEmprunt.setDateDebut(date);
@@ -153,7 +159,12 @@ public class EmpruntServiceImpl implements EmpruntService {
             nouvelEmprunt.setProlongeable(true);
             nouvelEmprunt.setExemplaire(exemplaire);
             exemplaire.setEtat(EtatEnums.EMPRUNTE);
-            exemplaire.getLivre().setQuantiteDispo(exemplaire.getLivre().getQuantiteDispo() - 1 );
+
+            livre.setQuantiteDispo(livre.getQuantiteDispo() - 1);
+
+            livreRepository.save(livre);
+            exemplaireRepository.save(exemplaire);
+
 
             return empruntRepository.save(nouvelEmprunt);
 

@@ -23,6 +23,9 @@ public class Reservation implements Serializable {
     @Transient
     private int positionFileAttente ;
 
+    @Transient
+    private Date dateDisponibiliteEstimee ;
+
     private Date dateCloture;
 
     private Exemplaire exemplaire;
@@ -109,6 +112,14 @@ public class Reservation implements Serializable {
         this.positionFileAttente = positionFileAttente;
     }
 
+    public Date getDateDisponibiliteEstimee() {
+        return dateDisponibiliteEstimee;
+    }
+
+    public void setDateDisponibiliteEstimee(Date dateDisponibiliteEstimee) {
+        this.dateDisponibiliteEstimee = dateDisponibiliteEstimee;
+    }
+
     @Override
     public String toString() {
         return "Reservation{" +
@@ -116,6 +127,8 @@ public class Reservation implements Serializable {
                 ", dateDemandeReservation=" + dateDemandeReservation +
                 ", pseudoDemandeur='" + pseudoDemandeur + '\'' +
                 ", etatReservationEnums=" + etatReservationEnums +
+                ", positionFileAttente=" + positionFileAttente +
+                ", dateDisponibiliteEstimee=" + dateDisponibiliteEstimee +
                 ", dateCloture=" + dateCloture +
                 ", exemplaire=" + exemplaire +
                 ", livre=" + livre +

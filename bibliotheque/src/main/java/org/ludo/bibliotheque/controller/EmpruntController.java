@@ -91,7 +91,7 @@ public class EmpruntController {
      * @return un nouvel emprunt
      */
     @ApiOperation(value = "Pour ouvrir un emprunt")
-    @PostMapping(value = "/emprunt/{identifiantExemplaire}")
+    @RequestMapping(value = "/emprunt/ouvrir/{identifiantExemplaire}", method = RequestMethod.POST)
     public Emprunt ouvrirEmprunt(@PathVariable String identifiantExemplaire, @RequestParam String pseudoEmprunteur) throws EmpruntExceptions {
 
         logger.debug("Appel controlleur ouvrirEmprunt");
@@ -121,5 +121,11 @@ public class EmpruntController {
         logger.debug("Appel controlleur listeLivreNonRendueApresDateFin");
 
         return empruntService.listeLivreNonRendueApresDateFin();
+    }
+
+    @ApiOperation(value = "Pour supprimer un emprunt par son id")
+    @DeleteMapping(value = "/emprunt/supprimer/{idEmprunt}")
+    public void supprimeEmprunt(@PathVariable("idEmprunt") Long idEmprunt){
+        empruntService.deleteById(idEmprunt);
     }
 }

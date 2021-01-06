@@ -10,5 +10,5 @@ public interface ExemplaireRepository extends JpaRepository<Exemplaire, Long> {
 
     Exemplaire findByIdentifiant(String identifiantExemplaire);
 
-    List<Exemplaire> findAllByLivre(Livre livre);
+    List<Exemplaire> findAllByLivre_titre(String titreLivre);
 }
