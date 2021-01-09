@@ -79,7 +79,8 @@ public class EmailServiceImpl implements EmailService {
             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
             String strDate = sdf.format(datefin);
 
-            UtilisateurBean utilisateur = microserviceUtilisateurProxy.login(e.getPseudoEmprunteur());
+            System.out.println(e.getPseudoEmprunteur());
+            UtilisateurBean utilisateur = getUtil(e.getPseudoEmprunteur());
 
             logger.debug("Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : " + utilisateur.getEmail() + " pour le livre : " +e.getExemplaire().getLivre().getTitre() + " pour l'emprunt id : " + e.getIdEmprunt());
 
@@ -94,7 +95,10 @@ public class EmailServiceImpl implements EmailService {
 
     public void envoyerEmailExemplaireDispo(Exemplaire exemplaire, Reservation reservation) throws MessagingException {
         Email email = emailRepository.findByNom("exemplaireDispo");
-        UtilisateurBean utilisateur = microserviceUtilisateurProxy.login(reservation.getPseudoDemandeur());
+
+        System.out.println(reservation);
+
+        UtilisateurBean utilisateur = getUtil(reservation.getPseudoDemandeur());
 
         Date dateCloture = new Date();
         Calendar calendar = Calendar.getInstance();
@@ -113,4 +117,11 @@ public class EmailServiceImpl implements EmailService {
         sendSimpleMessage(utilisateur.getEmail(), email.getObjet(), text);
 
     }
+
+    public UtilisateurBean getUtil(String util){
+
+
+        return microserviceUtilisateurProxy.login(util);
+    }
+
 }

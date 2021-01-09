@@ -4126,3 +4126,835 @@
 [DEBUG] 2021-01-09 09:46:22.914 [http-nio-8082-exec-3] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
 [DEBUG] 2021-01-09 09:49:08.606 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur listeLivre
 [DEBUG] 2021-01-09 09:49:08.606 [http-nio-8082-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 10:03:50.431 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 10:04:00.205 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 10:04:37.282 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 10:04:37.282 [http-nio-8082-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 10:05:00.006 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 10:05:31.083 [http-nio-8082-exec-3] BibliothequeApplication - Appel controlleur ouvrirEmprunt
+[DEBUG] 2021-01-09 10:05:31.084 [http-nio-8082-exec-3] BibliothequeApplication - Appel empruntService méthode ouvrirEmprunt
+[DEBUG] 2021-01-09 10:05:31.107 [http-nio-8082-exec-3] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 10:05:31 CET 2021
+[DEBUG] 2021-01-09 10:05:39.198 [http-nio-8082-exec-5] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 10:05:39.198 [http-nio-8082-exec-5] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 10:05:49.685 [http-nio-8082-exec-7] BibliothequeApplication - Appel controlleur listeEmpruntUtilisateur
+[DEBUG] 2021-01-09 10:05:49.685 [http-nio-8082-exec-7] BibliothequeApplication - Appel empruntService méthode findAllByPseudoEmprunteur avec paramètre pseudoEmprunteur : ludo
+[DEBUG] 2021-01-09 10:06:00.005 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 10:06:23.259 [http-nio-8082-exec-8] BibliothequeApplication - Appel controlleur prolongerEmprunt
+[DEBUG] 2021-01-09 10:06:23.259 [http-nio-8082-exec-8] BibliothequeApplication - Appel empruntService méthode prolongerEmprunt avec paramètre idEmprunt : 1324
+[DEBUG] 2021-01-09 10:06:23.264 [http-nio-8082-exec-8] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : 2021-02-06 10:05:31.0
+[DEBUG] 2021-01-09 10:06:23.286 [http-nio-8082-exec-9] BibliothequeApplication - Appel controlleur listeEmpruntUtilisateur
+[DEBUG] 2021-01-09 10:06:23.286 [http-nio-8082-exec-9] BibliothequeApplication - Appel empruntService méthode findAllByPseudoEmprunteur avec paramètre pseudoEmprunteur : ludo
+[DEBUG] 2021-01-09 10:07:00.007 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 10:08:00.005 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 10:09:00.005 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 10:10:00.007 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 10:10:32.964 [http-nio-8082-exec-2] BibliothequeApplication - Appel controlleur listeEmpruntUtilisateur
+[DEBUG] 2021-01-09 10:10:32.965 [http-nio-8082-exec-2] BibliothequeApplication - Appel empruntService méthode findAllByPseudoEmprunteur avec paramètre pseudoEmprunteur : ludo
+[DEBUG] 2021-01-09 10:11:00.007 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 10:11:00.039 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 10:11:00.039 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 10:12:00.008 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 10:12:00.027 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 10:12:00.027 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 10:12:29.615 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 10:13:00.248 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 10:13:00.325 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 10:13:00.326 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 10:14:00.007 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 10:14:00.028 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 10:14:00.028 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 10:15:00.008 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 10:15:00.026 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 10:15:00.026 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 10:16:00.005 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 10:16:00.025 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 10:16:00.025 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 10:17:00.008 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 10:17:00.027 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 10:17:00.027 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 10:17:47.965 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 10:29:36.011 [http-nio-8082-exec-2] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 10:29:36.012 [http-nio-8082-exec-2] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 10:30:02.961 [http-nio-8082-exec-4] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 10:30:02.961 [http-nio-8082-exec-4] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 10:30:08.095 [http-nio-8082-exec-5] BibliothequeApplication - Appel controlleur listeEmpruntUtilisateur
+[DEBUG] 2021-01-09 10:30:08.101 [http-nio-8082-exec-5] BibliothequeApplication - Appel empruntService méthode findAllByPseudoEmprunteur avec paramètre pseudoEmprunteur : ludo
+[DEBUG] 2021-01-09 10:30:22.980 [http-nio-8082-exec-6] BibliothequeApplication - Appel controlleur listeEmpruntUtilisateur
+[DEBUG] 2021-01-09 10:30:22.980 [http-nio-8082-exec-6] BibliothequeApplication - Appel empruntService méthode findAllByPseudoEmprunteur avec paramètre pseudoEmprunteur : ludo
+[DEBUG] 2021-01-09 10:30:26.207 [http-nio-8082-exec-7] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 10:30:26.207 [http-nio-8082-exec-7] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 10:31:07.394 [http-nio-8082-exec-9] BibliothequeApplication - Appel controlleur ouvrirEmprunt
+[DEBUG] 2021-01-09 10:31:07.395 [http-nio-8082-exec-9] BibliothequeApplication - Appel empruntService méthode ouvrirEmprunt
+[DEBUG] 2021-01-09 10:31:07.412 [http-nio-8082-exec-9] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 10:31:07 CET 2021
+[DEBUG] 2021-01-09 10:31:16.651 [http-nio-8082-exec-10] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 10:31:16.652 [http-nio-8082-exec-10] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 10:31:25.533 [http-nio-8082-exec-2] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 10:31:25.533 [http-nio-8082-exec-2] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 10:32:38.225 [http-nio-8082-exec-8] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 10:32:38.226 [http-nio-8082-exec-8] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 10:35:26.821 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 10:36:03.208 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 10:36:03.208 [http-nio-8082-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 10:36:07.252 [http-nio-8082-exec-3] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 10:36:07.253 [http-nio-8082-exec-3] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 10:49:16.409 [http-nio-8082-exec-6] BibliothequeApplication - Appel controlleur listeEmpruntUtilisateur
+[DEBUG] 2021-01-09 10:49:16.416 [http-nio-8082-exec-6] BibliothequeApplication - Appel empruntService méthode findAllByPseudoEmprunteur avec paramètre pseudoEmprunteur : ludo
+[DEBUG] 2021-01-09 11:05:13.690 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 11:06:28.898 [http-nio-8082-exec-2] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 11:06:28.898 [http-nio-8082-exec-2] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 11:06:29.728 [http-nio-8082-exec-3] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 11:06:29.728 [http-nio-8082-exec-3] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 11:06:43.249 [http-nio-8082-exec-4] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 11:06:43.255 [http-nio-8082-exec-4] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 11:10:26.289 [http-nio-8082-exec-7] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 11:10:26.291 [http-nio-8082-exec-7] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 11:13:38.292 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 11:14:13.807 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 11:14:13.807 [http-nio-8082-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 11:14:45.456 [http-nio-8082-exec-3] BibliothequeApplication - Appel controlleur listeEmpruntUtilisateur
+[DEBUG] 2021-01-09 11:14:45.460 [http-nio-8082-exec-3] BibliothequeApplication - Appel empruntService méthode findAllByPseudoEmprunteur avec paramètre pseudoEmprunteur : ludo
+[DEBUG] 2021-01-09 11:14:50.804 [http-nio-8082-exec-4] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 11:14:50.804 [http-nio-8082-exec-4] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 11:15:10.409 [http-nio-8082-exec-5] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 11:15:10.410 [http-nio-8082-exec-5] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 11:15:10.464 [http-nio-8082-exec-5] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 11:20:21.649 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 11:20:32.323 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 11:20:32.323 [http-nio-8082-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 11:20:33.675 [http-nio-8082-exec-2] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 11:20:33.675 [http-nio-8082-exec-2] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 11:21:00.032 [http-nio-8082-exec-4] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 11:21:00.036 [http-nio-8082-exec-4] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 11:21:00.101 [http-nio-8082-exec-4] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 11:22:45.055 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 11:25:46.373 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 11:26:08.721 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 11:26:08.722 [http-nio-8082-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 11:26:26.943 [http-nio-8082-exec-3] BibliothequeApplication - Appel controlleur listeEmpruntUtilisateur
+[DEBUG] 2021-01-09 11:26:26.950 [http-nio-8082-exec-3] BibliothequeApplication - Appel empruntService méthode findAllByPseudoEmprunteur avec paramètre pseudoEmprunteur : aurelie
+[DEBUG] 2021-01-09 11:26:49.279 [http-nio-8082-exec-5] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 11:26:49.282 [http-nio-8082-exec-5] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 11:26:52.486 [http-nio-8082-exec-6] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 11:26:52.487 [http-nio-8082-exec-6] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 11:28:01.880 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 11:28:48.235 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 11:28:48.235 [http-nio-8082-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 11:29:04.542 [http-nio-8082-exec-3] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 11:29:04.549 [http-nio-8082-exec-3] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 11:29:04.613 [http-nio-8082-exec-3] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 11:34:20.587 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 11:34:55.651 [http-nio-8082-exec-2] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 11:34:55.663 [http-nio-8082-exec-2] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 11:34:55.732 [http-nio-8082-exec-2] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 11:36:39.273 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 11:36:58.071 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 11:37:08.522 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 11:37:08.534 [http-nio-8082-exec-1] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 11:37:08.828 [http-nio-8082-exec-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 11:41:42.215 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 11:42:05.080 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 11:42:05.092 [http-nio-8082-exec-1] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 11:42:05.360 [http-nio-8082-exec-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 11:43:38.688 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 11:43:46.750 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 11:43:46.759 [http-nio-8082-exec-1] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 11:43:47.033 [http-nio-8082-exec-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 11:45:45.457 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 11:45:57.438 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 11:45:57.450 [http-nio-8082-exec-1] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 11:48:57.295 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 11:49:04.806 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 11:49:04.817 [http-nio-8082-exec-1] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 11:49:41.676 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 11:49:44.472 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 11:49:44.482 [http-nio-8082-exec-1] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 11:50:36.442 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 11:50:40.399 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 11:50:40.409 [http-nio-8082-exec-1] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 11:50:40.691 [http-nio-8082-exec-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 11:52:12.430 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 11:52:49.224 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 11:52:49.237 [http-nio-8082-exec-1] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 13:10:21.500 [http-nio-8082-exec-3] BibliothequeApplication - appel controlleur enregistrerNouveauLivre
+[DEBUG] 2021-01-09 13:10:21.501 [http-nio-8082-exec-3] BibliothequeApplication - Appel LivreServiceImpl méthode enregistrerNouveauLivre
+[DEBUG] 2021-01-09 13:10:21.630 [http-nio-8082-exec-6] BibliothequeApplication - appel controlleur enregistrerNouveauLivre
+[DEBUG] 2021-01-09 13:10:21.630 [http-nio-8082-exec-6] BibliothequeApplication - Appel LivreServiceImpl méthode enregistrerNouveauLivre
+[DEBUG] 2021-01-09 13:10:21.888 [http-nio-8082-exec-9] BibliothequeApplication - Appel controlleur findById livre
+[DEBUG] 2021-01-09 13:10:21.888 [http-nio-8082-exec-9] BibliothequeApplication - Appel LivreServiceImpl méthode findLivreById avec paramètre idLidvre : 1328
+[DEBUG] 2021-01-09 13:10:22.014 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur ouvrirEmprunt
+[DEBUG] 2021-01-09 13:10:22.015 [http-nio-8082-exec-1] BibliothequeApplication - Appel empruntService méthode ouvrirEmprunt
+[DEBUG] 2021-01-09 13:10:22.023 [http-nio-8082-exec-1] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 13:10:22 CET 2021
+[DEBUG] 2021-01-09 13:10:22.082 [http-nio-8082-exec-5] BibliothequeApplication - Appel controlleur findById livre
+[DEBUG] 2021-01-09 13:10:22.082 [http-nio-8082-exec-5] BibliothequeApplication - Appel LivreServiceImpl méthode findLivreById avec paramètre idLidvre : 1329
+[DEBUG] 2021-01-09 13:10:22.175 [http-nio-8082-exec-4] BibliothequeApplication - Appel controlleur ouvrirEmprunt
+[DEBUG] 2021-01-09 13:10:22.175 [http-nio-8082-exec-4] BibliothequeApplication - Appel empruntService méthode ouvrirEmprunt
+[DEBUG] 2021-01-09 13:10:22.181 [http-nio-8082-exec-4] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 13:10:22 CET 2021
+[DEBUG] 2021-01-09 13:10:22.544 [http-nio-8082-exec-2] BibliothequeApplication - Appel controlleur prolongerEmprunt
+[DEBUG] 2021-01-09 13:10:22.544 [http-nio-8082-exec-2] BibliothequeApplication - Appel empruntService méthode prolongerEmprunt avec paramètre idEmprunt : 1332
+[DEBUG] 2021-01-09 13:10:22.548 [http-nio-8082-exec-2] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : 2021-02-06 13:10:22.0
+[DEBUG] 2021-01-09 13:10:22.912 [http-nio-8082-exec-5] BibliothequeApplication - appel controlleur supprimerLivre
+[DEBUG] 2021-01-09 13:10:22.912 [http-nio-8082-exec-5] BibliothequeApplication - Appel LivreServiceImpl méthode supprimerLivre avec paramètre idLidvre : 1328
+[DEBUG] 2021-01-09 13:10:22.951 [http-nio-8082-exec-2] BibliothequeApplication - appel controlleur supprimerLivre
+[DEBUG] 2021-01-09 13:10:22.951 [http-nio-8082-exec-2] BibliothequeApplication - Appel LivreServiceImpl méthode supprimerLivre avec paramètre idLidvre : 1329
+[DEBUG] 2021-01-09 13:12:28.615 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 13:24:59.627 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 13:25:09.583 [http-nio-8082-exec-1] BibliothequeApplication - appel controlleur enregistrerNouveauLivre
+[DEBUG] 2021-01-09 13:25:09.583 [http-nio-8082-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode enregistrerNouveauLivre
+[DEBUG] 2021-01-09 13:25:09.760 [http-nio-8082-exec-3] BibliothequeApplication - appel controlleur enregistrerNouveauLivre
+[DEBUG] 2021-01-09 13:25:09.761 [http-nio-8082-exec-3] BibliothequeApplication - Appel LivreServiceImpl méthode enregistrerNouveauLivre
+[DEBUG] 2021-01-09 13:25:10.247 [http-nio-8082-exec-6] BibliothequeApplication - Appel controlleur findById livre
+[DEBUG] 2021-01-09 13:25:10.248 [http-nio-8082-exec-6] BibliothequeApplication - Appel LivreServiceImpl méthode findLivreById avec paramètre idLidvre : 1336
+[DEBUG] 2021-01-09 13:25:10.438 [http-nio-8082-exec-8] BibliothequeApplication - Appel controlleur ouvrirEmprunt
+[DEBUG] 2021-01-09 13:25:10.444 [http-nio-8082-exec-8] BibliothequeApplication - Appel empruntService méthode ouvrirEmprunt
+[DEBUG] 2021-01-09 13:25:10.456 [http-nio-8082-exec-8] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 13:25:10 CET 2021
+[DEBUG] 2021-01-09 13:25:10.554 [http-nio-8082-exec-9] BibliothequeApplication - Appel controlleur findById livre
+[DEBUG] 2021-01-09 13:25:10.554 [http-nio-8082-exec-9] BibliothequeApplication - Appel LivreServiceImpl méthode findLivreById avec paramètre idLidvre : 1337
+[DEBUG] 2021-01-09 13:25:10.635 [http-nio-8082-exec-2] BibliothequeApplication - Appel controlleur ouvrirEmprunt
+[DEBUG] 2021-01-09 13:25:10.636 [http-nio-8082-exec-2] BibliothequeApplication - Appel empruntService méthode ouvrirEmprunt
+[DEBUG] 2021-01-09 13:25:10.642 [http-nio-8082-exec-2] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 13:25:10 CET 2021
+[DEBUG] 2021-01-09 13:25:11.055 [http-nio-8082-exec-10] BibliothequeApplication - Appel controlleur prolongerEmprunt
+[DEBUG] 2021-01-09 13:25:11.055 [http-nio-8082-exec-10] BibliothequeApplication - Appel empruntService méthode prolongerEmprunt avec paramètre idEmprunt : 1340
+[DEBUG] 2021-01-09 13:25:11.058 [http-nio-8082-exec-10] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : 2021-02-06 13:25:10.0
+[DEBUG] 2021-01-09 13:25:11.339 [http-nio-8082-exec-9] BibliothequeApplication - appel controlleur supprimerLivre
+[DEBUG] 2021-01-09 13:25:11.339 [http-nio-8082-exec-9] BibliothequeApplication - Appel LivreServiceImpl méthode supprimerLivre avec paramètre idLidvre : 1336
+[DEBUG] 2021-01-09 13:25:11.383 [http-nio-8082-exec-10] BibliothequeApplication - appel controlleur supprimerLivre
+[DEBUG] 2021-01-09 13:25:11.383 [http-nio-8082-exec-10] BibliothequeApplication - Appel LivreServiceImpl méthode supprimerLivre avec paramètre idLidvre : 1337
+[DEBUG] 2021-01-09 13:26:27.423 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 13:26:27.424 [http-nio-8082-exec-1] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 13:41:40.022 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 13:41:53.693 [http-nio-8082-exec-2] BibliothequeApplication - appel controlleur enregistrerNouveauLivre
+[DEBUG] 2021-01-09 13:41:53.693 [http-nio-8082-exec-2] BibliothequeApplication - Appel LivreServiceImpl méthode enregistrerNouveauLivre
+[DEBUG] 2021-01-09 13:41:53.864 [http-nio-8082-exec-3] BibliothequeApplication - appel controlleur enregistrerNouveauLivre
+[DEBUG] 2021-01-09 13:41:53.864 [http-nio-8082-exec-3] BibliothequeApplication - Appel LivreServiceImpl méthode enregistrerNouveauLivre
+[DEBUG] 2021-01-09 13:41:54.372 [http-nio-8082-exec-6] BibliothequeApplication - Appel controlleur findById livre
+[DEBUG] 2021-01-09 13:41:54.372 [http-nio-8082-exec-6] BibliothequeApplication - Appel LivreServiceImpl méthode findLivreById avec paramètre idLidvre : 1344
+[DEBUG] 2021-01-09 13:41:54.562 [http-nio-8082-exec-8] BibliothequeApplication - Appel controlleur ouvrirEmprunt
+[DEBUG] 2021-01-09 13:41:54.568 [http-nio-8082-exec-8] BibliothequeApplication - Appel empruntService méthode ouvrirEmprunt
+[DEBUG] 2021-01-09 13:41:54.581 [http-nio-8082-exec-8] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 13:41:54 CET 2021
+[DEBUG] 2021-01-09 13:41:54.679 [http-nio-8082-exec-9] BibliothequeApplication - Appel controlleur findById livre
+[DEBUG] 2021-01-09 13:41:54.679 [http-nio-8082-exec-9] BibliothequeApplication - Appel LivreServiceImpl méthode findLivreById avec paramètre idLidvre : 1345
+[DEBUG] 2021-01-09 13:41:54.780 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur ouvrirEmprunt
+[DEBUG] 2021-01-09 13:41:54.781 [http-nio-8082-exec-1] BibliothequeApplication - Appel empruntService méthode ouvrirEmprunt
+[DEBUG] 2021-01-09 13:41:54.787 [http-nio-8082-exec-1] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 13:41:54 CET 2021
+[DEBUG] 2021-01-09 13:41:55.272 [http-nio-8082-exec-10] BibliothequeApplication - Appel controlleur prolongerEmprunt
+[DEBUG] 2021-01-09 13:41:55.273 [http-nio-8082-exec-10] BibliothequeApplication - Appel empruntService méthode prolongerEmprunt avec paramètre idEmprunt : 1348
+[DEBUG] 2021-01-09 13:41:55.278 [http-nio-8082-exec-10] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : 2021-02-06 13:41:55.0
+[DEBUG] 2021-01-09 13:41:55.665 [http-nio-8082-exec-9] BibliothequeApplication - appel controlleur supprimerLivre
+[DEBUG] 2021-01-09 13:41:55.665 [http-nio-8082-exec-9] BibliothequeApplication - Appel LivreServiceImpl méthode supprimerLivre avec paramètre idLidvre : 1344
+[DEBUG] 2021-01-09 13:41:55.709 [http-nio-8082-exec-10] BibliothequeApplication - appel controlleur supprimerLivre
+[DEBUG] 2021-01-09 13:41:55.709 [http-nio-8082-exec-10] BibliothequeApplication - Appel LivreServiceImpl méthode supprimerLivre avec paramètre idLidvre : 1345
+[DEBUG] 2021-01-09 13:42:34.006 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 13:42:34.007 [http-nio-8082-exec-1] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 13:43:25.111 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 13:43:29.294 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 13:43:29.306 [http-nio-8082-exec-1] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 13:43:29.638 [http-nio-8082-exec-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 13:44:19.285 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 13:53:23.762 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 13:53:54.010 [http-nio-8082-exec-1] BibliothequeApplication - appel controlleur enregistrerNouveauLivre
+[DEBUG] 2021-01-09 13:53:54.011 [http-nio-8082-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode enregistrerNouveauLivre
+[DEBUG] 2021-01-09 13:53:54.194 [http-nio-8082-exec-3] BibliothequeApplication - appel controlleur enregistrerNouveauLivre
+[DEBUG] 2021-01-09 13:53:54.194 [http-nio-8082-exec-3] BibliothequeApplication - Appel LivreServiceImpl méthode enregistrerNouveauLivre
+[DEBUG] 2021-01-09 13:53:54.637 [http-nio-8082-exec-6] BibliothequeApplication - Appel controlleur findById livre
+[DEBUG] 2021-01-09 13:53:54.638 [http-nio-8082-exec-6] BibliothequeApplication - Appel LivreServiceImpl méthode findLivreById avec paramètre idLidvre : 1352
+[DEBUG] 2021-01-09 13:53:54.781 [http-nio-8082-exec-8] BibliothequeApplication - Appel controlleur ouvrirEmprunt
+[DEBUG] 2021-01-09 13:53:54.790 [http-nio-8082-exec-8] BibliothequeApplication - Appel empruntService méthode ouvrirEmprunt
+[DEBUG] 2021-01-09 13:53:54.802 [http-nio-8082-exec-8] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 13:53:54 CET 2021
+[DEBUG] 2021-01-09 13:53:54.870 [http-nio-8082-exec-9] BibliothequeApplication - Appel controlleur findById livre
+[DEBUG] 2021-01-09 13:53:54.870 [http-nio-8082-exec-9] BibliothequeApplication - Appel LivreServiceImpl méthode findLivreById avec paramètre idLidvre : 1353
+[DEBUG] 2021-01-09 13:53:54.987 [http-nio-8082-exec-2] BibliothequeApplication - Appel controlleur ouvrirEmprunt
+[DEBUG] 2021-01-09 13:53:54.988 [http-nio-8082-exec-2] BibliothequeApplication - Appel empruntService méthode ouvrirEmprunt
+[DEBUG] 2021-01-09 13:53:54.996 [http-nio-8082-exec-2] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 13:53:54 CET 2021
+[DEBUG] 2021-01-09 13:53:55.471 [http-nio-8082-exec-9] BibliothequeApplication - Appel controlleur prolongerEmprunt
+[DEBUG] 2021-01-09 13:53:55.472 [http-nio-8082-exec-9] BibliothequeApplication - Appel empruntService méthode prolongerEmprunt avec paramètre idEmprunt : 1356
+[DEBUG] 2021-01-09 13:53:55.476 [http-nio-8082-exec-9] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : 2021-02-06 13:53:55.0
+[DEBUG] 2021-01-09 13:53:55.816 [http-nio-8082-exec-8] BibliothequeApplication - appel controlleur supprimerLivre
+[DEBUG] 2021-01-09 13:53:55.816 [http-nio-8082-exec-8] BibliothequeApplication - Appel LivreServiceImpl méthode supprimerLivre avec paramètre idLidvre : 1352
+[DEBUG] 2021-01-09 13:53:55.864 [http-nio-8082-exec-9] BibliothequeApplication - appel controlleur supprimerLivre
+[DEBUG] 2021-01-09 13:53:55.864 [http-nio-8082-exec-9] BibliothequeApplication - Appel LivreServiceImpl méthode supprimerLivre avec paramètre idLidvre : 1353
+[DEBUG] 2021-01-09 13:54:12.853 [http-nio-8082-exec-2] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 13:54:12.853 [http-nio-8082-exec-2] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 13:54:12.881 [http-nio-8082-exec-2] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 13:56:28.543 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 13:56:34.503 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 13:56:34.518 [http-nio-8082-exec-1] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 13:57:29.090 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 13:57:33.619 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 13:57:33.630 [http-nio-8082-exec-1] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 13:57:34.024 [http-nio-8082-exec-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 14:02:35.792 [http-nio-8082-exec-3] BibliothequeApplication - appel controlleur enregistrerNouveauLivre
+[DEBUG] 2021-01-09 14:02:35.793 [http-nio-8082-exec-3] BibliothequeApplication - Appel LivreServiceImpl méthode enregistrerNouveauLivre
+[DEBUG] 2021-01-09 14:02:35.958 [http-nio-8082-exec-4] BibliothequeApplication - appel controlleur enregistrerNouveauLivre
+[DEBUG] 2021-01-09 14:02:35.958 [http-nio-8082-exec-4] BibliothequeApplication - Appel LivreServiceImpl méthode enregistrerNouveauLivre
+[DEBUG] 2021-01-09 14:02:36.272 [http-nio-8082-exec-7] BibliothequeApplication - Appel controlleur findById livre
+[DEBUG] 2021-01-09 14:02:36.272 [http-nio-8082-exec-7] BibliothequeApplication - Appel LivreServiceImpl méthode findLivreById avec paramètre idLidvre : 1360
+[DEBUG] 2021-01-09 14:02:36.493 [http-nio-8082-exec-9] BibliothequeApplication - Appel controlleur ouvrirEmprunt
+[DEBUG] 2021-01-09 14:02:36.494 [http-nio-8082-exec-9] BibliothequeApplication - Appel empruntService méthode ouvrirEmprunt
+[DEBUG] 2021-01-09 14:02:36.509 [http-nio-8082-exec-9] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 14:02:36 CET 2021
+[DEBUG] 2021-01-09 14:02:36.589 [http-nio-8082-exec-10] BibliothequeApplication - Appel controlleur findById livre
+[DEBUG] 2021-01-09 14:02:36.589 [http-nio-8082-exec-10] BibliothequeApplication - Appel LivreServiceImpl méthode findLivreById avec paramètre idLidvre : 1361
+[DEBUG] 2021-01-09 14:02:36.737 [http-nio-8082-exec-2] BibliothequeApplication - Appel controlleur ouvrirEmprunt
+[DEBUG] 2021-01-09 14:02:36.738 [http-nio-8082-exec-2] BibliothequeApplication - Appel empruntService méthode ouvrirEmprunt
+[DEBUG] 2021-01-09 14:02:36.746 [http-nio-8082-exec-2] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 14:02:36 CET 2021
+[DEBUG] 2021-01-09 14:02:37.305 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur prolongerEmprunt
+[DEBUG] 2021-01-09 14:02:37.306 [http-nio-8082-exec-1] BibliothequeApplication - Appel empruntService méthode prolongerEmprunt avec paramètre idEmprunt : 1364
+[DEBUG] 2021-01-09 14:02:37.314 [http-nio-8082-exec-1] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : 2021-02-06 14:02:37.0
+[DEBUG] 2021-01-09 14:02:37.730 [http-nio-8082-exec-10] BibliothequeApplication - appel controlleur supprimerLivre
+[DEBUG] 2021-01-09 14:02:37.730 [http-nio-8082-exec-10] BibliothequeApplication - Appel LivreServiceImpl méthode supprimerLivre avec paramètre idLidvre : 1360
+[DEBUG] 2021-01-09 14:02:37.788 [http-nio-8082-exec-1] BibliothequeApplication - appel controlleur supprimerLivre
+[DEBUG] 2021-01-09 14:02:37.788 [http-nio-8082-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode supprimerLivre avec paramètre idLidvre : 1361
+[DEBUG] 2021-01-09 14:11:47.834 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 14:11:59.334 [http-nio-8082-exec-2] BibliothequeApplication - appel controlleur enregistrerNouveauLivre
+[DEBUG] 2021-01-09 14:11:59.334 [http-nio-8082-exec-2] BibliothequeApplication - Appel LivreServiceImpl méthode enregistrerNouveauLivre
+[DEBUG] 2021-01-09 14:11:59.612 [http-nio-8082-exec-3] BibliothequeApplication - appel controlleur enregistrerNouveauLivre
+[DEBUG] 2021-01-09 14:11:59.613 [http-nio-8082-exec-3] BibliothequeApplication - Appel LivreServiceImpl méthode enregistrerNouveauLivre
+[DEBUG] 2021-01-09 14:12:00.319 [http-nio-8082-exec-6] BibliothequeApplication - Appel controlleur findById livre
+[DEBUG] 2021-01-09 14:12:00.320 [http-nio-8082-exec-6] BibliothequeApplication - Appel LivreServiceImpl méthode findLivreById avec paramètre idLidvre : 1368
+[DEBUG] 2021-01-09 14:12:00.540 [http-nio-8082-exec-8] BibliothequeApplication - Appel controlleur ouvrirEmprunt
+[DEBUG] 2021-01-09 14:12:00.548 [http-nio-8082-exec-8] BibliothequeApplication - Appel empruntService méthode ouvrirEmprunt
+[DEBUG] 2021-01-09 14:12:00.566 [http-nio-8082-exec-8] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 14:12:00 CET 2021
+[DEBUG] 2021-01-09 14:12:00.670 [http-nio-8082-exec-9] BibliothequeApplication - Appel controlleur findById livre
+[DEBUG] 2021-01-09 14:12:00.670 [http-nio-8082-exec-9] BibliothequeApplication - Appel LivreServiceImpl méthode findLivreById avec paramètre idLidvre : 1369
+[DEBUG] 2021-01-09 14:12:00.815 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur ouvrirEmprunt
+[DEBUG] 2021-01-09 14:12:00.817 [http-nio-8082-exec-1] BibliothequeApplication - Appel empruntService méthode ouvrirEmprunt
+[DEBUG] 2021-01-09 14:12:00.829 [http-nio-8082-exec-1] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 14:12:00 CET 2021
+[DEBUG] 2021-01-09 14:12:01.452 [http-nio-8082-exec-10] BibliothequeApplication - Appel controlleur prolongerEmprunt
+[DEBUG] 2021-01-09 14:12:01.452 [http-nio-8082-exec-10] BibliothequeApplication - Appel empruntService méthode prolongerEmprunt avec paramètre idEmprunt : 1372
+[DEBUG] 2021-01-09 14:12:01.460 [http-nio-8082-exec-10] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : 2021-02-06 14:12:01.0
+[DEBUG] 2021-01-09 14:12:01.902 [http-nio-8082-exec-9] BibliothequeApplication - appel controlleur supprimerLivre
+[DEBUG] 2021-01-09 14:12:01.902 [http-nio-8082-exec-9] BibliothequeApplication - Appel LivreServiceImpl méthode supprimerLivre avec paramètre idLidvre : 1368
+[DEBUG] 2021-01-09 14:12:02.029 [http-nio-8082-exec-10] BibliothequeApplication - appel controlleur supprimerLivre
+[DEBUG] 2021-01-09 14:12:02.029 [http-nio-8082-exec-10] BibliothequeApplication - Appel LivreServiceImpl méthode supprimerLivre avec paramètre idLidvre : 1369
+[DEBUG] 2021-01-09 14:12:14.737 [http-nio-8082-exec-10] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 14:12:14.738 [http-nio-8082-exec-10] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 14:12:14.777 [http-nio-8082-exec-10] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 14:12:27.235 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 14:12:27.235 [http-nio-8082-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 14:14:12.733 [http-nio-8082-exec-9] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 14:14:12.734 [http-nio-8082-exec-9] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 14:14:15.311 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 14:14:15.311 [http-nio-8082-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 14:14:33.268 [http-nio-8082-exec-3] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 14:14:33.269 [http-nio-8082-exec-3] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 14:14:54.927 [http-nio-8082-exec-2] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 14:14:54.927 [http-nio-8082-exec-2] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 14:17:50.854 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 14:19:29.044 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 14:19:29.052 [http-nio-8082-exec-1] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 14:20:33.766 [http-nio-8082-exec-3] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 14:20:33.766 [http-nio-8082-exec-3] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 14:21:29.900 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 14:22:00.212 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 14:22:00.276 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 14:22:00.277 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 14:23:00.007 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 14:23:00.025 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 14:23:00.025 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 14:24:00.010 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 14:24:00.030 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 14:24:00.030 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 14:28:41.905 [http-nio-8082-exec-2] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 14:28:41.908 [http-nio-8082-exec-2] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 14:28:59.204 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 14:28:59.221 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 14:28:59.221 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 14:29:26.443 [http-nio-8082-exec-4] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 14:29:26.445 [http-nio-8082-exec-4] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 14:30:00.007 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 14:30:00.018 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 14:30:00.018 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 14:30:21.108 [http-nio-8082-exec-5] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 14:30:21.108 [http-nio-8082-exec-5] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 14:30:24.813 [http-nio-8082-exec-6] BibliothequeApplication - Appel controlleur listeEmpruntUtilisateur
+[DEBUG] 2021-01-09 14:30:24.813 [http-nio-8082-exec-6] BibliothequeApplication - Appel empruntService méthode findAllByPseudoEmprunteur avec paramètre pseudoEmprunteur : ludo
+[DEBUG] 2021-01-09 14:30:27.610 [http-nio-8082-exec-8] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 14:30:27.610 [http-nio-8082-exec-8] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 14:30:56.953 [http-nio-8082-exec-10] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 14:30:56.953 [http-nio-8082-exec-10] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 14:30:59.309 [http-nio-8082-exec-2] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 14:30:59.309 [http-nio-8082-exec-2] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 14:31:00.006 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 14:31:00.022 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 14:31:00.022 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 14:32:00.009 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 14:32:00.025 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 14:32:00.025 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 14:33:00.006 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 14:33:00.024 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 14:33:00.024 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 14:34:00.006 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 14:34:00.022 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 14:34:00.023 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 14:37:52.418 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 14:37:52.441 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 14:37:52.441 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 14:38:00.008 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 14:38:00.026 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 14:38:00.026 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 14:38:30.688 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 14:41:10.007 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 14:42:45.794 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 14:42:45.795 [http-nio-8082-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 14:44:33.059 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 14:45:51.268 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 14:46:48.050 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 14:47:14.882 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 14:47:14.882 [http-nio-8082-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 14:54:53.391 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 14:55:00.430 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 14:55:00.431 [http-nio-8082-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 14:59:56.831 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 15:00:00.972 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 15:00:00.972 [http-nio-8082-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 15:00:26.282 [http-nio-8082-exec-2] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 15:00:26.290 [http-nio-8082-exec-2] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 15:01:41.255 [http-nio-8082-exec-7] BibliothequeApplication - appel controlleur enregistrerNouveauLivre
+[DEBUG] 2021-01-09 15:01:41.256 [http-nio-8082-exec-7] BibliothequeApplication - Appel LivreServiceImpl méthode enregistrerNouveauLivre
+[DEBUG] 2021-01-09 15:01:41.365 [http-nio-8082-exec-8] BibliothequeApplication - appel controlleur enregistrerNouveauLivre
+[DEBUG] 2021-01-09 15:01:41.365 [http-nio-8082-exec-8] BibliothequeApplication - Appel LivreServiceImpl méthode enregistrerNouveauLivre
+[DEBUG] 2021-01-09 15:01:41.587 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur findById livre
+[DEBUG] 2021-01-09 15:01:41.587 [http-nio-8082-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode findLivreById avec paramètre idLidvre : 1378
+[DEBUG] 2021-01-09 15:01:41.681 [http-nio-8082-exec-3] BibliothequeApplication - Appel controlleur ouvrirEmprunt
+[DEBUG] 2021-01-09 15:01:41.682 [http-nio-8082-exec-3] BibliothequeApplication - Appel empruntService méthode ouvrirEmprunt
+[DEBUG] 2021-01-09 15:01:41.691 [http-nio-8082-exec-3] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 15:01:41 CET 2021
+[DEBUG] 2021-01-09 15:01:41.750 [http-nio-8082-exec-4] BibliothequeApplication - Appel controlleur findById livre
+[DEBUG] 2021-01-09 15:01:41.751 [http-nio-8082-exec-4] BibliothequeApplication - Appel LivreServiceImpl méthode findLivreById avec paramètre idLidvre : 1379
+[DEBUG] 2021-01-09 15:01:41.835 [http-nio-8082-exec-6] BibliothequeApplication - Appel controlleur ouvrirEmprunt
+[DEBUG] 2021-01-09 15:01:41.836 [http-nio-8082-exec-6] BibliothequeApplication - Appel empruntService méthode ouvrirEmprunt
+[DEBUG] 2021-01-09 15:01:41.841 [http-nio-8082-exec-6] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 15:01:41 CET 2021
+[DEBUG] 2021-01-09 15:01:42.225 [http-nio-8082-exec-5] BibliothequeApplication - Appel controlleur prolongerEmprunt
+[DEBUG] 2021-01-09 15:01:42.225 [http-nio-8082-exec-5] BibliothequeApplication - Appel empruntService méthode prolongerEmprunt avec paramètre idEmprunt : 1382
+[DEBUG] 2021-01-09 15:01:42.228 [http-nio-8082-exec-5] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : 2021-02-06 15:01:42.0
+[DEBUG] 2021-01-09 15:01:42.520 [http-nio-8082-exec-4] BibliothequeApplication - appel controlleur supprimerLivre
+[DEBUG] 2021-01-09 15:01:42.520 [http-nio-8082-exec-4] BibliothequeApplication - Appel LivreServiceImpl méthode supprimerLivre avec paramètre idLidvre : 1378
+[DEBUG] 2021-01-09 15:01:42.565 [http-nio-8082-exec-5] BibliothequeApplication - appel controlleur supprimerLivre
+[DEBUG] 2021-01-09 15:01:42.565 [http-nio-8082-exec-5] BibliothequeApplication - Appel LivreServiceImpl méthode supprimerLivre avec paramètre idLidvre : 1379
+[DEBUG] 2021-01-09 15:02:36.647 [http-nio-8082-exec-7] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 15:02:36.647 [http-nio-8082-exec-7] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 15:02:43.633 [http-nio-8082-exec-10] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 15:02:43.634 [http-nio-8082-exec-10] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 15:11:15.200 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 15:12:00.210 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:12:00.600 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:12:00.600 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:12:28.568 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 15:12:28.575 [http-nio-8082-exec-1] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 15:13:00.008 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:13:00.027 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:13:00.027 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:14:09.797 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 15:14:25.086 [http-nio-8082-exec-9] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 15:14:25.098 [http-nio-8082-exec-9] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 15:15:00.046 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:15:00.093 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:15:00.093 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:16:00.007 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:16:00.026 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:16:00.026 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:17:00.006 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:17:00.020 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:17:00.020 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:18:06.914 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 15:19:00.206 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:19:00.270 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:19:00.270 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:19:06.245 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 15:19:06.245 [http-nio-8082-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 15:19:09.348 [http-nio-8082-exec-2] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 15:19:09.348 [http-nio-8082-exec-2] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 15:19:10.597 [http-nio-8082-exec-3] BibliothequeApplication - Appel controlleur listeEmpruntUtilisateur
+[DEBUG] 2021-01-09 15:19:10.598 [http-nio-8082-exec-3] BibliothequeApplication - Appel empruntService méthode findAllByPseudoEmprunteur avec paramètre pseudoEmprunteur : ludo
+[DEBUG] 2021-01-09 15:19:25.375 [http-nio-8082-exec-5] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 15:19:25.376 [http-nio-8082-exec-5] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 15:20:00.005 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:20:00.026 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:20:00.026 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:20:53.590 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 15:21:00.240 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:21:00.349 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:21:00.349 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:21:13.094 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 15:21:13.100 [http-nio-8082-exec-1] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 15:22:00.007 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:22:00.027 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:22:00.027 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:23:00.005 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:23:00.027 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:23:00.027 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:23:05.427 [http-nio-8082-exec-2] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 15:23:05.428 [http-nio-8082-exec-2] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 15:23:08.505 [http-nio-8082-exec-3] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 15:23:08.506 [http-nio-8082-exec-3] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 15:23:08.677 [http-nio-8082-exec-4] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 15:23:08.678 [http-nio-8082-exec-4] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 15:23:08.832 [http-nio-8082-exec-5] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 15:23:08.833 [http-nio-8082-exec-5] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 15:23:09.038 [http-nio-8082-exec-6] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 15:23:09.038 [http-nio-8082-exec-6] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 15:23:09.127 [http-nio-8082-exec-7] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 15:23:09.128 [http-nio-8082-exec-7] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 15:23:09.268 [http-nio-8082-exec-8] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 15:23:09.270 [http-nio-8082-exec-8] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 15:23:09.413 [http-nio-8082-exec-9] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 15:23:09.414 [http-nio-8082-exec-9] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 15:23:09.553 [http-nio-8082-exec-10] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 15:23:09.554 [http-nio-8082-exec-10] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 15:23:09.682 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 15:23:09.683 [http-nio-8082-exec-1] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 15:23:09.827 [http-nio-8082-exec-2] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 15:23:09.828 [http-nio-8082-exec-2] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 15:23:09.996 [http-nio-8082-exec-3] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 15:23:09.997 [http-nio-8082-exec-3] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 15:24:00.004 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:24:00.022 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:24:00.022 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:25:00.003 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:25:00.016 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:25:00.016 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:28:22.010 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 15:28:48.599 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 15:28:48.601 [http-nio-8082-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 15:29:00.057 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:29:00.093 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:29:00.093 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:29:00.442 [http-nio-8082-exec-2] BibliothequeApplication - Appel controlleur listeEmpruntUtilisateur
+[DEBUG] 2021-01-09 15:29:00.443 [http-nio-8082-exec-2] BibliothequeApplication - Appel empruntService méthode findAllByPseudoEmprunteur avec paramètre pseudoEmprunteur : ludo
+[DEBUG] 2021-01-09 15:30:00.010 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:30:00.030 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:30:00.030 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:30:03.334 [http-nio-8082-exec-4] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 15:30:03.335 [http-nio-8082-exec-4] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 15:31:00.006 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:31:00.025 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:31:00.025 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:31:49.813 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 15:32:00.050 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:32:00.086 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:32:00.086 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:32:05.154 [http-nio-8082-exec-2] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 15:32:05.160 [http-nio-8082-exec-2] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 15:33:06.709 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 15:34:00.216 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:34:00.282 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:34:00.282 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:34:11.109 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 15:34:11.109 [http-nio-8082-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 15:35:00.007 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:35:00.027 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:35:00.027 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:35:16.014 [http-nio-8082-exec-3] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 15:35:16.016 [http-nio-8082-exec-3] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 15:36:00.006 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:36:00.025 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:36:00.025 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:37:00.006 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:37:00.029 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:37:00.029 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:38:00.007 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:38:00.027 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:38:00.027 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:39:00.008 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:39:00.027 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:39:00.027 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:40:00.009 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:40:00.027 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:40:00.027 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:41:03.217 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 15:41:57.083 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 15:41:57.084 [http-nio-8082-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 15:42:00.044 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:42:00.076 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:42:00.077 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:42:05.384 [http-nio-8082-exec-2] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 15:42:05.384 [http-nio-8082-exec-2] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 15:42:42.844 [http-nio-8082-exec-4] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 15:42:42.845 [http-nio-8082-exec-4] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 15:43:00.006 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:43:00.023 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:43:00.023 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:44:00.005 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:44:00.025 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:44:00.026 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:45:00.006 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:45:00.024 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:45:00.024 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:46:00.010 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:46:00.031 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:46:00.031 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:47:00.005 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:47:00.022 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:47:00.022 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:48:03.343 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 15:49:00.044 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:49:00.089 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:49:00.089 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:50:00.008 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:50:00.042 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:50:00.043 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:50:37.859 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 15:51:00.212 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:51:00.277 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:51:00.278 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:52:00.005 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:52:00.025 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:52:00.025 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:52:27.279 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 15:53:00.212 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:53:00.276 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:53:00.276 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:53:16.482 [http-nio-8082-exec-2] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 15:53:16.489 [http-nio-8082-exec-2] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 15:54:00.005 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:54:00.026 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:54:00.026 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:54:18.584 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 15:55:00.231 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:55:00.296 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:55:00.296 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:55:20.287 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 15:55:20.294 [http-nio-8082-exec-1] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 15:55:59.979 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:55:59.995 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:55:59.995 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:56:49.468 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 15:57:00.220 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:57:00.287 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:57:00.287 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:57:18.761 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 15:57:18.766 [http-nio-8082-exec-1] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 15:58:00.004 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:58:00.022 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:58:00.022 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 15:59:00.009 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 15:59:00.030 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 15:59:00.030 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 16:00:00.006 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 16:00:00.025 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 16:00:00.025 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 16:00:42.138 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 16:01:00.257 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 16:01:00.339 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 16:01:00.339 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 16:01:23.058 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 16:01:23.059 [http-nio-8082-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 16:01:53.770 [http-nio-8082-exec-3] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 16:01:53.773 [http-nio-8082-exec-3] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 16:01:53.816 [http-nio-8082-exec-3] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 16:02:00.007 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 16:02:00.024 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 16:02:00.025 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 16:02:16.498 [http-nio-8082-exec-5] BibliothequeApplication - Appel empruntService méthode ouvrirEmprunt
+[DEBUG] 2021-01-09 16:02:16.504 [http-nio-8082-exec-5] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 16:02:16 CET 2021
+[DEBUG] 2021-01-09 16:03:00.004 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 16:03:00.015 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 16:03:00.015 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 16:04:00.009 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 16:04:00.030 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 16:04:00.030 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 16:05:00.007 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 16:05:00.023 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 16:05:00.023 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 16:06:00.006 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 16:06:00.025 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 16:06:00.025 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 16:07:00.008 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 16:07:00.026 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 16:07:00.026 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 16:07:31.645 [http-nio-8082-exec-10] BibliothequeApplication - Appel empruntService méthode ouvrirEmprunt
+[DEBUG] 2021-01-09 16:07:31.650 [http-nio-8082-exec-10] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 16:07:31 CET 2021
+[DEBUG] 2021-01-09 16:08:00.008 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 16:08:00.026 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 16:08:00.026 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 16:09:00.005 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 16:09:00.016 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 16:09:00.016 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 16:09:40.352 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 16:10:00.222 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 16:10:00.291 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 16:10:00.291 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 16:11:00.006 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 16:11:00.024 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 16:11:00.025 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 16:11:42.995 [http-nio-8082-exec-2] BibliothequeApplication - Appel controlleur listeEmpruntUtilisateur
+[DEBUG] 2021-01-09 16:11:42.997 [http-nio-8082-exec-2] BibliothequeApplication - Appel empruntService méthode findAllByPseudoEmprunteur avec paramètre pseudoEmprunteur : ludo
+[DEBUG] 2021-01-09 16:11:48.169 [http-nio-8082-exec-3] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 16:11:48.169 [http-nio-8082-exec-3] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 16:12:00.007 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 16:12:00.026 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 16:12:00.026 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 16:12:08.928 [http-nio-8082-exec-5] BibliothequeApplication - Appel empruntService méthode ouvrirEmprunt
+[DEBUG] 2021-01-09 16:12:08.954 [http-nio-8082-exec-5] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 16:12:08 CET 2021
+[DEBUG] 2021-01-09 16:13:00.006 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 16:13:00.019 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 16:13:00.019 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 16:14:00.008 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 16:14:00.024 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 16:14:00.025 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 16:15:00.007 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 16:15:00.020 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 16:15:00.021 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 16:16:00.007 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 16:16:00.028 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 16:16:00.028 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 16:17:00.005 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 16:17:00.022 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 16:17:00.023 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 16:18:00.003 [scheduling-1] BibliothequeApplication - Appel empruntService méthode listeLivreNonRendueApresDateFin
+[DEBUG] 2021-01-09 16:18:00.017 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : ludovic.souplet@gmail.com pour le livre : Le Seigneur de Samarcande pour l'emprunt id : 28
+[DEBUG] 2021-01-09 16:18:00.017 [scheduling-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 16:18:25.349 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 16:18:31.725 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 16:18:31.725 [http-nio-8082-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 16:20:29.520 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 16:23:04.593 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 17:08:03.328 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 17:08:55.063 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 17:08:55.063 [http-nio-8082-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 17:11:31.821 [http-nio-8082-exec-4] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 17:11:31.821 [http-nio-8082-exec-4] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 17:11:39.916 [http-nio-8082-exec-9] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 17:11:39.916 [http-nio-8082-exec-9] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 17:11:42.248 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 17:11:42.248 [http-nio-8082-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 17:12:08.190 [http-nio-8082-exec-4] BibliothequeApplication - Appel controlleur listeEmpruntUtilisateur
+[DEBUG] 2021-01-09 17:12:08.195 [http-nio-8082-exec-4] BibliothequeApplication - Appel empruntService méthode findAllByPseudoEmprunteur avec paramètre pseudoEmprunteur : aurelie
+[DEBUG] 2021-01-09 17:12:53.420 [http-nio-8082-exec-7] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 17:12:53.420 [http-nio-8082-exec-7] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 17:12:57.193 [http-nio-8082-exec-9] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 17:12:57.193 [http-nio-8082-exec-9] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 17:12:58.365 [http-nio-8082-exec-10] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 17:12:58 CET 2021
+[DEBUG] 2021-01-09 17:13:04.194 [http-nio-8082-exec-2] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 17:13:04 CET 2021
+[DEBUG] 2021-01-09 17:13:05.732 [http-nio-8082-exec-3] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 17:13:05.733 [http-nio-8082-exec-3] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 17:14:10.379 [http-nio-8082-exec-5] BibliothequeApplication - Appel controlleur ouvrirEmprunt
+[DEBUG] 2021-01-09 17:14:10.381 [http-nio-8082-exec-5] BibliothequeApplication - Appel empruntService méthode ouvrirEmprunt
+[DEBUG] 2021-01-09 17:14:10.388 [http-nio-8082-exec-5] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 17:14:10 CET 2021
+[DEBUG] 2021-01-09 17:14:56.125 [http-nio-8082-exec-6] BibliothequeApplication - Appel controlleur ouvrirEmprunt
+[DEBUG] 2021-01-09 17:14:56.127 [http-nio-8082-exec-6] BibliothequeApplication - Appel empruntService méthode ouvrirEmprunt
+[DEBUG] 2021-01-09 17:14:56.132 [http-nio-8082-exec-6] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 17:14:56 CET 2021
+[DEBUG] 2021-01-09 17:15:16.847 [http-nio-8082-exec-8] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 17:15:16.848 [http-nio-8082-exec-8] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 17:17:15.707 [http-nio-8082-exec-1] BibliothequeApplication - appel controlleur enregistrerNouveauLivre
+[DEBUG] 2021-01-09 17:17:15.709 [http-nio-8082-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode enregistrerNouveauLivre
+[DEBUG] 2021-01-09 17:17:15.789 [http-nio-8082-exec-2] BibliothequeApplication - appel controlleur enregistrerNouveauLivre
+[DEBUG] 2021-01-09 17:17:15.789 [http-nio-8082-exec-2] BibliothequeApplication - Appel LivreServiceImpl méthode enregistrerNouveauLivre
+[DEBUG] 2021-01-09 17:17:15.998 [http-nio-8082-exec-5] BibliothequeApplication - Appel controlleur findById livre
+[DEBUG] 2021-01-09 17:17:15.998 [http-nio-8082-exec-5] BibliothequeApplication - Appel LivreServiceImpl méthode findLivreById avec paramètre idLidvre : 1393
+[DEBUG] 2021-01-09 17:17:16.088 [http-nio-8082-exec-7] BibliothequeApplication - Appel controlleur ouvrirEmprunt
+[DEBUG] 2021-01-09 17:17:16.089 [http-nio-8082-exec-7] BibliothequeApplication - Appel empruntService méthode ouvrirEmprunt
+[DEBUG] 2021-01-09 17:17:16.093 [http-nio-8082-exec-7] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 17:17:16 CET 2021
+[DEBUG] 2021-01-09 17:17:16.139 [http-nio-8082-exec-8] BibliothequeApplication - Appel controlleur findById livre
+[DEBUG] 2021-01-09 17:17:16.139 [http-nio-8082-exec-8] BibliothequeApplication - Appel LivreServiceImpl méthode findLivreById avec paramètre idLidvre : 1394
+[DEBUG] 2021-01-09 17:17:16.223 [http-nio-8082-exec-10] BibliothequeApplication - Appel controlleur ouvrirEmprunt
+[DEBUG] 2021-01-09 17:17:16.223 [http-nio-8082-exec-10] BibliothequeApplication - Appel empruntService méthode ouvrirEmprunt
+[DEBUG] 2021-01-09 17:17:16.229 [http-nio-8082-exec-10] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 17:17:16 CET 2021
+[DEBUG] 2021-01-09 17:17:16.522 [http-nio-8082-exec-9] BibliothequeApplication - Appel controlleur prolongerEmprunt
+[DEBUG] 2021-01-09 17:17:16.522 [http-nio-8082-exec-9] BibliothequeApplication - Appel empruntService méthode prolongerEmprunt avec paramètre idEmprunt : 1397
+[DEBUG] 2021-01-09 17:17:16.525 [http-nio-8082-exec-9] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : 2021-02-06 17:17:16.0
+[DEBUG] 2021-01-09 17:17:16.804 [http-nio-8082-exec-8] BibliothequeApplication - appel controlleur supprimerLivre
+[DEBUG] 2021-01-09 17:17:16.805 [http-nio-8082-exec-8] BibliothequeApplication - Appel LivreServiceImpl méthode supprimerLivre avec paramètre idLidvre : 1393
+[DEBUG] 2021-01-09 17:17:16.837 [http-nio-8082-exec-9] BibliothequeApplication - appel controlleur supprimerLivre
+[DEBUG] 2021-01-09 17:17:16.837 [http-nio-8082-exec-9] BibliothequeApplication - Appel LivreServiceImpl méthode supprimerLivre avec paramètre idLidvre : 1394
+[DEBUG] 2021-01-09 17:17:45.295 [http-nio-8082-exec-10] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 17:17:45.295 [http-nio-8082-exec-10] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 17:19:31.010 [http-nio-8082-exec-6] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 17:19:31.010 [http-nio-8082-exec-6] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 17:21:25.751 [http-nio-8082-exec-9] BibliothequeApplication - Appel controlleur ouvrirEmprunt
+[DEBUG] 2021-01-09 17:21:25.752 [http-nio-8082-exec-9] BibliothequeApplication - Appel empruntService méthode ouvrirEmprunt
+[DEBUG] 2021-01-09 17:21:25.757 [http-nio-8082-exec-9] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 17:21:25 CET 2021
+[DEBUG] 2021-01-09 17:21:40.443 [http-nio-8082-exec-10] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 17:21:40.443 [http-nio-8082-exec-10] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 17:21:42.738 [http-nio-8082-exec-2] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 17:21:42.739 [http-nio-8082-exec-2] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 17:21:47.620 [http-nio-8082-exec-3] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 17:21:47 CET 2021
+[DEBUG] 2021-01-09 17:23:26.487 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 17:24:03.559 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 17:24:03.570 [http-nio-8082-exec-1] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 17:24:03.839 [http-nio-8082-exec-1] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 17:24:48.992 [http-nio-8082-exec-3] BibliothequeApplication - Appel empruntService méthode ouvrirEmprunt
+[DEBUG] 2021-01-09 17:24:49.001 [http-nio-8082-exec-3] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 17:24:49 CET 2021
+[DEBUG] 2021-01-09 21:40:11.253 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 21:41:00.313 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 21:41:00.314 [http-nio-8082-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 21:41:15.660 [http-nio-8082-exec-3] BibliothequeApplication - Appel empruntService méthode ouvrirEmprunt
+[DEBUG] 2021-01-09 21:41:15.693 [http-nio-8082-exec-3] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 21:41:15 CET 2021
+[DEBUG] 2021-01-09 21:47:17.229 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 21:48:06.171 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 21:48:06.171 [http-nio-8082-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 21:48:10.075 [http-nio-8082-exec-3] BibliothequeApplication - Appel empruntService méthode ouvrirEmprunt
+[DEBUG] 2021-01-09 21:48:10.115 [http-nio-8082-exec-3] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 21:48:10 CET 2021
+[DEBUG] 2021-01-09 21:49:22.741 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 21:49:37.397 [http-nio-8082-exec-2] BibliothequeApplication - Appel empruntService méthode ouvrirEmprunt
+[DEBUG] 2021-01-09 21:49:37.429 [http-nio-8082-exec-2] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 21:49:37 CET 2021
+[DEBUG] 2021-01-09 21:51:11.602 [http-nio-8082-exec-5] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 21:51:11.603 [http-nio-8082-exec-5] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 21:51:24.837 [http-nio-8082-exec-6] BibliothequeApplication - Appel controlleur listeEmpruntUtilisateur
+[DEBUG] 2021-01-09 21:51:24.837 [http-nio-8082-exec-6] BibliothequeApplication - Appel empruntService méthode findAllByPseudoEmprunteur avec paramètre pseudoEmprunteur : ludo
+[DEBUG] 2021-01-09 21:51:28.156 [http-nio-8082-exec-7] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 21:51:28.156 [http-nio-8082-exec-7] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 21:52:37.446 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 21:52:48.397 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 21:52:48.397 [http-nio-8082-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 21:52:52.343 [http-nio-8082-exec-2] BibliothequeApplication - Appel controlleur listeEmpruntUtilisateur
+[DEBUG] 2021-01-09 21:52:52.348 [http-nio-8082-exec-2] BibliothequeApplication - Appel empruntService méthode findAllByPseudoEmprunteur avec paramètre pseudoEmprunteur : ludo
+[DEBUG] 2021-01-09 21:56:25.639 [http-nio-8082-exec-7] BibliothequeApplication - Appel controlleur listeEmpruntUtilisateur
+[DEBUG] 2021-01-09 21:56:25.641 [http-nio-8082-exec-7] BibliothequeApplication - Appel empruntService méthode findAllByPseudoEmprunteur avec paramètre pseudoEmprunteur : ludo
+[DEBUG] 2021-01-09 22:03:48.959 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur listeEmpruntUtilisateur
+[DEBUG] 2021-01-09 22:03:48.960 [http-nio-8082-exec-1] BibliothequeApplication - Appel empruntService méthode findAllByPseudoEmprunteur avec paramètre pseudoEmprunteur : ludo
+[DEBUG] 2021-01-09 22:05:12.490 [http-nio-8082-exec-2] BibliothequeApplication - Appel controlleur listeEmpruntUtilisateur
+[DEBUG] 2021-01-09 22:05:12.491 [http-nio-8082-exec-2] BibliothequeApplication - Appel empruntService méthode findAllByPseudoEmprunteur avec paramètre pseudoEmprunteur : ludo
+[DEBUG] 2021-01-09 22:06:27.722 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 22:06:30.557 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 22:06:30.557 [http-nio-8082-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 22:06:33.372 [http-nio-8082-exec-2] BibliothequeApplication - Appel controlleur listeEmpruntUtilisateur
+[DEBUG] 2021-01-09 22:06:33.378 [http-nio-8082-exec-2] BibliothequeApplication - Appel empruntService méthode findAllByPseudoEmprunteur avec paramètre pseudoEmprunteur : ludo
+[DEBUG] 2021-01-09 22:06:34.297 [http-nio-8082-exec-3] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 22:06:34 CET 2021
+[DEBUG] 2021-01-09 22:06:37.049 [http-nio-8082-exec-4] BibliothequeApplication - Appel controlleur listeEmpruntUtilisateur
+[DEBUG] 2021-01-09 22:06:37.049 [http-nio-8082-exec-4] BibliothequeApplication - Appel empruntService méthode findAllByPseudoEmprunteur avec paramètre pseudoEmprunteur : ludo
+[DEBUG] 2021-01-09 22:06:38.044 [http-nio-8082-exec-5] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 22:06:38 CET 2021
+[DEBUG] 2021-01-09 22:06:40.836 [http-nio-8082-exec-6] BibliothequeApplication - Appel controlleur listeEmpruntUtilisateur
+[DEBUG] 2021-01-09 22:06:40.838 [http-nio-8082-exec-6] BibliothequeApplication - Appel empruntService méthode findAllByPseudoEmprunteur avec paramètre pseudoEmprunteur : ludo
+[DEBUG] 2021-01-09 22:07:53.877 [http-nio-8082-exec-8] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 22:07:53.878 [http-nio-8082-exec-8] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 22:09:19.557 [http-nio-8082-exec-10] BibliothequeApplication - Appel controlleur ouvrirEmprunt
+[DEBUG] 2021-01-09 22:09:19.558 [http-nio-8082-exec-10] BibliothequeApplication - Appel empruntService méthode ouvrirEmprunt
+[DEBUG] 2021-01-09 22:09:19.579 [http-nio-8082-exec-10] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 22:09:19 CET 2021
+[DEBUG] 2021-01-09 22:10:00.381 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 22:10:00.382 [http-nio-8082-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 22:10:08.363 [http-nio-8082-exec-3] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 22:10:08.363 [http-nio-8082-exec-3] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 22:10:13.430 [http-nio-8082-exec-4] BibliothequeApplication - Appel controlleur listeEmpruntUtilisateur
+[DEBUG] 2021-01-09 22:10:13.431 [http-nio-8082-exec-4] BibliothequeApplication - Appel empruntService méthode findAllByPseudoEmprunteur avec paramètre pseudoEmprunteur : ludo
+[DEBUG] 2021-01-09 22:10:15.833 [http-nio-8082-exec-5] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 22:10:15 CET 2021
+[DEBUG] 2021-01-09 22:10:15.835 [http-nio-8082-exec-5] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 22:10:15 CET 2021
+[DEBUG] 2021-01-09 22:10:58.281 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-09 22:11:22.925 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 22:11:22.925 [http-nio-8082-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 22:11:53.600 [http-nio-8082-exec-2] BibliothequeApplication - Appel controlleur cloturerEmprunt
+[DEBUG] 2021-01-09 22:11:53.605 [http-nio-8082-exec-2] BibliothequeApplication - Appel empruntService méthode cloturerEmprunt
+[DEBUG] 2021-01-09 22:11:53.675 [http-nio-8082-exec-2] BibliothequeApplication - Appel EmailServiceImpl méthode sendSimpleMessage à l'adresse : ludovic.souplet@gmail.com
+[DEBUG] 2021-01-09 22:12:11.161 [http-nio-8082-exec-3] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 22:12:11 CET 2021
+[DEBUG] 2021-01-09 22:12:17.283 [http-nio-8082-exec-4] BibliothequeApplication - Appel empruntService méthode ouvrirEmprunt
+[DEBUG] 2021-01-09 22:12:17.292 [http-nio-8082-exec-4] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 22:12:17 CET 2021
+[DEBUG] 2021-01-09 22:12:17.372 [http-nio-8082-exec-5] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 22:12:17 CET 2021
+[DEBUG] 2021-01-09 22:12:17.374 [http-nio-8082-exec-5] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 22:12:17 CET 2021
+[DEBUG] 2021-01-09 22:12:23.541 [http-nio-8082-exec-6] BibliothequeApplication - Appel controlleur listeEmpruntUtilisateur
+[DEBUG] 2021-01-09 22:12:23.541 [http-nio-8082-exec-6] BibliothequeApplication - Appel empruntService méthode findAllByPseudoEmprunteur avec paramètre pseudoEmprunteur : ludo
+[DEBUG] 2021-01-09 22:12:38.020 [http-nio-8082-exec-7] BibliothequeApplication - Appel controlleur listeEmpruntUtilisateur
+[DEBUG] 2021-01-09 22:12:38.020 [http-nio-8082-exec-7] BibliothequeApplication - Appel empruntService méthode findAllByPseudoEmprunteur avec paramètre pseudoEmprunteur : aurelie
+[DEBUG] 2021-01-09 22:12:40.674 [http-nio-8082-exec-9] BibliothequeApplication - Appel controlleur listeEmpruntUtilisateur
+[DEBUG] 2021-01-09 22:12:40.675 [http-nio-8082-exec-9] BibliothequeApplication - Appel empruntService méthode findAllByPseudoEmprunteur avec paramètre pseudoEmprunteur : aurelie
+[DEBUG] 2021-01-09 22:12:42.271 [http-nio-8082-exec-10] BibliothequeApplication - Appel controlleur listeEmpruntUtilisateur
+[DEBUG] 2021-01-09 22:12:42.271 [http-nio-8082-exec-10] BibliothequeApplication - Appel empruntService méthode findAllByPseudoEmprunteur avec paramètre pseudoEmprunteur : aurelie
+[DEBUG] 2021-01-09 22:12:45.113 [http-nio-8082-exec-2] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 22:12:45.113 [http-nio-8082-exec-2] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 22:17:52.780 [http-nio-8082-exec-5] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 22:17:52.780 [http-nio-8082-exec-5] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-09 22:18:00.257 [http-nio-8082-exec-7] BibliothequeApplication - Appel controlleur listeEmpruntUtilisateur
+[DEBUG] 2021-01-09 22:18:00.257 [http-nio-8082-exec-7] BibliothequeApplication - Appel empruntService méthode findAllByPseudoEmprunteur avec paramètre pseudoEmprunteur : aurelie
+[DEBUG] 2021-01-09 22:18:17.204 [http-nio-8082-exec-8] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 22:18:17 CET 2021
+[DEBUG] 2021-01-09 22:18:17.205 [http-nio-8082-exec-8] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 09 22:18:17 CET 2021
+[DEBUG] 2021-01-09 22:18:20.264 [http-nio-8082-exec-9] BibliothequeApplication - Appel controlleur listeEmpruntUtilisateur
+[DEBUG] 2021-01-09 22:18:20.264 [http-nio-8082-exec-9] BibliothequeApplication - Appel empruntService méthode findAllByPseudoEmprunteur avec paramètre pseudoEmprunteur : ludo
+[DEBUG] 2021-01-09 22:18:27.042 [http-nio-8082-exec-10] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-09 22:18:27.042 [http-nio-8082-exec-10] BibliothequeApplication - Appel LivreServiceImpl méthode findAll

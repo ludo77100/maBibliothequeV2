@@ -131,7 +131,7 @@ public class Emprunt implements Serializable {
                 ", dateFin=" + dateFin +
                 ", prolongeable=" + prolongeable +
                 ", enCours=" + enCours +
-                ", exemplaire=" + exemplaire +
+
                 '}';
     }
 }

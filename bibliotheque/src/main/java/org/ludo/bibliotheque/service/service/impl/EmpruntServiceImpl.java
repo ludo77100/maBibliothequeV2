@@ -160,6 +160,7 @@ public class EmpruntServiceImpl implements EmpruntService {
             nouvelEmprunt.setExemplaire(exemplaire);
             exemplaire.setEtat(EtatEnums.EMPRUNTE);
 
+            if (!exemplaire.getEtat().equals(EtatEnums.ATTENTE))
             livre.setQuantiteDispo(livre.getQuantiteDispo() - 1);
 
             livreRepository.save(livre);
@@ -190,9 +191,13 @@ public class EmpruntServiceImpl implements EmpruntService {
             emprunt.getExemplaire().setEtat(EtatEnums.ATTENTE);
         } else {
             emprunt.getExemplaire().setEtat(EtatEnums.DISPONIBLE);
-            emprunt.setEnCours(false);
-            emprunt.setDateFin(date);
+            livre.setQuantiteDispo(livre.getQuantiteDispo() + 1);
+            livreRepository.save(livre);
         }
-        return emprunt;
+        emprunt.setEnCours(false);
+        emprunt.setDateFin(date);
+        emprunt.setExemplaire(null);
+
+        return empruntRepository.save(emprunt);
     }
 }

@@ -79,6 +79,7 @@ public class ReservationServiceImpl implements ReservationService {
         //ici on appel la méthode pour trouver la reservation la plus ancienne
         Reservation reservation = this.getOlderReservationForLivre(exemplaire.getLivre().getTitre());
 
+        System.out.println("Dans RESERVATIONIMPL" + exemplaire);
         //Ici on set les valeurs nécéssaires
         reservation.setEtatReservationEnums(EtatReservationEnums.ATTENTE);
         reservation.setExemplaire(exemplaire);
@@ -105,7 +106,7 @@ public class ReservationServiceImpl implements ReservationService {
 
         if (!reservationSet.isEmpty()) {
             for (Reservation e : reservationSet) {
-                if (e.getDateDemandeReservation().before(date)) {
+                if (e.getEtatReservationEnums() == EtatReservationEnums.ENCOURS && e.getDateDemandeReservation().before(date)) {
                     reservationPlusAncienne = e;
                     date = e.getDateDemandeReservation();
                 }
@@ -125,13 +126,13 @@ public class ReservationServiceImpl implements ReservationService {
 
         for (Emprunt emprunt : listeEmpruntUtilisateur) {
             String livre = emprunt.getExemplaire().getLivre().getTitre();
-            if (livre.equals(titreLivre))
+            if (livre.equals(titreLivre) && emprunt.isEnCours())
                 throw new ReservationExceptions("Un emprunt pour ce livre existe déjà pour cette utilisateur");
         }
 
         for (Reservation reservation : listeReservationUtilisateur){
             String livre = reservation.getLivre().getTitre();
-            if (livre.equals(titreLivre)){
+            if (livre.equals(titreLivre) && reservation.getEtatReservationEnums() == EtatReservationEnums.ENCOURS){
                 throw new ReservationExceptions("Une réservation pour ce livre existe déjà pour cette utilisateur");
             }
         }
@@ -167,6 +168,9 @@ public class ReservationServiceImpl implements ReservationService {
         Reservation reservation = reservationRepository.findById(idReservation).get();
         Exemplaire exemplaire = reservation.getExemplaire();
 
+        System.out.println("AAAAAAAAAAAAAAAAAAAAAAA" + reservation);
+        System.out.println("BBBBBBBBBBBBBBBBBBBBBBB" + exemplaire);
+
         reservation.setEtatReservationEnums(EtatReservationEnums.CLOTURE);
         empruntService.ouvrirEmprunt(exemplaire.getIdentifiant(), reservation.getPseudoDemandeur());
 
@@ -195,10 +199,10 @@ public class ReservationServiceImpl implements ReservationService {
             Set<Exemplaire> exemplaireSet = e.getLivre().getExemplaires();
             Date date = new Date() ;
             for (Exemplaire f : exemplaireSet){
-                if (f.getEmprunt().getDateFin().after(date) && e.getEtatReservationEnums().equals(EtatReservationEnums.ENCOURS)){
-                    date = f.getEmprunt().getDateFin();
-                    e.setDateDisponibiliteEstimee(date);
-                }
+
+                if (f.getEtat().equals(EtatEnums.EMPRUNTE))
+                    empruntService.ajouter4Semaines(date);
+                e.setDateDisponibiliteEstimee(date);
             }
             e.setDateDisponibiliteEstimee(date);
         }

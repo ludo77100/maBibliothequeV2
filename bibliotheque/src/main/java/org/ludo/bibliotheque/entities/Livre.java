@@ -55,7 +55,6 @@ public class Livre implements Serializable {
     /**
      * Quantité disponible du livre pour emprunt
      */
-    @Range(min = 0, message = "La quantité disponible ne peut être inférieur à zéro")
     private int quantiteDispo;
 
     /**
@@ -206,8 +205,6 @@ public class Livre implements Serializable {
                 ", urlImage='" + urlImage + '\'' +
                 ", dateRetourPlusProche=" + dateRetourPlusProche +
                 ", tailleListeReservation=" + tailleListeReservationEnCours +
-                ", exemplaires=" + exemplaires +
-                ", reservations=" + reservations +
                 '}';
     }
 }

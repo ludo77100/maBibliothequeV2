@@ -28,6 +28,8 @@ public class Reservation implements Serializable {
 
     private Date dateCloture;
 
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "idExemplaire")
     private Exemplaire exemplaire;
 
     @JsonManagedReference
@@ -38,11 +40,13 @@ public class Reservation implements Serializable {
         super();
     }
 
-    public Reservation(long idReservation, Date dateDemandeReservation, String pseudoDemandeur, EtatReservationEnums etatReservationEnums, Date dateCloture, Exemplaire exemplaire, Livre livre) {
+    public Reservation(long idReservation, Date dateDemandeReservation, String pseudoDemandeur, EtatReservationEnums etatReservationEnums, int positionFileAttente, Date dateDisponibiliteEstimee, Date dateCloture, Exemplaire exemplaire, Livre livre) {
         this.idReservation = idReservation;
         this.dateDemandeReservation = dateDemandeReservation;
         this.pseudoDemandeur = pseudoDemandeur;
         this.etatReservationEnums = etatReservationEnums;
+        this.positionFileAttente = positionFileAttente;
+        this.dateDisponibiliteEstimee = dateDisponibiliteEstimee;
         this.dateCloture = dateCloture;
         this.exemplaire = exemplaire;
         this.livre = livre;
@@ -80,6 +84,22 @@ public class Reservation implements Serializable {
         this.etatReservationEnums = etatReservationEnums;
     }
 
+    public int getPositionFileAttente() {
+        return positionFileAttente;
+    }
+
+    public void setPositionFileAttente(int positionFileAttente) {
+        this.positionFileAttente = positionFileAttente;
+    }
+
+    public Date getDateDisponibiliteEstimee() {
+        return dateDisponibiliteEstimee;
+    }
+
+    public void setDateDisponibiliteEstimee(Date dateDisponibiliteEstimee) {
+        this.dateDisponibiliteEstimee = dateDisponibiliteEstimee;
+    }
+
     public Date getDateCloture() {
         return dateCloture;
     }
@@ -102,22 +122,6 @@ public class Reservation implements Serializable {
 
     public void setLivre(Livre livre) {
         this.livre = livre;
-    }
-
-    public int getPositionFileAttente() {
-        return positionFileAttente;
-    }
-
-    public void setPositionFileAttente(int positionFileAttente) {
-        this.positionFileAttente = positionFileAttente;
-    }
-
-    public Date getDateDisponibiliteEstimee() {
-        return dateDisponibiliteEstimee;
-    }
-
-    public void setDateDisponibiliteEstimee(Date dateDisponibiliteEstimee) {
-        this.dateDisponibiliteEstimee = dateDisponibiliteEstimee;
     }
 
     @Override

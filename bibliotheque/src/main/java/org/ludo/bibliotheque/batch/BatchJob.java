@@ -20,7 +20,7 @@ public class BatchJob {
     @Autowired
     ReservationService reservationService ;
 
-    @Scheduled(cron = "0 0 14 * * *")
+    //@Scheduled(cron = "0 */1 * * * *")
     public void lendingRevival() throws Exception {
         emailService.envoyerEmailRelance();
     }

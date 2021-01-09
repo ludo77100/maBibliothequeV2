@@ -90,8 +90,6 @@ public class Exemplaire implements Serializable {
                 "idExemplaire=" + idExemplaire +
                 ", etat=" + etat +
                 ", identifiant='" + identifiant + '\'' +
-                ", livre=" + livre +
-                ", emprunt=" + emprunt +
                 '}';
     }
 }
