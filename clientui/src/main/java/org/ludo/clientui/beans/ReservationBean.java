@@ -14,6 +14,8 @@ public class ReservationBean {
 
     private int positionFileAttente ;
 
+    private Date dateDisponibiliteEstimee ;
+
     private Date dateCloture;
 
     private ExemplaireBean exemplaire;
@@ -24,12 +26,13 @@ public class ReservationBean {
         super();
     }
 
-    public ReservationBean(long idReservation, Date dateDemandeReservation, String pseudoDemandeur, String etatReservationEnums, int positionFileAttente, Date dateCloture, ExemplaireBean exemplaire, LivreBean livre) {
+    public ReservationBean(long idReservation, Date dateDemandeReservation, String pseudoDemandeur, String etatReservationEnums, int positionFileAttente, Date dateDisponibiliteEstimee,Date dateCloture, ExemplaireBean exemplaire, LivreBean livre) {
         this.idReservation = idReservation;
         this.dateDemandeReservation = dateDemandeReservation;
         this.pseudoDemandeur = pseudoDemandeur;
         this.etatReservationEnums = etatReservationEnums;
         this.positionFileAttente = positionFileAttente;
+        this.dateDisponibiliteEstimee = dateDisponibiliteEstimee ;
         this.dateCloture = dateCloture;
         this.exemplaire = exemplaire;
         this.livre = livre;
@@ -75,6 +78,14 @@ public class ReservationBean {
         this.positionFileAttente = positionFileAttente;
     }
 
+    public Date getDateDisponibiliteEstimee() {
+        return dateDisponibiliteEstimee;
+    }
+
+    public void setDateDisponibiliteEstimee(Date dateDisponibiliteEstimee) {
+        this.dateDisponibiliteEstimee = dateDisponibiliteEstimee;
+    }
+
     public Date getDateCloture() {
         return dateCloture;
     }
@@ -107,6 +118,7 @@ public class ReservationBean {
                 ", pseudoDemandeur='" + pseudoDemandeur + '\'' +
                 ", etatReservationEnums='" + etatReservationEnums + '\'' +
                 ", positionFileAttente=" + positionFileAttente +
+                ", dateDisponibiliteEstimee=" + dateDisponibiliteEstimee +
                 ", dateCloture=" + dateCloture +
                 ", exemplaire=" + exemplaire +
                 ", livre=" + livre +
