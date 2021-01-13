@@ -48,8 +48,14 @@ public class ReservationServiceImpl implements ReservationService {
 
         this.verifLivreReserveNonEmprunte(listeEmpruntUtilisateur, titreLivre, listeReservationUtilisateur);
 
-
-        if (livreDemande.getReservations().size() >= livreDemande.getExemplaires().size()*2) {
+        Set<Reservation> reservationList = livreDemande.getReservations();
+        int tailleListeReservation = 0;
+        for (Reservation e : reservationList) {
+            if (e.getEtatReservationEnums() == EtatReservationEnums.ENCOURS){
+                tailleListeReservation++;
+            }
+        }
+        if (tailleListeReservation >= livreDemande.getExemplaires().size()*2) {
             throw new ReservationExceptions("La liste de réservations est complète");
         } else {
 
@@ -79,7 +85,6 @@ public class ReservationServiceImpl implements ReservationService {
         //ici on appel la méthode pour trouver la reservation la plus ancienne
         Reservation reservation = this.getOlderReservationForLivre(exemplaire.getLivre().getTitre());
 
-        System.out.println("Dans RESERVATIONIMPL" + exemplaire);
         //Ici on set les valeurs nécéssaires
         reservation.setEtatReservationEnums(EtatReservationEnums.ATTENTE);
         reservation.setExemplaire(exemplaire);
@@ -153,10 +158,20 @@ public class ReservationServiceImpl implements ReservationService {
                 e.setEtatReservationEnums(EtatReservationEnums.CLOTURE);
                 //Et on vérifie si il y a d'autre demandes de réservation et on execute ou pas la mise en attente d'une reservation
                 if (!e.getExemplaire().getLivre().getReservations().isEmpty()) {
-                    this.mettreReservationAttente(e.getExemplaire());
+                    System.out.println("1");
+                    Set<Reservation> reservationList = e.getExemplaire().getLivre().getReservations();
+                    for (Reservation f : reservationList){
+                        System.out.println("2");
+                        if (f.getEtatReservationEnums() == EtatReservationEnums.ENCOURS){
+                            System.out.println("3");
+                            this.mettreReservationAttente(e.getExemplaire());
+                            break;
+                        }
+                    }
                 } else {
                     //Si aucune reservation, l'exemplaire passe à disponible
                     e.getExemplaire().setEtat(EtatEnums.DISPONIBLE);
+                    e.getExemplaire().getLivre().setQuantiteDispo(e.getExemplaire().getLivre().getQuantiteDispo() + 1);
                 }
                 reservationRepository.save(e);
             }
@@ -168,11 +183,9 @@ public class ReservationServiceImpl implements ReservationService {
         Reservation reservation = reservationRepository.findById(idReservation).get();
         Exemplaire exemplaire = reservation.getExemplaire();
 
-        System.out.println("AAAAAAAAAAAAAAAAAAAAAAA" + reservation);
-        System.out.println("BBBBBBBBBBBBBBBBBBBBBBB" + exemplaire);
-
-        reservation.setEtatReservationEnums(EtatReservationEnums.CLOTURE);
         empruntService.ouvrirEmprunt(exemplaire.getIdentifiant(), reservation.getPseudoDemandeur());
+        reservation.setExemplaire(null);
+        reservation.setEtatReservationEnums(EtatReservationEnums.CLOTURE);
 
         return reservationRepository.save(reservation);
     }

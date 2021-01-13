@@ -50,8 +50,8 @@ public class LivreServiceImpl implements LivreService {
             dateRetour.setDate(2999-12-12);
 
             for (Exemplaire f : listeExemplaires){
-                System.out.println(f.getEtat());
-                if (f.getEtat().equals(EtatEnums.EMPRUNTE) && f.getEmprunt().getDateFin().before(dateRetour)){
+                System.out.println("AAAAAAAAAAAAAAAA" + f.getEtat());
+                if (f.getEtat() == (EtatEnums.EMPRUNTE) && f.getEmprunt().getDateFin().before(dateRetour)){
                     dateRetour = f.getEmprunt().getDateFin();
                     e.setDateRetourPlusProche(dateRetour);
                 }

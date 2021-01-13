@@ -158,12 +158,15 @@ public class EmpruntServiceImpl implements EmpruntService {
             nouvelEmprunt.setEnCours(true);
             nouvelEmprunt.setProlongeable(true);
             nouvelEmprunt.setExemplaire(exemplaire);
+
+        if (!exemplaire.getEtat().equals(EtatEnums.ATTENTE)){
+                livre.setQuantiteDispo(livre.getQuantiteDispo() - 1);
+            }
+
             exemplaire.setEtat(EtatEnums.EMPRUNTE);
 
-            if (!exemplaire.getEtat().equals(EtatEnums.ATTENTE))
-            livre.setQuantiteDispo(livre.getQuantiteDispo() - 1);
 
-            livreRepository.save(livre);
+        livreRepository.save(livre);
             exemplaireRepository.save(exemplaire);
 
 
@@ -185,14 +188,24 @@ public class EmpruntServiceImpl implements EmpruntService {
         Emprunt emprunt = empruntRepository.findById(idEmprunt).get();
         Livre livre = emprunt.getExemplaire().getLivre();
         Date date = new Date();
+        boolean enCours = false ;
 
         if (!livre.getReservations().isEmpty()) {
-            reservationService.mettreReservationAttente(emprunt.getExemplaire());
-            emprunt.getExemplaire().setEtat(EtatEnums.ATTENTE);
-        } else {
-            emprunt.getExemplaire().setEtat(EtatEnums.DISPONIBLE);
-            livre.setQuantiteDispo(livre.getQuantiteDispo() + 1);
-            livreRepository.save(livre);
+            Set<Reservation> listeReservations = livre.getReservations();
+            for (Reservation e : listeReservations) {
+                if (e.getEtatReservationEnums() == EtatReservationEnums.ENCOURS) {
+                    enCours = true ;
+                    break;
+                }
+            }
+            if (enCours){
+                reservationService.mettreReservationAttente(emprunt.getExemplaire());
+                emprunt.getExemplaire().setEtat(EtatEnums.ATTENTE);
+            } else {
+                emprunt.getExemplaire().setEtat(EtatEnums.DISPONIBLE);
+                livre.setQuantiteDispo(livre.getQuantiteDispo() + 1);
+                livreRepository.save(livre);
+            }
         }
         emprunt.setEnCours(false);
         emprunt.setDateFin(date);

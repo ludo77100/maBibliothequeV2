@@ -48,7 +48,7 @@ public class Emprunt implements Serializable {
      */
     private boolean enCours ;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "id_exemplaire")
     private Exemplaire exemplaire ;
 

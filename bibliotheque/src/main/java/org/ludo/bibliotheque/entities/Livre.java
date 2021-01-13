@@ -72,11 +72,11 @@ public class Livre implements Serializable {
      * Relation avec la table emprunt
      */
     @JsonIgnore
-    @OneToMany(mappedBy = "livre", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "livre", fetch = FetchType.EAGER)
     private Set<Exemplaire> exemplaires;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "livre")
+    @OneToMany(mappedBy = "livre", fetch = FetchType.EAGER)
     private Set<Reservation> reservations;
 
     public Livre() {
