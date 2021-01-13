@@ -56,7 +56,7 @@ public class ReservationServiceImpl implements ReservationService {
             }
         }
         if (tailleListeReservation >= livreDemande.getExemplaires().size()*2) {
-            throw new ReservationExceptions("La liste de réservations est complète");
+            throw new ReservationExceptions("ReservationExceptions03");
         } else {
 
 
@@ -132,13 +132,13 @@ public class ReservationServiceImpl implements ReservationService {
         for (Emprunt emprunt : listeEmpruntUtilisateur) {
             String livre = emprunt.getExemplaire().getLivre().getTitre();
             if (livre.equals(titreLivre) && emprunt.isEnCours())
-                throw new ReservationExceptions("Un emprunt pour ce livre existe déjà pour cette utilisateur");
+                throw new ReservationExceptions("ReservationExceptions01");
         }
 
         for (Reservation reservation : listeReservationUtilisateur){
             String livre = reservation.getLivre().getTitre();
             if (livre.equals(titreLivre) && reservation.getEtatReservationEnums() == EtatReservationEnums.ENCOURS){
-                throw new ReservationExceptions("Une réservation pour ce livre existe déjà pour cette utilisateur");
+                throw new ReservationExceptions("ReservationExceptions02");
             }
         }
     }

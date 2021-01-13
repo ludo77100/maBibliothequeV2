@@ -13,7 +13,6 @@ import org.ludo.bibliotheque.entities.Emprunt;
 import org.ludo.bibliotheque.entities.Exemplaire;
 import org.ludo.bibliotheque.entities.Livre;
 import org.ludo.bibliotheque.entities.Reservation;
-import org.ludo.bibliotheque.exceptions.EmpruntExceptions;
 import org.ludo.bibliotheque.service.EmpruntService;
 import org.ludo.bibliotheque.service.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -142,7 +141,7 @@ public class EmpruntServiceImpl implements EmpruntService {
      */
     @Transactional
     @Override
-    public Emprunt ouvrirEmprunt(String identifiantExemplaire, String pseudoEmprunteur) throws EmpruntExceptions {
+    public Emprunt ouvrirEmprunt(String identifiantExemplaire, String pseudoEmprunteur) {
 
         logger.debug("Appel empruntService méthode ouvrirEmprunt");
 
@@ -181,7 +180,7 @@ public class EmpruntServiceImpl implements EmpruntService {
      */
     @Transactional
     @Override
-    public Emprunt cloturerEmprunt(Long idEmprunt) throws EmpruntExceptions, MessagingException {
+    public Emprunt cloturerEmprunt(Long idEmprunt) throws MessagingException {
 
         logger.debug("Appel empruntService méthode cloturerEmprunt");
 
