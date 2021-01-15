@@ -22,6 +22,10 @@
                     <button class="btn btn-primary">Chercher</button>
                 </form>
 
+            <div class="red">
+                <p th:text="${messageErreur}"></p>
+            </div>
+
                 <div class="row">
                     <div class="card border-dark spacer-line spacer" style="width: 269px;"
                          th:each="ll:${listeLivresBean}">

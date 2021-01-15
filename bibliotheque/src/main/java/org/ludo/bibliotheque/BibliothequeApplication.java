@@ -35,9 +35,4 @@ public class BibliothequeApplication {
 		logger.debug("Microservice Bibliothèque démarré");
 			}
 
-	@Bean
-	public CustomErrorDecoder CustomErrorDecoder() {
-		return new CustomErrorDecoder();
-	}
-
 }

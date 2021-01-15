@@ -7,14 +7,14 @@ public class ApiError {
 
     private String message;
 
-    private String apiError;
+    private String error;
 
     public ApiError() {
     }
 
-    public ApiError(String message, String apiError) {
+    public ApiError(String message, String error) {
         this.message = message;
-        this.apiError = apiError;
+        this.error = error;
     }
 
     public String getMessage() {
@@ -25,19 +25,19 @@ public class ApiError {
         this.message = message;
     }
 
-    public String getApiError() {
-        return apiError;
+    public String getError() {
+        return error;
     }
 
-    public void setApiError(String apiError) {
-        this.apiError = apiError;
+    public void setError(String error) {
+        this.error = error;
     }
 
     @Override
     public String toString() {
         return "ApiError{" +
                 "message='" + message + '\'' +
-                ", apiError='" + apiError + '\'' +
+                ", apiError='" + error + '\'' +
                 '}';
     }
 
