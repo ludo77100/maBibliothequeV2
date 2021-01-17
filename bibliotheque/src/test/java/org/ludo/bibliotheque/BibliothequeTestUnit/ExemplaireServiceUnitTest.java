@@ -112,7 +112,6 @@ public class ExemplaireServiceUnitTest {
 
         Mockito.when(exemplaireRepository.findAllByLivre_titre("1a")).thenReturn(livre1.getExemplaires());
         Mockito.when(exemplaireRepository.findAllByLivre_titre("2a")).thenReturn(livre2.getExemplaires());
-
     }
 
     @Test
@@ -134,5 +133,4 @@ public class ExemplaireServiceUnitTest {
         String identifiantTest = exemplaireService.compositionIdentifiant(livreTest);
         Assertions.assertEquals("11113", identifiantTest);
     }
-
 }

@@ -80,7 +80,7 @@ public class LivreServiceUnitTest {
         exemplaire2.setEtat(EtatEnums.EMPRUNTE);
         exemplaire2.setIdentifiant("4Lid");
         exemplaire2.setIdExemplaire(4L);
-        exemplaireSet1.add(exemplaire2);
+        exemplaireSet2.add(exemplaire2);
 
         Exemplaire exemplaire3 = new Exemplaire();
         exemplaire3.setEtat(EtatEnums.DISPONIBLE);

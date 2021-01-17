@@ -14,3 +14,7 @@
 [DEBUG] 2021-01-17 13:39:12.131 [main] BibliothequeApplication - Appel LivreServiceImpl méthode findLivreById avec paramètre idLidvre : 1
 [DEBUG] 2021-01-17 13:40:16.464 [main] BibliothequeApplication - Appel LivreServiceImpl méthode findLivreById avec paramètre idLidvre : 1
 [DEBUG] 2021-01-17 13:40:30.751 [main] BibliothequeApplication - Appel LivreServiceImpl méthode findLivreById avec paramètre idLidvre : 1
+[DEBUG] 2021-01-17 14:01:52.735 [main] BibliothequeApplication - Appel LivreServiceImpl méthode findLivreById avec paramètre idLidvre : 1
+[DEBUG] 2021-01-17 14:05:22.886 [main] BibliothequeApplication - Appel LivreServiceImpl méthode findByTitreContainingIgnoreCase avec paramètre mc : a
+[DEBUG] 2021-01-17 14:05:22.905 [main] BibliothequeApplication - Appel LivreServiceImpl méthode findLivreById avec paramètre idLidvre : 1
+[DEBUG] 2021-01-17 14:05:22.977 [main] BibliothequeApplication - Appel LivreServiceImpl méthode findLivreById avec paramètre idLidvre : 2

@@ -57,6 +57,11 @@ public class ExemplaireServiceImpl implements ExemplaireService {
         return exemplaireRepository.findByIdentifiant(identifiant);
     }
 
+    @Override
+    public List<Exemplaire> findAllByTitre(String titre) {
+        return exemplaireRepository.findAllByLivre_titre(titre);
+    }
+
     public Exemplaire changerEtatExemplaire(String identifiantExemplaire, String nouvelEtat){
         Exemplaire exemplaire = exemplaireRepository.findByIdentifiant(identifiantExemplaire) ;
         switch (nouvelEtat){

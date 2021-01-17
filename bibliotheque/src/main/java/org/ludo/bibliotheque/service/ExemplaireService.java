@@ -16,4 +16,6 @@ public interface ExemplaireService {
     void deleteById(Long idExemplaire);
 
     Exemplaire findByIdentifiant(String identifiant);
+
+    List<Exemplaire> findAllByTitre(String titre);
 }
