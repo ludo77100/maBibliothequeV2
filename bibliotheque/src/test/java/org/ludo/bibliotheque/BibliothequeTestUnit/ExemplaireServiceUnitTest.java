@@ -2,6 +2,7 @@ package org.ludo.bibliotheque.BibliothequeTestUnit;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
 import org.junit.runner.RunWith;
 import org.ludo.bibliotheque.Enums.EtatEnums;
 import org.ludo.bibliotheque.dao.EmpruntRepository;
@@ -9,30 +10,38 @@ import org.ludo.bibliotheque.dao.ExemplaireRepository;
 import org.ludo.bibliotheque.dao.LivreRepository;
 import org.ludo.bibliotheque.entities.Exemplaire;
 import org.ludo.bibliotheque.entities.Livre;
+import org.ludo.bibliotheque.service.service.impl.ExemplaireServiceImpl;
 import org.ludo.bibliotheque.service.service.impl.LivreServiceImpl;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
-import static org.assertj.core.api.Assertions.assertThat;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import static org.assertj.core.api.Assertions.assertThat;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Optional;
 
 @SpringBootTest
 @RunWith(MockitoJUnitRunner.Silent.class)
-public class LivreServiceUnitTest {
+public class ExemplaireServiceUnitTest {
 
     @Mock
-    private LivreRepository livreRepository;
-    @Mock
     private ExemplaireRepository exemplaireRepository;
+
     @Mock
-    private EmpruntRepository empruntRepository;
+    private LivreRepository livreRepository ;
+
     @Autowired
     @InjectMocks
-    private LivreServiceImpl livreService;
+    private LivreServiceImpl livreService ;
+
+    @Autowired
+    @InjectMocks
+    private ExemplaireServiceImpl exemplaireService;
 
     private List<Livre> livres = new ArrayList<>();
     private List<Exemplaire> exemplaireSet1 = new ArrayList<>();
@@ -80,7 +89,7 @@ public class LivreServiceUnitTest {
         exemplaire2.setEtat(EtatEnums.EMPRUNTE);
         exemplaire2.setIdentifiant("4Lid");
         exemplaire2.setIdExemplaire(4L);
-        exemplaireSet1.add(exemplaire2);
+        exemplaireSet2.add(exemplaire2);
 
         Exemplaire exemplaire3 = new Exemplaire();
         exemplaire3.setEtat(EtatEnums.DISPONIBLE);
@@ -98,37 +107,32 @@ public class LivreServiceUnitTest {
         livre2.setExemplaires(exemplaireSet2);
 
         Mockito.when(livreRepository.findById(1L)).thenReturn(Optional.of(livre1));
-        Mockito.when(livreRepository.findById(2L)).thenReturn(Optional.of(livre2));
 
-        Mockito.when(livreRepository.findByTitreContainingIgnoreCase("a")).thenReturn(livres);
+        Mockito.when(exemplaireRepository.findByIdentifiant("6Lid")).thenReturn(exemplaire4);
 
         Mockito.when(exemplaireRepository.findAllByLivre_titre("1a")).thenReturn(livre1.getExemplaires());
         Mockito.when(exemplaireRepository.findAllByLivre_titre("2a")).thenReturn(livre2.getExemplaires());
 
     }
 
-
     @Test
-    public void findLivreByID_test(){
-        Livre livre1Test = livreService.findLivreById(1L);
-        assertThat(livre1Test.getTitre()).isEqualTo("1a");
-        assertThat(livre1Test.getAuteur()).isEqualTo("1b");
-        assertThat(livre1Test.getEditeur()).isEqualTo("1c");
-        assertThat(livre1Test.getDecription()).isEqualTo("1d");
-        assertThat(livre1Test.getQuantiteDispo()).isEqualTo(1);
-
-        Livre livre2Test = livreService.findLivreById(2L);
-        assertThat(livre2Test.getTitre()).isEqualTo("2a");
-        assertThat(livre2Test.getAuteur()).isEqualTo("2b");
-        assertThat(livre2Test.getEditeur()).isEqualTo("2c");
-        assertThat(livre2Test.getDecription()).isEqualTo("2d");
-        assertThat(livre2Test.getQuantiteDispo()).isEqualTo(1);
+    public void findByIdentifiant(){
+        Exemplaire exemplaireTest = exemplaireService.findByIdentifiant("6Lid");
+        assertThat(exemplaireTest.getIdentifiant()).isEqualTo("6Lid");
     }
 
     @Test
-    public void searchLivresMethod_test(){
-        List<Livre> listeLivres = livreService.findByTitreContainingIgnoreCase("a");
-        org.junit.jupiter.api.Assertions.assertEquals(2, listeLivres.size());
+    public void test(){
+        Exemplaire exemplaireTest = exemplaireService.findByIdentifiant("6Lid");
+        exemplaireService.changerEtatExemplaire(exemplaireTest.getIdentifiant(), "INDISPONIBLE");
+        assertThat(exemplaireTest.getEtat()).isEqualTo(EtatEnums.INDISPONIBLE);
+    }
+
+    @Test
+    public void test2(){
+        Livre livreTest = livreService.findLivreById(1L);
+        String identifiantTest = exemplaireService.compositionIdentifiant(livreTest);
+        Assertions.assertEquals("11113", identifiantTest);
     }
 
 }

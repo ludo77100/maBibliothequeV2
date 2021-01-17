@@ -52,27 +52,34 @@ public class ExemplaireServiceImpl implements ExemplaireService {
         exemplaireRepository.deleteById(idExemplaire);
     }
 
+    @Override
+    public Exemplaire findByIdentifiant(String identifiant) {
+        return exemplaireRepository.findByIdentifiant(identifiant);
+    }
+
     public Exemplaire changerEtatExemplaire(String identifiantExemplaire, String nouvelEtat){
-
         Exemplaire exemplaire = exemplaireRepository.findByIdentifiant(identifiantExemplaire) ;
-
         switch (nouvelEtat){
             case "DISPONIBLE":
                 exemplaire.setEtat(EtatEnums.DISPONIBLE);
+                break;
             case "INDISPONIBLE":
                 exemplaire.setEtat(EtatEnums.INDISPONIBLE);
-            case "RESERVE":
-                exemplaire.setEtat(EtatEnums.RESERVE);
-            case "EMPRUNTE":
-                exemplaire.setEtat(EtatEnums.EMPRUNTE);
+                break;
             case "ATTENTE":
                 exemplaire.setEtat(EtatEnums.ATTENTE);
+                break;
+            case "EMPRUNTE":
+                exemplaire.setEtat(EtatEnums.EMPRUNTE);
+                break;
+            case "RESERVE":
+                exemplaire.setEtat(EtatEnums.RESERVE);
+                break;
         }
 
         return exemplaireRepository.save(exemplaire);
     }
 
-    //TODO gerer le cas ou un identifiat existe deja
     /**
      * Méthode pour composer un identifiant pour un exemplaire
      * Un identifiant se compose de la première lettre du titre, puis auteur, puis editeur, puis un slash et pour finir un nombre qui est le nombre d'element dans le set pour le livre
@@ -80,13 +87,10 @@ public class ExemplaireServiceImpl implements ExemplaireService {
      * @return l'identifiant en String
      */
     public String compositionIdentifiant(Livre livre){
-
         String newRef ;
         List<Exemplaire> exemplaires = livre.getExemplaires();
         int sizeSet = exemplaires.size() + 1 ;
-
         newRef = livre.getIdLivre() + livre.getTitre().substring(0,1) + livre.getAuteur().substring(0,1) + livre.getEditeur().substring(0,1) + sizeSet;
-
         return newRef ;
     }
 }
