@@ -5554,3 +5554,75 @@
 [DEBUG] 2021-01-15 15:30:44.136 [http-nio-8082-exec-4] BibliothequeApplication - Appel LivreServiceImpl méthode supprimerLivre avec paramètre idLidvre : 1472
 [DEBUG] 2021-01-15 15:30:44.163 [http-nio-8082-exec-6] BibliothequeApplication - appel controlleur supprimerLivre
 [DEBUG] 2021-01-15 15:30:44.163 [http-nio-8082-exec-6] BibliothequeApplication - Appel LivreServiceImpl méthode supprimerLivre avec paramètre idLidvre : 1473
+[DEBUG] 2021-01-16 16:59:38.272 [main] BibliothequeApplication - Microservice Bibliothèque démarré
+[DEBUG] 2021-01-16 17:00:19.394 [http-nio-8082-exec-1] BibliothequeApplication - appel controlleur enregistrerNouveauLivre
+[DEBUG] 2021-01-16 17:00:19.395 [http-nio-8082-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode enregistrerNouveauLivre
+[DEBUG] 2021-01-16 17:00:19.626 [http-nio-8082-exec-3] BibliothequeApplication - appel controlleur enregistrerNouveauLivre
+[DEBUG] 2021-01-16 17:00:19.626 [http-nio-8082-exec-3] BibliothequeApplication - Appel LivreServiceImpl méthode enregistrerNouveauLivre
+[DEBUG] 2021-01-16 17:00:20.011 [http-nio-8082-exec-6] BibliothequeApplication - Appel controlleur findById livre
+[DEBUG] 2021-01-16 17:00:20.011 [http-nio-8082-exec-6] BibliothequeApplication - Appel LivreServiceImpl méthode findLivreById avec paramètre idLidvre : 1480
+[DEBUG] 2021-01-16 17:00:20.165 [http-nio-8082-exec-8] BibliothequeApplication - Appel controlleur ouvrirEmprunt
+[DEBUG] 2021-01-16 17:00:20.172 [http-nio-8082-exec-8] BibliothequeApplication - Appel empruntService méthode ouvrirEmprunt
+[DEBUG] 2021-01-16 17:00:20.184 [http-nio-8082-exec-8] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 16 17:00:20 CET 2021
+[DEBUG] 2021-01-16 17:00:20.277 [http-nio-8082-exec-9] BibliothequeApplication - Appel controlleur findById livre
+[DEBUG] 2021-01-16 17:00:20.277 [http-nio-8082-exec-9] BibliothequeApplication - Appel LivreServiceImpl méthode findLivreById avec paramètre idLidvre : 1481
+[DEBUG] 2021-01-16 17:00:20.396 [http-nio-8082-exec-2] BibliothequeApplication - Appel controlleur ouvrirEmprunt
+[DEBUG] 2021-01-16 17:00:20.396 [http-nio-8082-exec-2] BibliothequeApplication - Appel empruntService méthode ouvrirEmprunt
+[DEBUG] 2021-01-16 17:00:20.403 [http-nio-8082-exec-2] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 16 17:00:20 CET 2021
+[DEBUG] 2021-01-16 17:00:20.831 [http-nio-8082-exec-7] BibliothequeApplication - Appel controlleur prolongerEmprunt
+[DEBUG] 2021-01-16 17:00:20.832 [http-nio-8082-exec-7] BibliothequeApplication - Appel empruntService méthode prolongerEmprunt avec paramètre idEmprunt : 1484
+[DEBUG] 2021-01-16 17:00:20.840 [http-nio-8082-exec-7] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : 2021-02-13 17:00:20.0
+[DEBUG] 2021-01-16 17:00:21.202 [http-nio-8082-exec-6] BibliothequeApplication - appel controlleur supprimerLivre
+[DEBUG] 2021-01-16 17:00:21.202 [http-nio-8082-exec-6] BibliothequeApplication - Appel LivreServiceImpl méthode supprimerLivre avec paramètre idLidvre : 1480
+[DEBUG] 2021-01-16 17:00:21.245 [http-nio-8082-exec-7] BibliothequeApplication - appel controlleur supprimerLivre
+[DEBUG] 2021-01-16 17:00:21.245 [http-nio-8082-exec-7] BibliothequeApplication - Appel LivreServiceImpl méthode supprimerLivre avec paramètre idLidvre : 1481
+[DEBUG] 2021-01-16 17:00:47.669 [http-nio-8082-exec-8] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-16 17:00:47.669 [http-nio-8082-exec-8] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-16 17:01:06.527 [http-nio-8082-exec-9] BibliothequeApplication - Appel controlleur findById livre
+[DEBUG] 2021-01-16 17:01:06.527 [http-nio-8082-exec-9] BibliothequeApplication - Appel LivreServiceImpl méthode findLivreById avec paramètre idLidvre : 4
+[DEBUG] 2021-01-16 17:01:08.720 [http-nio-8082-exec-10] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-16 17:01:08.720 [http-nio-8082-exec-10] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-16 17:01:47.011 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur listeEmpruntUtilisateur
+[DEBUG] 2021-01-16 17:01:47.011 [http-nio-8082-exec-1] BibliothequeApplication - Appel empruntService méthode findAllByPseudoEmprunteur avec paramètre pseudoEmprunteur : ludo
+[DEBUG] 2021-01-16 17:01:48.298 [http-nio-8082-exec-3] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 16 17:01:48 CET 2021
+[DEBUG] 2021-01-16 17:01:48.298 [http-nio-8082-exec-3] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 16 17:01:48 CET 2021
+[DEBUG] 2021-01-16 17:03:31.515 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-16 17:03:31.515 [http-nio-8082-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-16 17:04:31.083 [http-nio-8082-exec-5] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-16 17:04:31.083 [http-nio-8082-exec-5] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-16 17:04:33.200 [http-nio-8082-exec-8] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-16 17:04:33.200 [http-nio-8082-exec-8] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-16 17:04:36.413 [http-nio-8082-exec-7] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 16 17:04:36 CET 2021
+[DEBUG] 2021-01-16 17:04:36.413 [http-nio-8082-exec-7] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 16 17:04:36 CET 2021
+[DEBUG] 2021-01-16 17:04:37.286 [http-nio-8082-exec-2] BibliothequeApplication - Appel controlleur listeEmpruntUtilisateur
+[DEBUG] 2021-01-16 17:04:37.286 [http-nio-8082-exec-2] BibliothequeApplication - Appel empruntService méthode findAllByPseudoEmprunteur avec paramètre pseudoEmprunteur : ludo
+[DEBUG] 2021-01-16 17:04:38.650 [http-nio-8082-exec-1] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-16 17:04:38.650 [http-nio-8082-exec-1] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-16 17:04:46.495 [http-nio-8082-exec-4] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-16 17:04:46.495 [http-nio-8082-exec-4] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-16 17:06:32.213 [http-nio-8082-exec-10] BibliothequeApplication - Appel controlleur ouvrirEmprunt
+[DEBUG] 2021-01-16 17:06:32.214 [http-nio-8082-exec-10] BibliothequeApplication - Appel empruntService méthode ouvrirEmprunt
+[DEBUG] 2021-01-16 17:06:32.221 [http-nio-8082-exec-10] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 16 17:06:32 CET 2021
+[DEBUG] 2021-01-16 17:06:41.775 [http-nio-8082-exec-5] BibliothequeApplication - Appel controlleur listeEmpruntUtilisateur
+[DEBUG] 2021-01-16 17:06:41.775 [http-nio-8082-exec-5] BibliothequeApplication - Appel empruntService méthode findAllByPseudoEmprunteur avec paramètre pseudoEmprunteur : ludo
+[DEBUG] 2021-01-16 17:06:52.067 [http-nio-8082-exec-9] BibliothequeApplication - Appel controlleur prolongerEmprunt
+[DEBUG] 2021-01-16 17:06:52.067 [http-nio-8082-exec-9] BibliothequeApplication - Appel empruntService méthode prolongerEmprunt avec paramètre idEmprunt : 1488
+[DEBUG] 2021-01-16 17:06:52.073 [http-nio-8082-exec-9] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : 2021-02-13 17:06:32.0
+[DEBUG] 2021-01-16 17:06:52.095 [http-nio-8082-exec-8] BibliothequeApplication - Appel controlleur listeEmpruntUtilisateur
+[DEBUG] 2021-01-16 17:06:52.095 [http-nio-8082-exec-8] BibliothequeApplication - Appel empruntService méthode findAllByPseudoEmprunteur avec paramètre pseudoEmprunteur : ludo
+[DEBUG] 2021-01-16 17:07:11.845 [http-nio-8082-exec-7] BibliothequeApplication - Appel controlleur listeEmpruntUtilisateur
+[DEBUG] 2021-01-16 17:07:11.846 [http-nio-8082-exec-7] BibliothequeApplication - Appel empruntService méthode findAllByPseudoEmprunteur avec paramètre pseudoEmprunteur : ludo
+[DEBUG] 2021-01-16 17:07:15.271 [http-nio-8082-exec-2] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 16 17:07:15 CET 2021
+[DEBUG] 2021-01-16 17:07:15.271 [http-nio-8082-exec-2] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 16 17:07:15 CET 2021
+[DEBUG] 2021-01-16 17:08:29.545 [http-nio-8082-exec-4] BibliothequeApplication - Appel controlleur listeEmpruntUtilisateur
+[DEBUG] 2021-01-16 17:08:29.545 [http-nio-8082-exec-4] BibliothequeApplication - Appel empruntService méthode findAllByPseudoEmprunteur avec paramètre pseudoEmprunteur : ludo
+[DEBUG] 2021-01-16 17:08:29.553 [http-nio-8082-exec-3] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 16 17:08:29 CET 2021
+[DEBUG] 2021-01-16 17:08:29.553 [http-nio-8082-exec-3] BibliothequeApplication - Appel empruntService méthode ajouter4Semaines avec paramètre date : Sat Jan 16 17:08:29 CET 2021
+[DEBUG] 2021-01-16 17:08:31.944 [http-nio-8082-exec-10] BibliothequeApplication - Appel controlleur listeEmpruntUtilisateur
+[DEBUG] 2021-01-16 17:08:31.945 [http-nio-8082-exec-10] BibliothequeApplication - Appel empruntService méthode findAllByPseudoEmprunteur avec paramètre pseudoEmprunteur : ludo
+[DEBUG] 2021-01-16 17:08:34.996 [http-nio-8082-exec-5] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-16 17:08:34.996 [http-nio-8082-exec-5] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-16 17:09:06.525 [http-nio-8082-exec-9] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-16 17:09:06.525 [http-nio-8082-exec-9] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
+[DEBUG] 2021-01-16 17:09:09.214 [http-nio-8082-exec-7] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-16 17:09:09.214 [http-nio-8082-exec-7] BibliothequeApplication - Appel LivreServiceImpl méthode findAll
