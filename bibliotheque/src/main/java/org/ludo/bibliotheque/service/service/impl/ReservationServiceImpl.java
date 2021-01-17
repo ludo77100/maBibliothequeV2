@@ -209,7 +209,7 @@ public class ReservationServiceImpl implements ReservationService {
         }
 
         for (Reservation e : listeReservationUtilisateur){
-            Set<Exemplaire> exemplaireSet = e.getLivre().getExemplaires();
+            List<Exemplaire> exemplaireSet = e.getLivre().getExemplaires();
             Date date = new Date() ;
             for (Exemplaire f : exemplaireSet){
 

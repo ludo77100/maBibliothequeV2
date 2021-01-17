@@ -418,3 +418,21 @@
 [DEBUG] 2020-04-09 09:50:09.776 [http-nio-8080-exec-3] BibliothequeApplication - Appel controlleur listeLivre
 [DEBUG] 2020-04-09 09:50:12.559 [http-nio-8080-exec-6] BibliothequeApplication - Appel controlleur listeLivre
 [DEBUG] 2020-04-09 09:53:31.042 [http-nio-8080-exec-8] BibliothequeApplication - Appel controlleur listeLivre
+[DEBUG] 2021-01-17 11:09:35.594 [main] BibliothequeApplication - Appel LivreServiceImpl méthode findLivreById avec paramètre idLidvre : 1
+[DEBUG] 2021-01-17 11:09:35.650 [main] BibliothequeApplication - Appel LivreServiceImpl méthode findLivreById avec paramètre idLidvre : 2
+[DEBUG] 2021-01-17 11:14:26.674 [main] BibliothequeApplication - Appel LivreServiceImpl méthode findLivreById avec paramètre idLidvre : 1
+[DEBUG] 2021-01-17 11:14:26.718 [main] BibliothequeApplication - Appel LivreServiceImpl méthode findLivreById avec paramètre idLidvre : 2
+[DEBUG] 2021-01-17 11:19:31.569 [main] BibliothequeApplication - Appel LivreServiceImpl méthode findLivreById avec paramètre idLidvre : 1
+[DEBUG] 2021-01-17 11:19:31.614 [main] BibliothequeApplication - Appel LivreServiceImpl méthode findLivreById avec paramètre idLidvre : 2
+[DEBUG] 2021-01-17 11:38:02.192 [main] BibliothequeApplication - Appel LivreServiceImpl méthode findByTitreContainingIgnoreCase avec paramètre mc : A
+[DEBUG] 2021-01-17 11:38:02.221 [main] BibliothequeApplication - Appel LivreServiceImpl méthode findLivreById avec paramètre idLidvre : 1
+[DEBUG] 2021-01-17 11:38:02.307 [main] BibliothequeApplication - Appel LivreServiceImpl méthode findLivreById avec paramètre idLidvre : 2
+[DEBUG] 2021-01-17 11:38:39.801 [main] BibliothequeApplication - Appel LivreServiceImpl méthode findByTitreContainingIgnoreCase avec paramètre mc : A
+[DEBUG] 2021-01-17 11:39:00.593 [main] BibliothequeApplication - Appel LivreServiceImpl méthode findByTitreContainingIgnoreCase avec paramètre mc : a
+[DEBUG] 2021-01-17 11:43:09.315 [main] BibliothequeApplication - Appel LivreServiceImpl méthode findByTitreContainingIgnoreCase avec paramètre mc : A
+[DEBUG] 2021-01-17 11:43:28.052 [main] BibliothequeApplication - Appel LivreServiceImpl méthode findByTitreContainingIgnoreCase avec paramètre mc : 
+[DEBUG] 2021-01-17 11:47:17.865 [main] BibliothequeApplication - Appel LivreServiceImpl méthode findByTitreContainingIgnoreCase avec paramètre mc : 
+[DEBUG] 2021-01-17 11:47:27.939 [main] BibliothequeApplication - Appel LivreServiceImpl méthode findByTitreContainingIgnoreCase avec paramètre mc : a
+[DEBUG] 2021-01-17 11:49:12.698 [main] BibliothequeApplication - Appel LivreServiceImpl méthode findByTitreContainingIgnoreCase avec paramètre mc : a
+[DEBUG] 2021-01-17 11:49:12.709 [main] BibliothequeApplication - Appel LivreServiceImpl méthode findLivreById avec paramètre idLidvre : 1
+[DEBUG] 2021-01-17 11:49:12.754 [main] BibliothequeApplication - Appel LivreServiceImpl méthode findLivreById avec paramètre idLidvre : 2

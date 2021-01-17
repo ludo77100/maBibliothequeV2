@@ -45,7 +45,7 @@ public class LivreServiceImpl implements LivreService {
             List<Reservation> listeReservation = reservationRepository.findAllByLivreAndEtatReservationEnums(e, EtatReservationEnums.ENCOURS);
             e.setTailleListeReservationEnCours(listeReservation.size());
 
-            Set<Exemplaire> listeExemplaires =  e.getExemplaires();
+            List<Exemplaire> listeExemplaires =  e.getExemplaires();
             Date dateRetour = new Date();
             dateRetour.setDate(2999-12-12);
 

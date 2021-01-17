@@ -34,6 +34,7 @@ public class ExemplaireServiceTestUnit {
     @Test
     public void compositionReferenceExemplaire() {
         Livre livre = new Livre();
+
         livre.setAuteur("Abc");
         livre.setDecription("Bcd");
         livre.setEditeur("Cde");
@@ -50,7 +51,7 @@ public class ExemplaireServiceTestUnit {
         Exemplaire exemplaire = new Exemplaire() ;
 
         exemplaire.setEtat(EtatEnums.DISPONIBLE);
-        exemplaire.setIdentifiant("LRB1");
+        exemplaire.setIdentifiant("3LRB1");
 
         Assert.assertEquals(EtatEnums.INDISPONIBLE, exemplaireServiceImpl.changerEtatExemplaire("LRB1", "INDISPONIBLE").getEtat());
     }

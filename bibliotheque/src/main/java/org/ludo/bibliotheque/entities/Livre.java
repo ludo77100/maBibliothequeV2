@@ -1,15 +1,12 @@
 package org.ludo.bibliotheque.entities;
 
 import com.fasterxml.jackson.annotation.*;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Range;
-import org.springframework.lang.NonNull;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -73,7 +70,7 @@ public class Livre implements Serializable {
      */
     @JsonIgnore
     @OneToMany(mappedBy = "livre", fetch = FetchType.EAGER)
-    private Set<Exemplaire> exemplaires;
+    private List<Exemplaire> exemplaires;
 
     @JsonIgnore
     @OneToMany(mappedBy = "livre", fetch = FetchType.EAGER)
@@ -83,7 +80,7 @@ public class Livre implements Serializable {
         super();
     }
 
-    public Livre(Long idLivre, String titre, String auteur, String editeur, String decription, @Range(min = 1, message = "Le nombre de pages ne peut être inférieur à 1") int nombrePages, @Range(min = 0, message = "La quantité disponible ne peut être inférieur à zéro") int quantiteDispo, String urlImage, Set<Exemplaire> exemplaires, Set<Reservation> reservations) {
+    public Livre(Long idLivre, String titre, String auteur, String editeur, String decription, @Range(min = 1, message = "Le nombre de pages ne peut être inférieur à 1") int nombrePages, @Range(min = 0, message = "La quantité disponible ne peut être inférieur à zéro") int quantiteDispo, String urlImage, List<Exemplaire> exemplaires, Set<Reservation> reservations) {
         this.idLivre = idLivre;
         this.titre = titre;
         this.auteur = auteur;
@@ -160,11 +157,11 @@ public class Livre implements Serializable {
         this.urlImage = urlImage;
     }
 
-    public Set<Exemplaire> getExemplaires() {
+    public List<Exemplaire> getExemplaires() {
         return exemplaires;
     }
 
-    public void setExemplaires(Set<Exemplaire> exemplaires) {
+    public void setExemplaires(List<Exemplaire> exemplaires) {
         this.exemplaires = exemplaires;
     }
 
