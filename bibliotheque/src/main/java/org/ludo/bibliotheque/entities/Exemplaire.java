@@ -1,13 +1,10 @@
 package org.ludo.bibliotheque.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 import org.ludo.bibliotheque.Enums.EtatEnums;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.List;
 
 @Entity
 public class Exemplaire implements Serializable {

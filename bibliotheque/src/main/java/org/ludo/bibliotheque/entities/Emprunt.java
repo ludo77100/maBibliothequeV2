@@ -1,11 +1,5 @@
 package org.ludo.bibliotheque.entities;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.springframework.lang.NonNull;
-
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;

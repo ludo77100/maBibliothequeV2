@@ -78,8 +78,6 @@ public class EmailServiceImpl implements EmailService {
             Date datefin = e.getDateFin();
             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
             String strDate = sdf.format(datefin);
-
-            System.out.println(e.getPseudoEmprunteur());
             UtilisateurBean utilisateur = getUtil(e.getPseudoEmprunteur());
 
             logger.debug("Appel EmailServiceImpl méthode envoyerEmailRelance à l'adresse : " + utilisateur.getEmail() + " pour le livre : " +e.getExemplaire().getLivre().getTitre() + " pour l'emprunt id : " + e.getIdEmprunt());
@@ -112,7 +110,7 @@ public class EmailServiceImpl implements EmailService {
         String text = email.getContenu()
                 .replace("[NOMUTILISATEUR]", utilisateur.getPseudo())
                 .replace("[TITRELIVRE]", exemplaire.getLivre().getTitre())
-                .replace("[DATECLOTURE]", strDate);
+                .replace("[DATEFIN]", strDate);
 
         sendSimpleMessage(utilisateur.getEmail(), email.getObjet(), text);
 

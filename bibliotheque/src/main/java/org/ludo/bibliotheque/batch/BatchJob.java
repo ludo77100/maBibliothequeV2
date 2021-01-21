@@ -25,7 +25,7 @@ public class BatchJob {
         emailService.envoyerEmailRelance();
     }
 
-    @Scheduled(cron = "0 */1 * * * *")
+    //@Scheduled(cron = "0 */1 * * * *")
     public void verifReservationsAttentes() throws Exception {
         reservationService.verificationReservationAttente();
     }
