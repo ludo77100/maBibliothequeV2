@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 import org.ludo.bibliotheque.BibliothequeApplication;
 import org.ludo.bibliotheque.beans.UtilisateurBean;
 import org.ludo.bibliotheque.dao.EmailRepository;
+import org.ludo.bibliotheque.dao.EmpruntRepository;
 import org.ludo.bibliotheque.entities.Email;
 import org.ludo.bibliotheque.entities.Emprunt;
 import org.ludo.bibliotheque.entities.Exemplaire;
@@ -41,6 +42,9 @@ public class EmailServiceImpl implements EmailService {
     @Autowired
     EmailRepository emailRepository ;
 
+    @Autowired
+    EmpruntRepository empruntRepository ;
+
     /**
      * Envoi un email
      * @param email adresse email
@@ -75,6 +79,7 @@ public class EmailServiceImpl implements EmailService {
 
 
             e.setProlongeable(false) ; //correction d'un bug, ticket github #2
+            empruntRepository.save(e);
             Date datefin = e.getDateFin();
             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
             String strDate = sdf.format(datefin);

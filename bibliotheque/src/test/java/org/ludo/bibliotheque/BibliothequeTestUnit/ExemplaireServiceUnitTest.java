@@ -5,7 +5,6 @@ import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.runner.RunWith;
 import org.ludo.bibliotheque.Enums.EtatEnums;
-import org.ludo.bibliotheque.dao.EmpruntRepository;
 import org.ludo.bibliotheque.dao.ExemplaireRepository;
 import org.ludo.bibliotheque.dao.LivreRepository;
 import org.ludo.bibliotheque.entities.Exemplaire;

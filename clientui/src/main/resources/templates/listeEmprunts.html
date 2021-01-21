@@ -29,7 +29,7 @@
                     </ul>
                     <div class="text-center spacer">
                         <button class="btn btn-primary" th:if="${leu.prolongeable == TRUE}"><a class="btn btn-primary" th:href="@{/emprunt/prolonger/{idEmprunt}(idEmprunt=${leu.idEmprunt})}">Prolonger</a></button>
-                        <span th:unless="${leu.prolongeable == TRUE}">Déjà prolongé</span>
+                        <span th:unless="${leu.prolongeable == TRUE}">Non prolongeable</span>
                     </div>
                     </div>
                     </div>

@@ -75,7 +75,7 @@ public class ReservationController {
 
             try {
                 reservationProxy.ouvrirReservation(titreLivre, pseudoDemandeur);
-                return "redirect:/liste";
+                return "redirect:/reservation/user";
             } catch (Exception e) {
                 e.printStackTrace();
                 if (e instanceof ReservationExceptions) {

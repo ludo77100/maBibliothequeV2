@@ -25,9 +25,9 @@ Vous avez besoin d'installer:
 
 ### Installation
 
-1 - Initialiser les bases de données avec comme nom : maBibliMsBibliotheque et une autre maBibliMsUtilisateur (port: 3306 - username: root - password: vide)  
+1 - Initialiser les bases de données avec comme nom : maBibliMsBibliotheque et une autre maBibliMsUtilisateur (port: 3306 - username: root - password: Wxcvbn12345+)  
 2 - Cloner le projet depuis le repository  
-3 - déployer les BDD avec les fichiers: "mabiblimsbibliotheque - structure et données.sql" et "mabiblimsutilisateur - strucutres et données.sql"  
+3 - déployer les BDD avec les fichiers: "Structure and data.sql"  
 4 - Exécuter le maven goal suivant: 
 ```
 mvn clean install
@@ -53,7 +53,7 @@ Les fichiers de configuration se trouve dans ce repository: https://github.com/l
 
 ## Port pour accéder aux MicroServices:
 
-- Bibliotheque : 8080
+- Bibliotheque : 8082
 - Utilisateur : 8081
 - ClientUI : 8090
 - Spring Cloud Config: 9101
