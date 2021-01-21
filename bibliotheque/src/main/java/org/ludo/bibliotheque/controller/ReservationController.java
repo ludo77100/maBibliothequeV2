@@ -7,6 +7,7 @@ import org.ludo.bibliotheque.service.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.mail.MessagingException;
 import java.util.List;
 
 @RestController
@@ -42,7 +43,7 @@ public class ReservationController {
     }
 
     @GetMapping(value = "/reservation/fermer/{idReservation}")
-    public Reservation fermerReservation(@PathVariable long idReservation){
+    public Reservation fermerReservation(@PathVariable long idReservation) throws MessagingException {
         return reservationService.fermerReservation(idReservation);
     }
 

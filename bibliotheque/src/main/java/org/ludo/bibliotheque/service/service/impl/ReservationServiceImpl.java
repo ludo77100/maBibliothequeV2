@@ -157,12 +157,9 @@ public class ReservationServiceImpl implements ReservationService {
                 e.setEtatReservationEnums(EtatReservationEnums.CLOTURE);
                 //Et on vérifie si il y a d'autre demandes de réservation et on execute ou pas la mise en attente d'une reservation
                 if (!e.getExemplaire().getLivre().getReservations().isEmpty()) {
-                    System.out.println("1");
                     Set<Reservation> reservationList = e.getExemplaire().getLivre().getReservations();
                     for (Reservation f : reservationList){
-                        System.out.println("2");
                         if (f.getEtatReservationEnums() == EtatReservationEnums.ENCOURS){
-                            System.out.println("3");
                             this.mettreReservationAttente(e.getExemplaire());
                             break;
                         }
@@ -222,13 +219,34 @@ public class ReservationServiceImpl implements ReservationService {
     }
 
     @Override
-    public Reservation fermerReservation(long idReservation) {
+    public Reservation fermerReservation(long idReservation) throws MessagingException {
 
         Reservation reservation = reservationRepository.findById(idReservation).get();
         Date date = new Date();
 
         reservation.setEtatReservationEnums(EtatReservationEnums.ANNULE);
         reservation.setDateCloture(date);
+
+        Livre livre = reservation.getLivre();
+        boolean enCours = false ;
+
+        if (!livre.getReservations().isEmpty()) {
+            Set<Reservation> listeReservations = livre.getReservations();
+            for (Reservation e : listeReservations) {
+                if (e.getEtatReservationEnums() == EtatReservationEnums.ENCOURS) {
+                    enCours = true ;
+                    break;
+                }
+            }
+            if (enCours){
+                this.mettreReservationAttente(reservation.getExemplaire());
+                reservation.getExemplaire().setEtat(EtatEnums.ATTENTE);
+            } else {
+                reservation.getExemplaire().setEtat(EtatEnums.DISPONIBLE);
+                livre.setQuantiteDispo(livre.getQuantiteDispo() + 1);
+                livreRepository.save(livre);
+            }
+        }
 
         return reservationRepository.save(reservation);
     }
